@@ -14,6 +14,7 @@ import KPIFramework from '@/components/strategy/KPIFramework';
 import RiskMatrix from '@/components/strategy/RiskMatrix';
 import Recommendations from '@/components/strategy/Recommendations';
 import AudienceIntelligence from '@/components/strategy/AudienceIntelligence';
+import ImageBreak from '@/components/strategy/ImageBreak';
 import SectionDivider from '@/components/strategy/SectionDivider';
 import Footer from '@/components/strategy/Footer';
 
@@ -25,73 +26,29 @@ export default function StrategyClient({ strategy }: StrategyClientProps) {
   return (
     <>
       <ScrollProgress />
-      
-      {/* Hero Section */}
-      <Hero
-        brandName={strategy.brandName}
-        tagline={strategy.tagline}
-        executiveSummary={strategy.executiveSummary}
-      />
-
-      {/* Brand Position */}
-      <BrandPosition
-        positionStatement={strategy.positionStatement}
-        socialAccounts={strategy.socialAccounts}
-        voiceTraits={strategy.voiceTraits}
-        pressHighlights={strategy.pressHighlights}
-      />
-
+      <Hero strategy={strategy} />
+      <BrandPosition strategy={strategy} />
+      <ImageBreak src={strategy.images.hero2} alt={`${strategy.brandName} visual`} />
+      <SWOTAnalysis strategy={strategy} />
       <SectionDivider />
-
-      {/* Competitive Landscape */}
-      <CompetitiveLandscape landscape={strategy.competitiveLandscape} />
-
+      <ExecutiveSummary strategy={strategy} />
+      <ImageBreak src={strategy.images.editorial} alt={`${strategy.brandName} editorial`} />
+      <AudienceIntelligence strategy={strategy} />
       <SectionDivider />
-
-      {/* SWOT Analysis */}
-      <SWOTAnalysis swot={strategy.swot} />
-
+      <CompetitiveLandscape strategy={strategy} />
+      <ImageBreak src={strategy.images.data} alt="Data visualization" />
+      <StrategicPillars strategy={strategy} />
       <SectionDivider />
-
-      {/* Executive Summary */}
-      <ExecutiveSummary summary={strategy.summary} />
-
-      <SectionDivider variant="accent" />
-
-      {/* Audience Intelligence */}
-      <AudienceIntelligence audience={strategy.audience} />
-
+      <PhasedRoadmap strategy={strategy} />
       <SectionDivider />
-
-      {/* Strategic Pillars */}
-      <StrategicPillars pillars={strategy.strategicPillars} />
-
+      <ChannelStrategy strategy={strategy} />
       <SectionDivider />
-
-      {/* Phased Roadmap */}
-      <PhasedRoadmap phases={strategy.roadmap} />
-
+      <KPIFramework strategy={strategy} />
+      <ImageBreak src={strategy.images.texture} alt="Texture" />
+      <RiskMatrix strategy={strategy} />
       <SectionDivider />
-
-      {/* Channel Strategy */}
-      <ChannelStrategy channels={strategy.channels} />
-
-      <SectionDivider />
-
-      {/* KPI Framework */}
-      <KPIFramework kpis={strategy.kpis} />
-
-      <SectionDivider />
-
-      {/* Risk Matrix */}
-      <RiskMatrix risks={strategy.risks} />
-
-      <SectionDivider />
-
-      {/* Recommendations */}
-      <Recommendations recommendations={strategy.recommendations} />
-
-      {/* Footer */}
+      <Recommendations strategy={strategy} />
+      <ImageBreak src={strategy.images.closing} alt={`${strategy.brandName} closing`} />
       <Footer />
     </>
   );

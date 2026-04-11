@@ -49,7 +49,7 @@ export default function StrategyPage({ params }: StrategyPageProps) {
             Strategy Not Found
           </h1>
           <p className="text-[#B8B8C0]">
-            The strategy for "{params.slug}" could not be found.
+            The strategy for this brand could not be found.
           </p>
         </div>
       </div>

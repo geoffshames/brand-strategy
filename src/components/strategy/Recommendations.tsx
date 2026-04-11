@@ -6,7 +6,7 @@ import { BrandStrategy } from '@/lib/types/strategy';
 import SectionWrapper from './SectionWrapper';
 
 interface RecommendationsProps {
-  recommendations: BrandStrategy['recommendations'];
+  strategy: BrandStrategy;
 }
 
 const containerVariants = {
@@ -29,7 +29,8 @@ const itemVariants = {
   },
 };
 
-export default function Recommendations({ recommendations }: RecommendationsProps) {
+export default function Recommendations({ strategy }: RecommendationsProps) {
+  const recommendations = strategy.recommendations;
   const { ref, isInView } = useInView();
 
   return (

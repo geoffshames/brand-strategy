@@ -6,7 +6,7 @@ import { BrandStrategy } from '@/lib/types/strategy';
 import SectionWrapper from './SectionWrapper';
 
 interface RiskMatrixProps {
-  risks: BrandStrategy['risks'];
+  strategy: BrandStrategy;
 }
 
 const containerVariants = {
@@ -29,7 +29,8 @@ const itemVariants = {
   },
 };
 
-export default function RiskMatrix({ risks }: RiskMatrixProps) {
+export default function RiskMatrix({ strategy }: RiskMatrixProps) {
+  const risks = strategy.riskMatrix;
   const { ref, isInView } = useInView();
 
   return (

@@ -6,7 +6,7 @@ import { BrandStrategy } from '@/lib/types/strategy';
 import SectionWrapper from './SectionWrapper';
 
 interface AudienceIntelligenceProps {
-  audience: BrandStrategy['audience'];
+  strategy: BrandStrategy;
 }
 
 const containerVariants = {
@@ -29,7 +29,8 @@ const itemVariants = {
   },
 };
 
-export default function AudienceIntelligence({ audience }: AudienceIntelligenceProps) {
+export default function AudienceIntelligence({ strategy }: AudienceIntelligenceProps) {
+  const audience = strategy.audienceIntelligence;
   const { ref, isInView } = useInView();
 
   return (
