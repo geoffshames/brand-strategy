@@ -387,7 +387,7 @@ export const djTimClark: BrandStrategy = {
         'Explore secondary market opportunities after demonstrating growth',
         'Build international booking package based on streaming trajectory',
       ],
-    }
+    },
     {
       title: 'Activate the Core',
       thesis: 'Fan data is the single most important infrastructure to build. Without email addresses, SMS opt-ins, and direct communication channels, every other effort depends on algorithms the artist doesn't control. Building a 10K+ email list is not a supporting initiative — it is THE initiative that makes everything else work. Converting even 10% of the 120K Instagram following to active fans on direct channels would transform Tim's metrics overnight.',
