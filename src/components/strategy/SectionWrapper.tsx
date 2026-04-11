@@ -15,7 +15,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function SectionWrapper({ children, id, className = '', delay = 0 }: SectionWrapperProps) {
+function SectionWrapper({ children, id, className = '', delay = 0 }: SectionWrapperProps) {
   const { ref, isInView } = useInView();
 
   return (
@@ -32,3 +32,5 @@ export function SectionWrapper({ children, id, className = '', delay = 0 }: Sect
     </motion.section>
   );
 }
+
+export default SectionWrapper;

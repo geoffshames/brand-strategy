@@ -12,7 +12,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function KPIFramework({ strategy }: KPIFrameworkProps) {
+function KPIFramework({ strategy }: KPIFrameworkProps) {
   const { ref, isInView } = useInView();
 
   return (
@@ -67,3 +67,5 @@ export function KPIFramework({ strategy }: KPIFrameworkProps) {
     </motion.section>
   );
 }
+
+export default KPIFramework;

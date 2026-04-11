@@ -12,7 +12,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function CompetitiveLandscape({ strategy }: CompetitiveLandscapeProps) {
+function CompetitiveLandscape({ strategy }: CompetitiveLandscapeProps) {
   const { ref, isInView } = useInView();
   const landscape = strategy.competitiveLandscape;
 
@@ -83,3 +83,5 @@ export function CompetitiveLandscape({ strategy }: CompetitiveLandscapeProps) {
     </motion.div>
   );
 }
+
+export default CompetitiveLandscape;

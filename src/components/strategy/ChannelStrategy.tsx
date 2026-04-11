@@ -12,7 +12,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function ChannelStrategy({ strategy }: ChannelStrategyProps) {
+function ChannelStrategy({ strategy }: ChannelStrategyProps) {
   const { ref, isInView } = useInView();
   const channels = strategy.channelStrategy;
 
@@ -90,3 +90,5 @@ export function ChannelStrategy({ strategy }: ChannelStrategyProps) {
     </motion.section>
   );
 }
+
+export default ChannelStrategy;

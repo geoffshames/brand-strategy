@@ -17,7 +17,7 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
-export function BrandPosition({ strategy }: BrandPositionProps) {
+function BrandPosition({ strategy }: BrandPositionProps) {
   const { ref, isInView } = useInView();
   const audit = strategy.brandAudit;
 
@@ -106,3 +106,5 @@ export function BrandPosition({ strategy }: BrandPositionProps) {
     </motion.div>
   );
 }
+
+export default BrandPosition;

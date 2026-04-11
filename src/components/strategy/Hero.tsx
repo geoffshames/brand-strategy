@@ -16,7 +16,7 @@ const item = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
 };
 
-export function Hero({ strategy }: HeroProps) {
+function Hero({ strategy }: HeroProps) {
   return (
     <div className="relative w-full h-screen min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-black to-[#0A0A0A]">
       {/* Background image if available */}
@@ -92,3 +92,5 @@ export function Hero({ strategy }: HeroProps) {
     </div>
   );
 }
+
+export default Hero;

@@ -28,7 +28,7 @@ const SwotGrid = ({ title, items, color }: { title: string; items: Array<{ title
   </div>
 );
 
-export function SWOTAnalysis({ strategy }: SWOTAnalysisProps) {
+function SWOTAnalysis({ strategy }: SWOTAnalysisProps) {
   const { ref, isInView } = useInView();
   const swot = strategy.swot;
 
@@ -76,3 +76,5 @@ export function SWOTAnalysis({ strategy }: SWOTAnalysisProps) {
     </motion.section>
   );
 }
+
+export default SWOTAnalysis;

@@ -13,7 +13,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
+function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
   const { ref, isInView } = useInView();
   const [expandedPhase, setExpandedPhase] = useState(0);
 
@@ -113,3 +113,5 @@ export function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
     </motion.section>
   );
 }
+
+export default PhasedRoadmap;

@@ -12,7 +12,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-export function ExecutiveSummary({ strategy }: ExecutiveSummaryProps) {
+function ExecutiveSummary({ strategy }: ExecutiveSummaryProps) {
   const { ref, isInView } = useInView();
   const summary = strategy.executiveSummary;
 
@@ -56,3 +56,5 @@ export function ExecutiveSummary({ strategy }: ExecutiveSummaryProps) {
     </motion.section>
   );
 }
+
+export default ExecutiveSummary;
