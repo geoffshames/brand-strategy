@@ -1,7 +1,5 @@
 'use client';
 import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from '@/lib/hooks/useInView';
 
 interface SectionWrapperProps {
   children: ReactNode;
@@ -10,26 +8,14 @@ interface SectionWrapperProps {
   delay?: number;
 }
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-};
-
-function SectionWrapper({ children, id, className = '', delay = 0 }: SectionWrapperProps) {
-  const { ref, isInView } = useInView();
-
+function SectionWrapper({ children, id, className = '' }: SectionWrapperProps) {
   return (
-    <motion.section
-      ref={ref}
+    <section
       id={id}
       className={`py-20 md:py-32 ${className}`}
-      variants={fadeUp}
-      initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
-      transition={{ duration: 0.6, ease: 'easeOut', delay }}
     >
       {children}
-    </motion.section>
+    </section>
   );
 }
 
