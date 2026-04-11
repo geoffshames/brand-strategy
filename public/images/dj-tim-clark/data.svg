@@ -1,0 +1,26 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dataGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#FD3737;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#FD3737;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  
+  <!-- Bar Chart Representation -->
+  <rect x="150" y="400" width="60" height="150" fill="url(#dataGrad)"/>
+  <rect x="280" y="300" width="60" height="250" fill="url(#dataGrad)"/>
+  <rect x="410" y="200" width="60" height="350" fill="url(#dataGrad)"/>
+  <rect x="540" y="150" width="60" height="400" fill="url(#dataGrad)"/>
+  <rect x="670" y="250" width="60" height="300" fill="url(#dataGrad)"/>
+  <rect x="800" y="350" width="60" height="200" fill="url(#dataGrad)"/>
+  <rect x="930" y="380" width="60" height="170" fill="url(#dataGrad)"/>
+  
+  <!-- Labels -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="36" fill="#E4E4E9" text-anchor="middle" font-weight="bold">
+    KPI Framework
+  </text>
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="18" fill="#B8B8C0" text-anchor="middle">
+    Growth Metrics & Performance Targets
+  </text>
+</svg>

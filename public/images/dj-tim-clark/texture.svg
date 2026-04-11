@@ -1,0 +1,13 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="2" fill="#FD3737" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#FD3737" stroke-width="2" opacity="0.2"/>
+  <text x="600" y="315" font-family="Arial, sans-serif" font-size="48" fill="#FD3737" text-anchor="middle" dy="0.3em" opacity="0.5">
+    Visual Intelligence
+  </text>
+</svg>

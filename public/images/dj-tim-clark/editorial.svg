@@ -1,0 +1,20 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <g opacity="0.1">
+    <line x1="0" y1="0" x2="1200" y2="630" stroke="#FD3737" stroke-width="2"/>
+    <line x1="1200" y1="0" x2="0" y2="630" stroke="#FD3737" stroke-width="2"/>
+  </g>
+  <text x="600" y="150" font-family="Arial, sans-serif" font-size="42" fill="#E4E4E9" text-anchor="middle" font-weight="bold">
+    Market Analysis
+  </text>
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="28" fill="#B8B8C0" text-anchor="middle">
+    Competitive Intelligence
+  </text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="28" fill="#B8B8C0" text-anchor="middle">
+    Strategic Positioning
+  </text>
+  <rect x="200" y="450" width="800" height="120" fill="#FD3737" opacity="0.1" rx="8"/>
+  <text x="600" y="520" font-family="Arial, sans-serif" font-size="20" fill="#FD3737" text-anchor="middle">
+    Actionable Growth Roadmap
+  </text>
+</svg>
