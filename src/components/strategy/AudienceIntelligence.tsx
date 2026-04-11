@@ -20,7 +20,7 @@ function AudienceIntelligence({ strategy }: AudienceIntelligenceProps) {
 
   return (
     <SectionWrapper id="audience">
-      <div ref={ref} className="max-w-7xl mx-auto px-6 md:px-8">
+      <div ref={ref} className="max-w-5xl mx-auto px-6 md:px-8">
         <motion.div
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}

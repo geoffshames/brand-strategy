@@ -23,7 +23,7 @@ function StrategicPillars({ strategy }: StrategicPillarsProps) {
       animate={isInView ? 'visible' : 'hidden'}
       variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Strategic Pillars</h2>
           <p className="text-lg text-[#B8B8C0]">Five interconnected pillars driving the 12-month transformation.</p>

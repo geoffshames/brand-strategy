@@ -29,7 +29,7 @@ function BrandPosition({ strategy }: BrandPositionProps) {
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         {/* Positioning */}
         <motion.div variants={fadeUp} className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Current Positioning</h2>
@@ -39,30 +39,48 @@ function BrandPosition({ strategy }: BrandPositionProps) {
         {/* Social Accounts */}
         <motion.div variants={fadeUp} className="mb-16">
           <h3 className="text-2xl font-semibold text-white mb-8">Social Presence</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audit.socialAccounts.map((account, i) => (
-              <motion.a
-                key={i}
-                href={account.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-6 rounded-lg bg-[#141414] border border-[#262626] hover:border-[#FD3737] transition-colors group"
-                whileHover={{ y: -4 }}
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-base font-semibold text-white group-hover:text-[#FD3737] transition-colors">
-                    {account.platform}
-                  </h4>
-                  <svg className="w-5 h-5 text-[#FD3737] opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <p className="text-sm text-[#B8B8C0]">{account.handle}</p>
-                {account.followers && (
-                  <p className="text-xs text-[#B8B8C0] mt-2">{(account.followers / 1000).toFixed(0)}K followers</p>
-                )}
-              </motion.a>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {audit.socialAccounts.map((account, i) => {
+              const isLegacy = account.note?.includes('Legacy') || account.note?.includes('fan page');
+              const isNew = account.platform.includes('(New)');
+              const Tag = account.url ? 'a' : 'div';
+              const linkProps = account.url ? { href: account.url, target: '_blank', rel: 'noopener noreferrer' } : {};
+              return (
+                <motion.div
+                  key={i}
+                  className={`p-5 rounded-lg border transition-all duration-300 hover:-translate-y-0.5 ${
+                    isNew
+                      ? 'bg-[#FD3737]/5 border-[#FD3737]/20 hover:border-[#FD3737]/50'
+                      : isLegacy
+                        ? 'bg-[#141414] border-[#262626] opacity-70 hover:opacity-100'
+                        : 'bg-[#141414] border-[#262626] hover:border-[#FD3737]/30'
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <h4 className={`text-sm font-semibold ${isNew ? 'text-[#FD3737]' : 'text-white'}`}>
+                      {account.platform}
+                    </h4>
+                    {isLegacy && (
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-500 border border-yellow-500/20">
+                        ARCHIVING
+                      </span>
+                    )}
+                    {isNew && (
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#FD3737]/10 text-[#FD3737] border border-[#FD3737]/20">
+                        NEW
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-[#B8B8C0]">{account.handle}</p>
+                  {account.followers && (
+                    <p className="text-xs text-[#B8B8C0] mt-1">{(account.followers / 1000).toFixed(0)}K followers</p>
+                  )}
+                  {account.note && (
+                    <p className="text-[11px] text-[#888] mt-2 leading-relaxed italic">{account.note}</p>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 

@@ -24,7 +24,7 @@ function ChannelStrategy({ strategy }: ChannelStrategyProps) {
       animate={isInView ? 'visible' : 'hidden'}
       variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Channel Strategy</h2>
           <p className="text-lg text-[#E4E4E9] leading-relaxed max-w-3xl">{channels.overview}</p>

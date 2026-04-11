@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'N27';
-  src: url('/fonts/N27Bold.otf') format('opentype');
+  src: url('/brand/N27-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -78,6 +78,12 @@ a {
   margin-right: auto;
 }
 
+.container-tight {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text-balance {
   text-wrap: balance;
 }
@@ -130,4 +136,27 @@ a {
 
 .animate-pulse-slow {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Interactive glass cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(253, 55, 55, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(253, 55, 55, 0.08);
+}
+
+/* Section fade-in on scroll */
+.section-animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }

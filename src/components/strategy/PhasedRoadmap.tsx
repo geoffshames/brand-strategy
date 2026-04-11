@@ -26,7 +26,7 @@ function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
       animate={isInView ? 'visible' : 'hidden'}
       variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Phased Roadmap</h2>
           <p className="text-lg text-[#E4E4E9]">12-month transformation roadmap with quarterly acceleration checkpoints.</p>

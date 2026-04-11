@@ -8,8 +8,9 @@ export interface VoiceTrait {
 export interface SocialAccount {
   platform: string;
   handle: string;
-  url: string;
+  url?: string;
   followers?: number;
+  note?: string;
 }
 
 export interface PressHighlight {
@@ -79,7 +80,7 @@ export interface AudienceIntelligence {
 
 export interface AnalyzedVideo {
   title: string;
-  url: string;
+  url?: string;
   views: number;
   keyFrames: string[];
   narrative: string;

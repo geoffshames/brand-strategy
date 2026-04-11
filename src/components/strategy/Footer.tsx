@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#0A0A0A] border-t border-[#2A2A2E] py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -37,6 +37,7 @@ export default function Footer() {
         >
           {/* Brand */}
           <motion.div variants={itemVariants} className="space-y-4">
+            <img src="/brand/CC-LOGO-2024-WHITE.png" alt="Crowd Control Digital" className="h-8 mb-4 opacity-80" />
             <h3 className="text-lg font-bold text-[#E4E4E9]">DJ Tim Clark</h3>
             <p className="text-sm text-[#B8B8C0]">
               Rebrand Strategy & Market Intelligence
@@ -127,7 +128,7 @@ export default function Footer() {
             © {currentYear} Crowd Control Digital. All rights reserved.
           </p>
           <p className="text-sm text-[#B8B8C0]">
-            Crafted with precision for <span className="text-[#FD3737]">precision</span>
+            Prepared by <span className="text-[#FD3737]">Crowd Control Digital</span>
           </p>
         </motion.div>
       </div>
