@@ -12,7 +12,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
-const SwotGrid = ({ title, items, color }: { title: string; items: any[]; color: string }) => (
+const SwotGrid = ({ title, items, color }: { title: string; items: Array<{ title: string; description: string }>; color: string }) => (
   <div className={`p-8 rounded-lg border ${color}`}>
     <h3 className={`text-lg font-bold mb-6 ${color.includes('red') ? 'text-[#FD3737]' : color.includes('green') ? 'text-green-400' : color.includes('yellow') ? 'text-yellow-400' : 'text-blue-400'}`}>
       {title}

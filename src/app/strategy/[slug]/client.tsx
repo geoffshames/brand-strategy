@@ -14,7 +14,6 @@ import KPIFramework from '@/components/strategy/KPIFramework';
 import RiskMatrix from '@/components/strategy/RiskMatrix';
 import Recommendations from '@/components/strategy/Recommendations';
 import AudienceIntelligence from '@/components/strategy/AudienceIntelligence';
-import ImageBreak from '@/components/strategy/ImageBreak';
 import SectionDivider from '@/components/strategy/SectionDivider';
 import Footer from '@/components/strategy/Footer';
 
