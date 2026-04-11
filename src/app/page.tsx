@@ -27,7 +27,7 @@ const itemVariants = {
 
 export default function Home() {
   const slugs = getAllSlugs();
-  const strategies = slugs.map((slug) => getStrategy(slug)).filter(Boolean);
+  const strategies = slugs.map((slug) => getStrategy(slug)).filter((s): s is typeof s & {} => s !== null);
 
   return (
     <>
