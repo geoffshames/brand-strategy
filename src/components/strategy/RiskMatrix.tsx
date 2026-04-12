@@ -44,8 +44,8 @@ export default function RiskMatrix({ strategy }: { strategy: BrandStrategy }) {
                   </div>
                   <div className="flex items-center gap-3 flex-shrink-0">
                     <div className="flex gap-3 text-sm">
-                      <span className="text-[#B8B8C0]">L: <span className="font-bold text-[#E4E4E9]">{cap(risk.likelihood || 'medium')}</span></span>
-                      <span className="text-[#B8B8C0]">I: <span className="font-bold text-[#E4E4E9]">{cap(risk.impact || 'medium')}</span></span>
+                      <span className="text-[#B8B8C0]">Likelihood: <span className="font-bold text-[#E4E4E9]">{cap(risk.likelihood || 'medium')}</span></span>
+                      <span className="text-[#B8B8C0]">Impact: <span className="font-bold text-[#E4E4E9]">{cap(risk.impact || 'medium')}</span></span>
                     </div>
                     <span
                       className="text-xs font-bold px-3 py-1 rounded-full border"
