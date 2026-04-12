@@ -1,136 +1,32 @@
 'use client';
 
 import { motion } from '@/lib/motion-shim';
-import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <footer className="bg-[#0A0A0A] border-t border-[#2A2A2E] py-16">
-      <div className="max-w-5xl mx-auto px-6 md:px-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
+    <footer className="bg-[#0A0A0A] border-t border-[#2A2A2E]">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 py-20 text-center">
+        <p className="text-xs text-[#FD3737] uppercase tracking-[0.2em] font-semibold mb-4">Next Step</p>
+        <h3 className="text-3xl md:text-5xl font-bold text-[#E4E4E9] mb-6">Ready to take action?</h3>
+        <div className="w-16 h-1 bg-[#FD3737] mx-auto mb-8" />
+        <a
+          href="mailto:info@crowdcontroldigital.com"
+          className="inline-block px-10 py-4 rounded-lg bg-[#FD3737] text-white font-bold text-lg hover:bg-[#e02e2e] transition-colors"
         >
-          {/* Brand */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <img src="/brand/CC-LOGO-2024-WHITE.png" alt="Crowd Control Digital" className="h-8 mb-4 opacity-80" />
-            <h3 className="text-lg font-bold text-[#E4E4E9]">DJ Tim Clark</h3>
-            <p className="text-sm text-[#B8B8C0]">
-              Rebrand Strategy & Market Intelligence
-            </p>
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="text-sm font-semibold text-[#E4E4E9] uppercase tracking-wider">
-              Strategy
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { label: 'Executive Summary', href: '#executive' },
-                { label: 'Competitive Analysis', href: '#competitive' },
-                { label: 'Strategic Pillars', href: '#pillars' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#B8B8C0] hover:text-[#FD3737] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Resources */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="text-sm font-semibold text-[#E4E4E9] uppercase tracking-wider">
-              Planning
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { label: 'Roadmap', href: '#roadmap' },
-                { label: 'KPI Framework', href: '#kpi' },
-                { label: 'Recommendations', href: '#recommendations' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-[#B8B8C0] hover:text-[#FD3737] transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Legal */}
-          <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="text-sm font-semibold text-[#E4E4E9] uppercase tracking-wider">
-              Legal
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-[#B8B8C0] hover:text-[#FD3737] transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-[#B8B8C0] hover:text-[#FD3737] transition-colors"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </motion.div>
-        </motion.div>
-
-        {/* Bottom Section */}
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="pt-8 border-t border-[#2A2A2E] flex flex-col md:flex-row justify-between items-center gap-4"
-        >
-          <p className="text-sm text-[#B8B8C0]">
+          Hit Us Up
+        </a>
+      </div>
+      <div className="border-t border-[#2A2A2E] py-6">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center gap-3">
+          <p className="text-sm text-[#666]">
             © {currentYear} Crowd Control Digital. All rights reserved.
           </p>
-          <p className="text-sm text-[#B8B8C0]">
+          <p className="text-sm text-[#666]">
             Prepared by <span className="text-[#FD3737]">Crowd Control Digital</span>
           </p>
-        </motion.div>
+        </div>
       </div>
     </footer>
   );
