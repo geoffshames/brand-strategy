@@ -21,7 +21,7 @@ function Hero({ strategy }: HeroProps) {
       )}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 pb-28 sm:pb-0 text-center">
         <div className="mb-6">
           <span className="inline-block px-5 py-2 rounded-full border border-[#FD3737]/40 text-[#FD3737] text-sm font-semibold tracking-wider uppercase">
             Brand Strategy
@@ -58,7 +58,7 @@ function Hero({ strategy }: HeroProps) {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="text-sm text-[#B8B8C0]">Scroll to explore</span>
         <div className="w-6 h-10 rounded-full border-2 border-[#FD3737]/50 flex items-start justify-center p-2">
           <div className="w-1 h-2 bg-[#FD3737] rounded-full animate-pulse" />
