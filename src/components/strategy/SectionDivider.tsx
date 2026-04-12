@@ -1,26 +1,13 @@
 'use client';
 
-import { motion } from '@/lib/motion-shim';
-import { useInView } from '@/lib/hooks/useInView';
-
-interface SectionDividerProps {
-  variant?: 'default' | 'accent';
-}
-
-export default function SectionDivider({ variant = 'default' }: SectionDividerProps) {
-  const { ref, isInView } = useInView();
-
-  const color = variant === 'accent' ? '#FD3737' : '#2A2A2E';
-
+export default function SectionDivider() {
   return (
-    <div ref={ref} className="py-8 flex justify-center">
-      <motion.div
-        initial={{ scaleX: 0, opacity: 0 }}
-        animate={isInView ? { scaleX: 1, opacity: 1 } : { scaleX: 0, opacity: 0 }}
-        transition={{ duration: 0.8 }}
-        className="h-px w-24"
-        style={{ backgroundColor: color }}
-      />
+    <div className="w-full flex items-center justify-center py-4">
+      <div className="flex items-center gap-3">
+        <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#FD3737]/30" />
+        <div className="w-2 h-2 rounded-full bg-[#FD3737]/40" />
+        <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#FD3737]/30" />
+      </div>
     </div>
   );
 }

@@ -315,14 +315,19 @@ export const djTimClark: BrandStrategy = {
     keyFindings: [
       'Social-to-streaming ratio is 50:1 (120K Instagram vs 2.4K Spotify ML) — massive untapped funnel',
       'Finance narrative is credibility liability in underground community; authenticity is currency',
-      'Downtown Vegas overexposure dilutes festival-ready positioning; needs premium venue strategy',
+      'Downtown Vegas overexposure dilutes credibility; local frequency needs to decrease',
       'Release cadence is inconsistent; competitors face same challenge (differentiation opportunity)',
-      'Coldharbour pipeline + EDMA wins create festival booking credibility; execution is blocker',
+      'Fan data infrastructure (email/SMS) is nonexistent; this is the single biggest gap to close',
       'Inspire Radio distribution reaches 50K+ weekly listeners; not being leveraged for streaming conversion',
     ],
     primaryRecommendation: 'Complete a music-first rebrand (website, press kit, visual identity) while launching fresh social accounts to replace botted legacy profiles. Execute a disciplined 3-4 week release cadence with fan data capture (email/SMS) as the central infrastructure priority. Reduce local Vegas frequency and focus on brand-building for 6+ months before exploring more robust touring opportunities. Target 50K Spotify monthly listeners and 10K email subscribers within 12 months.',
     timelineToTarget: '12 months (April 2026 – April 2027) with quarterly acceleration checkpoints',
-    fullNarrative: 'The rebrand must accomplish three things simultaneously: (1) shed the origin-story narrative in favor of a music-first identity, (2) convert the existing social audience into streaming listeners through a disciplined 3-4 week release cadence with sound-first content strategy, and (3) elevate from local Vegas residency DJ to festival-circuit artist by reducing downtown Vegas overexposure and securing premium bookings. EDC 2026 is already confirmed—that\'s the proof-of-concept.\n\nThe path forward is a 12-month transformation from local celebrity to credible touring artist—leveraging the Coldharbour connection, the Markus Schulz mentorship, and the existing social following as accelerants, not crutches. By Q1 2027, the target is 50K+ Spotify monthly listeners, festival bookings at Tomorrowland/Ultra-tier events, and a brand identity where "Tim Clark" immediately connotes a specific sound—not a financial background.\n\nThis strategy is achievable because the infrastructure exists. The assets are already in place: the music, the label support, the awards, the social platform. What\'s missing is alignment between narrative and execution. The rebrand closes that gap. The execution closes the funnel.',
+    rebrandGoals: [
+      { number: 1, title: 'Shed the origin story', description: 'Kill the "finance titan turned DJ" narrative across every touchpoint. Website, press kit, social bios, booking materials — music leads, everything else disappears.' },
+      { number: 2, title: 'Build the streaming engine', description: 'Launch fresh social accounts, execute a disciplined 3-4 week release cadence, and seed every track through TikTok and creator partnerships. Convert followers into listeners.' },
+      { number: 3, title: 'Capture the fans directly', description: 'Build email/SMS infrastructure from zero to 10K+ subscribers. Pre-save funnels, exclusive content, direct communication. Stop depending entirely on algorithms you do not control.' },
+    ],
+    fullNarrative: 'The path forward is a 12-month transformation from local celebrity to credible artist — leveraging the Coldharbour connection, the Markus Schulz mentorship, and disciplined execution as accelerants, not crutches. By Q1 2027, the target is 50K+ Spotify monthly listeners, 10K+ email subscribers, and a brand identity where "Tim Clark" immediately connotes a specific sound — not a financial background.\n\nThis strategy is achievable because the raw materials exist. The music, the label support, the radio distribution, the production budget. What\'s missing is alignment between narrative and execution. The rebrand closes that gap. The execution closes the funnel.',
   },
 
   // ─── Strategic Pillars ───
@@ -405,7 +410,7 @@ export const djTimClark: BrandStrategy = {
         { action: 'Build pre-save funnel infrastructure', deadline: 'May 15, 2026' },
         { action: 'Launch email/SMS list collection', deadline: 'May 30, 2026' },
         { action: 'Begin TikTok sound seeding strategy', deadline: 'Jun 1, 2026' },
-        { action: 'Reduce Troy Liquor Bar to 2x/month, pitch premium Vegas venues', deadline: 'Jun 15, 2026' },
+        { action: 'Reduce Troy Liquor Bar frequency to 2x/month', deadline: 'Jun 15, 2026' },
       ],
       expectedOutcomes: [
         'Website and press materials reflect music-first identity',

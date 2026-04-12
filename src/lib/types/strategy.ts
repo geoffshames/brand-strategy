@@ -129,6 +129,7 @@ export interface ExecutiveSummary {
   primaryRecommendation: string;
   timelineToTarget: string;
   fullNarrative: string;
+  rebrandGoals?: Array<{ number: number; title: string; description: string }>;
 }
 
 export interface StrategicPillar {

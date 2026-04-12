@@ -27,13 +27,30 @@ export async function generateMetadata({
     };
   }
 
+  const ogImageUrl = `/api/og?title=${encodeURIComponent(strategy.brandName)}&subtitle=${encodeURIComponent('Growth Strategy by Crowd Control Digital')}`;
+
   return {
-    title: `${strategy.brandName} - Brand Strategy`,
+    title: `${strategy.brandName} — Brand Growth Strategy | Crowd Control Digital`,
     description: strategy.executiveSummary.thesis,
     openGraph: {
-      title: `${strategy.brandName} - Brand Strategy`,
+      title: `${strategy.brandName} — Brand Growth Strategy`,
       description: strategy.executiveSummary.thesis,
       type: 'website',
+      siteName: 'Crowd Control Digital',
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${strategy.brandName} Brand Strategy`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${strategy.brandName} — Brand Growth Strategy`,
+      description: strategy.executiveSummary.thesis,
+      images: [ogImageUrl],
     },
   };
 }

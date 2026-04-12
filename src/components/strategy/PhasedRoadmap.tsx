@@ -4,11 +4,7 @@ import { BrandStrategy } from '@/lib/types/strategy';
 import SectionWrapper from './SectionWrapper';
 import { useState } from 'react';
 
-interface PhasedRoadmapProps {
-  strategy: BrandStrategy;
-}
-
-function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
+function PhasedRoadmap({ strategy }: { strategy: BrandStrategy }) {
   const [expandedPhase, setExpandedPhase] = useState(0);
 
   return (
@@ -16,12 +12,13 @@ function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
       <div className="max-w-5xl mx-auto px-6 md:px-8">
         <div className="mb-16">
           <p className="text-xs text-[#FD3737] uppercase tracking-[0.2em] font-semibold mb-4">Execution</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Phased Roadmap</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">Phased Roadmap</h2>
+          <div className="w-24 h-1 bg-[#FD3737] mb-6" />
           <p className="text-base md:text-lg text-[#E4E4E9]">12-month transformation with quarterly acceleration checkpoints.</p>
         </div>
 
         <div className="relative">
-          <div className="absolute left-3 md:left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FD3737] via-[#FD3737]/50 to-transparent" />
+          <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FD3737] via-[#FD3737]/50 to-transparent" />
 
           <div className="space-y-6">
             {strategy.roadmap.map((phase, i) => (
@@ -34,7 +31,7 @@ function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
                   <span className="text-white text-xs font-bold">{i + 1}</span>
                 </div>
 
-                <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1A1A1A]/80 to-[#141414]/50 border border-[#262626]/60 hover:border-[#FD3737]/30 transition-colors">
+                <div className={`p-6 md:p-8 rounded-2xl bg-[#111] border transition-colors ${expandedPhase === i ? 'border-[#FD3737]/50' : 'border-[#262626]/80 hover:border-[#FD3737]/30'}`}>
                   <div className="flex items-start justify-between gap-4 mb-3">
                     <div>
                       <p className="text-xs font-bold text-[#FD3737] uppercase tracking-wide mb-1">{phase.phase}</p>
@@ -51,10 +48,9 @@ function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
                   {expandedPhase === i && (
                     <div className="pt-4 border-t border-[#262626]/60">
                       <p className="text-base text-[#E4E4E9] mb-6 leading-relaxed">{phase.description}</p>
-
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <p className="text-xs font-bold text-[#B8B8C0] uppercase tracking-wide mb-3">Key Actions</p>
+                          <p className="text-xs font-bold text-[#FD3737] uppercase tracking-wide mb-3">Key Actions</p>
                           <ul className="space-y-2">
                             {phase.actions.map((action, j) => (
                               <li key={j} className="text-sm text-[#E4E4E9] flex gap-2">
@@ -65,7 +61,7 @@ function PhasedRoadmap({ strategy }: PhasedRoadmapProps) {
                           </ul>
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-[#B8B8C0] uppercase tracking-wide mb-3">Expected Outcomes</p>
+                          <p className="text-xs font-bold text-[#FD3737] uppercase tracking-wide mb-3">Expected Outcomes</p>
                           <ul className="space-y-2">
                             {phase.expectedOutcomes.map((outcome, j) => (
                               <li key={j} className="text-sm text-[#E4E4E9] flex gap-2">
