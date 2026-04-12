@@ -7,7 +7,7 @@ export const djTimClark: BrandStrategy = {
   industry: 'Music & Entertainment',
   isArtist: true,
   tagline: 'Underground big room trance.',
-  accentColor: '#FD3737',
+  accentColor: '',
   timeHorizon: '12 months',
   strategyWindow: {
     start: 'April 2026',
@@ -339,7 +339,7 @@ export const djTimClark: BrandStrategy = {
         'Website relaunch with music-first positioning (0 mentions of Tradebloc)',
         'Press kit emphasizes sound identity + EDMA wins, not financial background',
         'Social content is 80% music-focused, 20% lifestyle',
-        'Brand color palette (#FD3737 accent) consistently applied across platforms',
+        'Cohesive visual identity consistently applied across all platforms',
       ],
       keyInitiatives: [
         'Complete website rebuild (timclarklive.com)',
@@ -354,7 +354,6 @@ export const djTimClark: BrandStrategy = {
       successMetrics: [
         'Release cadence: 100% on-schedule every 3-4 weeks',
         'Pre-save funnel: 3K+ pre-saves per release (average)',
-        'Spotify playlist placements: 50+ playlists per release',
         'Monthly listener growth: 2.4K → 50K+ (20x growth)',
       ],
       keyInitiatives: [
