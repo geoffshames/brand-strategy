@@ -11,6 +11,7 @@ export interface SocialAccount {
   url?: string;
   followers?: number;
   note?: string;
+  isNew?: boolean;
 }
 
 export interface PressHighlight {

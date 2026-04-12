@@ -80,8 +80,8 @@ function BrandPosition({ strategy }: BrandPositionProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {audit.socialAccounts.map((account, i) => {
               const isLegacy = account.note?.includes('Legacy') || account.note?.includes('fan page');
-              const isNew = account.platform.includes('(New)');
-              const platformBase = account.platform.replace(' (New)', '');
+              const isNew = !!account.isNew;
+              const platformBase = account.platform;
               const isKeeping = !isLegacy && !isNew;
               const isHighlight = isNew || isKeeping;
               return (
