@@ -55,7 +55,7 @@ export default function Recommendations({ strategy }: { strategy: BrandStrategy 
                         ? 'text-[#FF6B6B] border-[#FF6B6B]/30 bg-[#FF6B6B]/10'
                         : 'text-[#B8B8C0] border-[#B8B8C0]/30 bg-[#B8B8C0]/10'
                   }`}>
-                    {rec.priority.toUpperCase()}
+                    Priority: {rec.priority.charAt(0).toUpperCase() + rec.priority.slice(1)}
                   </span>
                 </div>
               )}

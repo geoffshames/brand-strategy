@@ -18,27 +18,24 @@ function KPIFramework({ strategy }: { strategy: BrandStrategy }) {
           {strategy.kpiFramework.map((kpi, i) => (
             <div
               key={i}
-              className="p-6 rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-colors"
+              className="rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-colors overflow-hidden"
             >
-              <h3 className="text-base font-bold text-[#FD3737] mb-4">{kpi.metric}</h3>
-              <div className="space-y-4">
-                <div className="flex items-baseline justify-between gap-4">
+              <div className="p-6 pb-4">
+                <h3 className="text-base font-bold text-[#FD3737] mb-5">{kpi.metric}</h3>
+                <div className="flex items-end justify-between gap-4 mb-4">
                   <div>
-                    <p className="text-xs text-[#B8B8C0] uppercase tracking-wide mb-1">Current</p>
-                    <p className="text-base font-semibold text-[#E4E4E9]">{kpi.current || 'N/A'}</p>
+                    <p className="text-[10px] text-[#666] uppercase tracking-widest mb-1">Now</p>
+                    <p className="text-lg font-semibold text-[#B8B8C0]">{kpi.current || 'N/A'}</p>
                   </div>
+                  <div className="text-[#444] text-xl">→</div>
                   <div className="text-right">
-                    <p className="text-xs text-[#B8B8C0] uppercase tracking-wide mb-1">Target</p>
+                    <p className="text-[10px] text-[#666] uppercase tracking-widest mb-1">12-Month Target</p>
                     <p className="text-2xl font-bold text-[#FD3737]">{kpi.target}</p>
                   </div>
                 </div>
-                <div className="p-3 rounded-lg bg-[#0A0A0A] border border-[#262626]/40">
-                  <p className="text-xs text-[#B8B8C0] uppercase tracking-wide mb-1">Benchmark</p>
-                  <p className="text-sm text-[#E4E4E9]">{kpi.benchmark}</p>
-                </div>
-                <div className="border-t border-[#262626]/60 pt-3">
-                  <p className="text-sm text-[#B8B8C0] leading-relaxed">{kpi.rationale}</p>
-                </div>
+              </div>
+              <div className="px-6 py-4 bg-[#0A0A0A] border-t border-[#262626]/40">
+                <p className="text-sm text-[#B8B8C0] leading-relaxed">{kpi.rationale}</p>
               </div>
             </div>
           ))}

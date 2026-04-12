@@ -616,10 +616,10 @@ export const djTimClark: BrandStrategy = {
       rationale: 'Fresh account with real, engaged followers. Quality over quantity. 25K real fans > 120K bots.',
     },
     {
-      metric: 'TikTok Followers (Fresh Account)',
-      current: '0 (launching with rebrand)',
+      metric: 'TikTok Followers',
+      current: '1,409',
       target: '25,000',
-      benchmark: 'Fresh account with real fans focused on sound seeding',
+      benchmark: 'Sound seeding platform. Archive old content, relaunch with music-first strategy',
       timeframe: '12 months',
       rationale: 'Sound seeding platform. Fresh account ensures clean algorithm signal and real fans. 25K engaged followers > legacy botted metrics.',
     },
