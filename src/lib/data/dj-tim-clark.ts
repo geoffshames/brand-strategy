@@ -226,11 +226,7 @@ export const djTimClark: BrandStrategy = {
         description: 'Direct mentorship and label relationship with Markus Schulz (Coldharbour Recordings) provides distribution, touring, and credibility.',
         evidence: 'You Belong collaboration (Apr 2025). Weekly Inspire Radio on Insomniac, Dash, Radio Eibiza. Coldharbour releases on premium labels.',
       },
-      {
-        title: 'Social Footprint (Requires Reset)',
-        description: '120K Instagram followers exists as a number, but the audience was built through aggressive paid acquisition and bot activity, resulting in low-affinity followers with minimal conversion potential. The accounts cannot be salvaged for artist-building — they should be transitioned to fan pages while fresh accounts are launched with the rebrand to build a real, engaged audience from scratch.',
-        evidence: '120K Instagram vs 2.4K Spotify monthly listeners. Rather than an untapped conversion opportunity, this ratio reflects an audience that was never real fans to begin with.',
-      },
+
       {
         title: 'Inspire Radio Distribution Network',
         description: 'A weekly show on Insomniac Radio, Dash Radio, Radio Eibiza, and 6+ stations creates persistent brand touchpoint.',
@@ -243,6 +239,11 @@ export const djTimClark: BrandStrategy = {
       },
     ],
     weaknesses: [
+      {
+        title: 'Social Footprint (Requires Reset)',
+        description: '120K Instagram followers exists as a number, but the audience was built through aggressive paid acquisition and bot activity, resulting in low-affinity followers with minimal conversion potential. The accounts cannot be salvaged for artist-building — they should be transitioned to fan pages while fresh accounts are launched with the rebrand to build a real, engaged audience from scratch.',
+        evidence: '120K Instagram vs 2.4K Spotify monthly listeners. Rather than an untapped conversion opportunity, this ratio reflects an audience that was never real fans to begin with.',
+      },
       {
         title: 'The Finance Guy Problem',
         description: 'Website, press, and social lead with "financial titan turned DJ" narrative. This creates credibility gap in underground community where authenticity is currency.',
@@ -264,9 +265,9 @@ export const djTimClark: BrandStrategy = {
         evidence: 'Weekly Troy Liquor Bar residency. Multiple downtown Vegas bookings.',
       },
       {
-        title: 'Website as Business Card, Not Artist Platform',
-        description: 'timclarklive.com is an Elementor template with merch store and show listing but no compelling artistic narrative.',
-        evidence: 'No music player integration. No visual identity system. No sound/genre communication. Generic template design.',
+        title: 'Website Needs a Modern Overhaul',
+        description: 'timclarklive.com lacks a modern look and feel. It could be significantly improved for better data capture, fan storytelling, and conversion.',
+        evidence: 'No email capture infrastructure. No pre-save funnels. Generic template design. Does not communicate sound identity or artistic narrative.',
       },
     ],
     opportunities: [
@@ -279,11 +280,6 @@ export const djTimClark: BrandStrategy = {
         title: 'Sound-First Social Strategy',
         description: 'TikTok and Instagram Reels sound seeding is essentially non-existent. 120K followers is built-in seeding audience.',
         evidence: 'Creator sound adoption = bridge from social following to streaming listener. Zero current TikTok sound seeding strategy.',
-      },
-      {
-        title: 'Festival Pipeline 2026-2027',
-        description: 'EDMA wins + Coldharbour affiliation + Markus Schulz co-signs create booking pitch for mid-tier festival stages.',
-        evidence: 'EDC 2026 confirmed. ADE 2023 precedent. MMW 2025 connections. 2027 festival season booking cycle aligns perfectly.',
       },
 
       {
