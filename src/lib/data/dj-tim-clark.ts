@@ -6,7 +6,7 @@ export const djTimClark: BrandStrategy = {
   brandName: 'DJ Tim Clark',
   industry: 'Music & Entertainment',
   isArtist: true,
-  tagline: 'Underground big room trance. Festival-circuit ready.',
+  tagline: 'Underground big room trance.',
   accentColor: '#FD3737',
   timeHorizon: '12 months',
   strategyWindow: {
@@ -18,16 +18,15 @@ export const djTimClark: BrandStrategy = {
   brandAudit: {
     positioning: 'Las Vegas-based EDM DJ/producer with EDMA awards and Coldharbour pedigree, currently positioned as "finance executive turned DJ" — a narrative liability that undermines artist credibility.',
     voiceTraits: [
-      { trait: 'Technically sophisticated', evidence: 'Two EDMA Breakthrough Artist wins demonstrate industry-recognized production quality' },
-      { trait: 'Mission-driven', evidence: 'Markus Schulz mentorship and consistent release cadence show commitment to craft' },
-      { trait: 'Access-oriented', evidence: 'Coldharbour Recordings, Insomniac Radio distribution, international touring history' },
-      { trait: 'Humble', evidence: 'Keeps Tradebloc background under-stated in music-first communication; credits mentors' },
+      { trait: 'Underground with polish', evidence: 'Produces big room trance with studio-grade quality but underground sensibility. The sound is premium without being commercial.' },
+      { trait: 'Relentlessly consistent', evidence: 'Weekly Inspire Radio show across 6+ stations. Committed to a 3-4 week release cadence. Shows up every week.' },
+      { trait: 'Craft-first', evidence: 'Leads with production quality and sound design, not persona or backstory. Lets the music do the talking.' },
+      { trait: 'Quietly ambitious', evidence: 'Does not self-promote the finance background. Focused on earning credibility through output, not narrative.' },
     ],
     keyOfferings: [
       'Original "underground big room" trance sound (progressive + trance + big room hybrid)',
       'High-production-value EDM releases every 3-4 weeks',
       'Weekly Inspire Radio show on 6+ stations (Insomniac, Dash, Radio Eibiza, etc.)',
-      'Festival bookings and international touring',
       'Coldharbour Recordings distribution network',
     ],
     socialAccounts: [
@@ -286,11 +285,7 @@ export const djTimClark: BrandStrategy = {
         description: 'EDMA wins + Coldharbour affiliation + Markus Schulz co-signs create booking pitch for mid-tier festival stages.',
         evidence: 'EDC 2026 confirmed. ADE 2023 precedent. MMW 2025 connections. 2027 festival season booking cycle aligns perfectly.',
       },
-      {
-        title: 'Untapped Sync Market',
-        description: '"Underground big room" with vocal hooks is highly syncable for gaming, sports, and brand content.',
-        evidence: 'Zero current sync activity. "Pure Life," "Secrets," "You Belong" all have commercial appeal.',
-      },
+
       {
         title: 'The Collab Economy',
         description: 'The Markus Schulz "You Belong" template proves Tim can hold his own on collaborative tracks.',
@@ -298,11 +293,7 @@ export const djTimClark: BrandStrategy = {
       },
     ],
     threats: [
-      {
-        title: 'Identity Crisis',
-        description: 'Rebrand too aggressively and alienate existing audience who follows the "finance to DJ" story.',
-        evidence: 'Risk of losing 50-100 superfans who are invested in the origin narrative.',
-      },
+
       {
         title: 'Streaming Plateau',
         description: 'Release cadence doesn\'t translate to meaningful listener growth if playlist support doesn\'t materialize.',
@@ -315,11 +306,11 @@ export const djTimClark: BrandStrategy = {
       },
       {
         title: 'Trance Genre Ceiling',
-        description: 'Trance has resurgence but remains niche compared to house and techno.',
-        evidence: 'Risk of market shift away from trance before Tim capitalizes.',
+        description: 'Trance is a small market with a devoted but limited ceiling compared to house and techno. Even at the top of the trance pyramid, the numbers are a fraction of what adjacent genres produce. A genre shift or hybrid evolution as part of the rebrand could significantly expand the addressable audience.',
+        evidence: 'Top trance artists peak at 300K-500K Spotify monthly listeners vs. 1M-10M+ for house/techno equivalents. Genre flexibility within the rebrand is an opportunity, not a risk — if timed correctly.',
       },
     ],
-    synthesis: 'Tim Clark has built formidable infrastructure—award wins, label support, social scale, radio distribution—but the brand narrative is fundamentally misaligned. The thesis: shed the origin-story anchor, convert social audience into streaming listeners through disciplined releases, and elevate from local residency DJ to festival-circuit artist. This requires simultaneous brand repositioning, content strategy execution, and booking matrix shift. The 12-month window is tight but achievable given the existing assets.',
+    synthesis: 'Tim Clark has built formidable infrastructure—award wins, label support, social scale, radio distribution—but the brand narrative is fundamentally misaligned. The thesis: shed the origin-story anchor, convert social audience into streaming listeners through disciplined releases, and elevate from local residency DJ to credible touring artist. This requires simultaneous brand repositioning, content strategy execution, and booking matrix shift. The 12-month window is tight but achievable given the existing assets.',
   },
 
   // ─── Executive Summary ───
@@ -393,34 +384,16 @@ export const djTimClark: BrandStrategy = {
       thesis: 'Fan data is the single most important infrastructure to build. Without email addresses, SMS opt-ins, and direct communication channels, every other effort depends on algorithms the artist does not control. Building a 10K+ email list is not a supporting initiative — it is THE initiative that makes everything else work. Converting even 10% of the existing Instagram following to active fans on direct channels would transform the metrics overnight.',
       successMetrics: [
         'Email/SMS list: 0 → 10K+ subscribers',
-        'Discord/community: 0 → 2K+ active members',
         'Email open rate: 30%+ (industry benchmark 20%)',
         'Merch revenue growth: 3x year-over-year',
       ],
       keyInitiatives: [
         'Launch email/SMS collection (pre-save funnels)',
-        'Create Discord superfan community',
         'Exclusive content tiers (Patreon/Substack)',
         'Superfan identification and VIP program',
       ],
     },
-    {
-      title: 'Expand the Radius',
-      thesis: 'Beyond the core electronic music audience, Tim\'s sound has crossover potential into broader energy/festival/lifestyle audiences. Strategic collaborations, sync placements, and content partnerships with lifestyle brands can pull in listeners who don\'t identify as "trance fans" but respond to the energy.',
-      successMetrics: [
-        'Sync placements: 0 → 3-5 (gaming, sports, brand)',
-        'Collaboration releases: 0 → 3+ per quarter',
-        'Brand partnerships: 1-2 (lifestyle, energy drinks, tech)',
-        'Crossover playlist adds: 25+ (Spotify lifestyle/energy playlists)',
-      ],
-      keyInitiatives: [
-        'Package tracks for sync licensing',
-        'Identify collaboration partners in lifestyle/electronic space',
-        'Pitch lifestyle brand partnerships',
-        'Develop crossover content strategy',
-      ],
-    },
-  ],
+],
 
   // ─── Phased Roadmap ───
   roadmap: [
@@ -454,7 +427,6 @@ export const djTimClark: BrandStrategy = {
         { action: 'Execute 4-5 releases on strict 3-4 week cadence', deadline: 'Sep 30, 2026' },
         { action: 'Launch Inspire Radio podcast rebrand with streaming CTAs', deadline: 'Jul 1, 2026' },
         { action: 'Activate creator seeding program (20-30 micro-creators)', deadline: 'Jul 30, 2026' },
-        { action: 'Begin sync licensing package development', deadline: 'Aug 30, 2026' },
         { action: 'Focus on fan data capture and email list growth', deadline: 'Sep 30, 2026' },
         { action: 'Build content pipeline for consistent releases', deadline: 'Sep 30, 2026' },
       ],
@@ -474,7 +446,7 @@ export const djTimClark: BrandStrategy = {
       actions: [
         { action: 'Target 25K+ Spotify monthly listeners', deadline: 'Dec 31, 2026' },
         { action: 'Release collaboration tracks with 2 mid-tier artists', deadline: 'Dec 15, 2026' },
-        { action: 'Launch superfan community platform (Discord)', deadline: 'Nov 1, 2026' },
+        { action: 'Launch superfan community platform', deadline: 'Nov 1, 2026' },
         { action: 'Execute holiday release moment (major single)', deadline: 'Nov 20, 2026' },
         { action: 'Evaluate touring readiness based on 6 months of data', deadline: 'Dec 15, 2026' },
         { action: 'Explore secondary market test dates if metrics support it', deadline: 'Dec 31, 2026' },
@@ -482,7 +454,7 @@ export const djTimClark: BrandStrategy = {
       ],
       expectedOutcomes: [
         'Spotify monthly listeners: 15K → 25K',
-        'Discord community: 1K+ active members',
+        'Superfan community: 1K+ active members',
         'Email list: 7K+ subscribers',
         'Touring strategy framework established',
         'Secondary market opportunities identified',
@@ -496,14 +468,12 @@ export const djTimClark: BrandStrategy = {
       actions: [
         { action: 'Target 50K+ Spotify monthly listeners', deadline: 'Apr 30, 2027' },
         { action: 'If streaming and fan data metrics support it, begin planning touring strategy for late 2027', deadline: 'Apr 30, 2027' },
-        { action: 'Full sync licensing portfolio active (5-10 placements)', deadline: 'Apr 30, 2027' },
         { action: 'Measure rebrand effectiveness and metrics', deadline: 'Apr 15, 2027' },
         { action: 'Plan next 12-month cycle', deadline: 'Apr 30, 2027' },
       ],
       expectedOutcomes: [
         'Spotify monthly listeners: 50K+ achieved',
         'Touring strategy framework evaluated and refined',
-        'Sync placements: 3-5 active',
         'Email list: 10K+ engaged subscribers',
         'Brand identity: "Tim Clark" = specific sound, not finance background',
       ],
@@ -594,16 +564,16 @@ export const djTimClark: BrandStrategy = {
       },
       {
         name: 'Live Events & Touring',
-        objective: 'Build credibility as touring artist. Reduce Vegas overexposure, increase premium bookings.',
+        objective: 'Reduce Vegas overexposure. Focus on brand-building first, explore touring after 6 months of releases.',
         tactics: [
-          'Premium Vegas residencies (Zouk, XS, LIV 2-3x per quarter)',
-          'Festival circuit prioritization (8-10 bookings 2027)',
-          'International touring (Europe, Asia, Latin America)',
-          'Cruise circuit as premium experience',
-          'VIP meet-and-greet for superfans',
+          'Reduce downtown Vegas frequency; pursue premium venues when opportunities arise',
+          'Focus first 6 months on releases and brand-building exclusively',
+          'Evaluate secondary market test dates after month 6 based on streaming data',
+          'Leverage Coldharbour/Schulz network for organic opportunities',
+          'VIP meet-and-greet for superfans at select events',
         ],
         contentTypes: ['Live performances', 'Event announcements', 'Meet-and-greet experiences'],
-        frequency: 'Weekly (residencies) + 8-10 festivals + international tours',
+        frequency: 'Reduced local residency (2x/month) + selective opportunities post-month 6',
       },
     ],
     allocationModel: {
@@ -615,8 +585,7 @@ export const djTimClark: BrandStrategy = {
         { channel: 'Creator & Influencer Partnerships', allocation: 15 },
         { channel: 'PR & Press Coverage', allocation: 5 },
         { channel: 'Streaming & DSP Optimization', allocation: 15 },
-        { channel: 'Sync Licensing Services', allocation: 3 },
-        { channel: 'Other (Analytics, Tools, etc.)', allocation: 2 },
+        { channel: 'Other (Analytics, Tools, etc.)', allocation: 5 },
       ],
       total: 100,
     },
@@ -687,15 +656,7 @@ export const djTimClark: BrandStrategy = {
       timeframe: '12 months',
       rationale: 'Festival bookings validate touring artist status. First 6 months focus on brand-building; touring strategy evaluated based on streaming metrics and fan data.',
     },
-    {
-      metric: 'Sync Placements',
-      current: '0',
-      target: '3-5',
-      benchmark: 'Emerging artist baseline in commercial sync market',
-      timeframe: '12 months',
-      rationale: 'Revenue diversification. Vocal-driven trance tracks are highly syncable.',
-    },
-    {
+{
       metric: 'Tier 1 Press Features (DJ Mag, Mixmag, etc.)',
       current: '2 (EDMA coverage, L.A. Weekly)',
       target: '8',
@@ -707,13 +668,7 @@ export const djTimClark: BrandStrategy = {
 
   // ─── Risk Matrix ───
   riskMatrix: [
-    {
-      title: 'Identity Crisis',
-      description: 'Rebrand too aggressively and alienate existing audience who follows the "finance to DJ" story.',
-      likelihood: 'medium',
-      impact: 'high',
-      mitigation: 'Gradual narrative evolution, not sudden deletion. Celebrate Tradebloc success in finance context, but position music as separate identity. Retain 50-100 "origin story" fans while converting to music-first messaging.',
-    },
+
     {
       title: 'Streaming Plateau',
       description: 'Release cadence doesn\'t translate to meaningful listener growth if playlist support doesn\'t materialize.',
@@ -721,13 +676,7 @@ export const djTimClark: BrandStrategy = {
       impact: 'high',
       mitigation: 'Diversify growth channels beyond organic: paid promotion ($500-1K per release), collaboration releases (expanded audience reach), paid TikTok seeding, Spotify playlist pitching diversity (not just major playlists).',
     },
-    {
-      title: 'Festival Rejection',
-      description: 'Booking agents don\'t take leap on an artist with <50K Spotify. Perception that artist is "not festival-ready."',
-      likelihood: 'medium',
-      impact: 'medium',
-      mitigation: 'Leverage Coldharbour/Schulz connections early (spring 2026) for 2-3 secondary festival bookings. Use these as proof points for larger festivals. Present festival pitch with streaming growth trajectory, not just current numbers.',
-    },
+
     {
       title: 'Content Burnout',
       description: '3-4 week release cadence + social content + touring is physically demanding. Risk of inconsistency.',
@@ -795,21 +744,13 @@ export const djTimClark: BrandStrategy = {
     },
     {
       title: 'Build Direct-to-Fan Infrastructure',
-      description: 'Email/SMS list with automated pre-save funnels. Launch Discord or community platform for superfans.',
-      rationale: 'Email list (10K target) enables pre-save automation and merchandise upsell. Discord = retention and community building.',
+      description: 'Email/SMS list with automated pre-save funnels. Launch exclusive community platform for superfans.',
+      rationale: 'Email list (10K target) enables pre-save automation and merchandise upsell. Community platform = retention and engagement.',
       timeline: '60–90 days (medium priority)',
       priority: 'medium',
-      expectedOutcome: 'Email list grows 1K/month. Discord reaches 2K active members by end of year.',
+      expectedOutcome: 'Email list grows 1K/month. Superfan community reaches 2K active members by end of year.',
     },
-    {
-      title: 'Sync Licensing Portfolio',
-      description: 'Package 5–10 tracks for sync licensing. Target gaming, sports, and lifestyle brands.',
-      rationale: '"Underground big room" with vocal hooks is highly syncable. Zero current activity = revenue left on table.',
-      timeline: '60–90 days (medium priority)',
-      priority: 'medium',
-      expectedOutcome: '3–5 sync placements secured. $10K–50K annual sync revenue.',
-    },
-  ],
+],
 
   // ─── Images ───
   images: {

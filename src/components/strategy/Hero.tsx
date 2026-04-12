@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion-shim';
 import { BrandStrategy } from '@/lib/types/strategy';
 
 interface HeroProps {

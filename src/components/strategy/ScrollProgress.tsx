@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion-shim';
 
 export default function ScrollProgress() {
   const [progress, setProgress] = useState(0);

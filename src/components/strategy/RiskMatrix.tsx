@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useInView } from '@/lib/hooks/useInView';
+import { motion } from '@/lib/motion-shim';
 import { BrandStrategy } from '@/lib/types/strategy';
 import SectionWrapper from './SectionWrapper';
 
@@ -9,144 +8,82 @@ interface RiskMatrixProps {
   strategy: BrandStrategy;
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
+function getLikelihoodLabel(val: string | number): string {
+  if (typeof val === 'string') return val.charAt(0).toUpperCase() + val.slice(1);
+  return String(val);
+}
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 },
-  },
-};
+function getImpactLabel(val: string | number): string {
+  if (typeof val === 'string') return val.charAt(0).toUpperCase() + val.slice(1);
+  return String(val);
+}
+
+function getSeverityFromStrings(likelihood: string | number, impact: string | number): { label: string; color: string } {
+  const likelihoodMap: Record<string, number> = { low: 1, medium: 2, high: 3 };
+  const impactMap: Record<string, number> = { low: 1, medium: 2, high: 3 };
+  const l = typeof likelihood === 'string' ? (likelihoodMap[likelihood] || 2) : likelihood;
+  const i = typeof impact === 'string' ? (impactMap[impact] || 2) : impact;
+  const score = l * i;
+  if (score >= 6) return { label: 'High', color: '#FD3737' };
+  if (score >= 4) return { label: 'Medium', color: '#FF6B6B' };
+  return { label: 'Low', color: '#B8B8C0' };
+}
 
 export default function RiskMatrix({ strategy }: RiskMatrixProps) {
   const risks = strategy.riskMatrix;
-  const { ref, isInView } = useInView();
 
   return (
-    <SectionWrapper id="risks" className="py-20">
-      <div ref={ref} className="space-y-12">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-4"
-        >
-          <h2 className="text-4xl font-bold text-[#E4E4E9]">Risk Matrix</h2>
-          <p className="text-[#B8B8C0] text-lg max-w-2xl">
-            Identified risks mapped by likelihood and impact, with mitigation strategies to ensure project success.
+    <SectionWrapper id="risks">
+      <div className="max-w-5xl mx-auto px-6 md:px-8">
+        <div className="mb-12">
+          <p className="text-xs text-[#FD3737] uppercase tracking-[0.2em] font-semibold mb-4">Risk Assessment</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#E4E4E9] mb-4">Risk Matrix</h2>
+          <p className="text-base md:text-lg text-[#B8B8C0] max-w-2xl">
+            Identified risks mapped by likelihood and impact, with mitigation strategies.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Matrix Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid gap-6"
-        >
+        <div className="space-y-4">
           {risks.map((risk, index) => {
-            // Calculate position on matrix (likelihood x impact both 1-5)
-            const likelihood = risk.likelihood || 3;
-            const impact = risk.impact || 3;
-            const severity = likelihood * impact;
-            
-            // Color coding based on severity
-            let severityColor = '#22C55E'; // Low
-            if (severity >= 12) severityColor = '#DC2626'; // Critical
-            else if (severity >= 9) severityColor = '#EA580C'; // High
-            else if (severity >= 6) severityColor = '#F59E0B'; // Medium
-
+            const severity = getSeverityFromStrings(risk.likelihood || 'medium', risk.impact || 'medium');
             return (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
-                className="border border-[#2A2A2E] rounded-lg p-6 bg-[#121214] hover:border-[#FD3737] transition-colors"
+                className="border border-[#262626]/60 rounded-2xl p-6 bg-gradient-to-br from-[#1A1A1A]/80 to-[#141414]/50 hover:border-[#FD3737]/30 transition-colors"
               >
-                <div className="flex items-start justify-between gap-6">
-                  {/* Risk Details */}
-                  <div className="flex-1 space-y-4">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-semibold text-[#E4E4E9]">
-                          {risk.description}
-                        </h3>
-                        <div className="flex gap-4 text-sm">
-                          <div className="flex items-center gap-2">
-                            <span className="text-[#B8B8C0]">Likelihood:</span>
-                            <span className="font-semibold text-[#FD3737]">
-                              {likelihood}/5
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-[#B8B8C0]">Impact:</span>
-                            <span className="font-semibold text-[#FD3737]">
-                              {impact}/5
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      {/* Severity Badge */}
-                      <div
-                        className="px-3 py-1 rounded text-white text-sm font-semibold whitespace-nowrap"
-                        style={{ backgroundColor: severityColor }}
-                      >
-                        {severity >= 12 ? 'Critical' : severity >= 9 ? 'High' : severity >= 6 ? 'Medium' : 'Low'}
-                      </div>
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                    <div className="space-y-2 flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold text-[#E4E4E9]">{risk.title}</h3>
+                      <p className="text-sm text-[#B8B8C0] leading-relaxed">{risk.description}</p>
                     </div>
-
-                    {/* Mitigation Strategy */}
-                    {risk.mitigation && (
-                      <div className="pt-4 border-t border-[#2A2A2E]">
-                        <p className="text-sm text-[#B8B8C0]">
-                          <span className="text-[#E4E4E9] font-semibold">Mitigation: </span>
-                          {risk.mitigation}
-                        </p>
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                      <div className="flex gap-3 text-sm">
+                        <span className="text-[#B8B8C0]">Likelihood: <span className="font-semibold text-[#E4E4E9]">{getLikelihoodLabel(risk.likelihood || 'medium')}</span></span>
+                        <span className="text-[#B8B8C0]">Impact: <span className="font-semibold text-[#E4E4E9]">{getImpactLabel(risk.impact || 'medium')}</span></span>
                       </div>
-                    )}
+                      <span
+                        className="text-xs font-semibold px-3 py-1 rounded-full border whitespace-nowrap"
+                        style={{ color: severity.color, borderColor: severity.color + '40', backgroundColor: severity.color + '10' }}
+                      >
+                        {severity.label}
+                      </span>
+                    </div>
                   </div>
+
+                  {risk.mitigation && (
+                    <div className="pt-4 border-t border-[#262626]/60">
+                      <p className="text-sm text-[#B8B8C0] leading-relaxed">
+                        <span className="text-[#E4E4E9] font-semibold">Mitigation: </span>
+                        {risk.mitigation}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
-
-        {/* Risk Legend */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="pt-8 border-t border-[#2A2A2E]"
-        >
-          <p className="text-sm text-[#B8B8C0] mb-4">Risk Severity Levels:</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {[
-              { label: 'Low', color: '#22C55E' },
-              { label: 'Medium', color: '#F59E0B' },
-              { label: 'High', color: '#EA580C' },
-              { label: 'Critical', color: '#DC2626' },
-            ].map((level) => (
-              <div key={level.label} className="flex items-center gap-2">
-                <div
-                  className="w-3 h-3 rounded"
-                  style={{ backgroundColor: level.color }}
-                />
-                <span className="text-sm text-[#B8B8C0]">{level.label}</span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        </div>
       </div>
     </SectionWrapper>
   );
