@@ -21,7 +21,7 @@ export const djTimClark: BrandStrategy = {
       { trait: 'Underground with polish', evidence: 'Produces big room trance with studio-grade quality but underground sensibility. The sound is premium without being commercial.' },
       { trait: 'Relentlessly consistent', evidence: 'Weekly Inspire Radio show across 6+ stations. Committed to a 3-4 week release cadence. Shows up every week.' },
       { trait: 'Craft-first', evidence: 'Leads with production quality and sound design, not persona or backstory. Lets the music do the talking.' },
-      { trait: 'Quietly ambitious', evidence: 'Does not self-promote the finance background. Focused on earning credibility through output, not narrative.' },
+      { trait: 'Ambitious but undisciplined narrative', evidence: 'Talks openly and frequently about the finance background, which undercuts music credibility. The rebrand must redirect this energy toward music-first storytelling — the ambition is real, the framing needs to change.' },
     ],
     keyOfferings: [
       'Original "underground big room" trance sound (progressive + trance + big room hybrid)',
