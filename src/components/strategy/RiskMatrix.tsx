@@ -42,18 +42,12 @@ export default function RiskMatrix({ strategy }: { strategy: BrandStrategy }) {
                     <h3 className="text-lg font-bold text-[#E4E4E9]">{risk.title}</h3>
                     <p className="text-sm text-[#B8B8C0] leading-relaxed mt-1">{risk.description}</p>
                   </div>
-                  <div className="flex items-center gap-3 flex-shrink-0">
-                    <div className="flex gap-3 text-sm">
-                      <span className="text-[#B8B8C0]">Likelihood: <span className="font-bold text-[#E4E4E9]">{cap(risk.likelihood || 'medium')}</span></span>
-                      <span className="text-[#B8B8C0]">Impact: <span className="font-bold text-[#E4E4E9]">{cap(risk.impact || 'medium')}</span></span>
-                    </div>
-                    <span
-                      className="text-xs font-bold px-3 py-1 rounded-full border"
-                      style={{ color: severity.color, borderColor: severity.color + '40', backgroundColor: severity.color + '10' }}
-                    >
-                      {severity.label}
-                    </span>
-                  </div>
+                  <span
+                    className="text-xs font-bold px-3 py-1.5 rounded-full border flex-shrink-0"
+                    style={{ color: severity.color, borderColor: severity.color + '40', backgroundColor: severity.color + '10' }}
+                  >
+                    Risk: {severity.label}
+                  </span>
                 </div>
                 {risk.mitigation && (
                   <div className="pt-4 border-t border-[#262626]/60">
