@@ -82,44 +82,48 @@ function BrandPosition({ strategy }: BrandPositionProps) {
               const isLegacy = account.note?.includes('Legacy') || account.note?.includes('fan page');
               const isNew = account.platform.includes('(New)');
               const platformBase = account.platform.replace(' (New)', '');
+              const isKeeping = !isLegacy && !isNew;
+              const isHighlight = isNew || isKeeping;
               return (
                 <div
                   key={i}
                   className={`p-6 rounded-2xl border transition-all duration-300 ${
-                    isNew
-                      ? 'bg-[#FD3737]/8 border-[#FD3737]/30 hover:border-[#FD3737]/60'
-                      : isLegacy
-                        ? 'bg-[#111] border-[#262626]/60 opacity-70'
-                        : 'bg-[#111] border-[#262626]/80 hover:border-[#FD3737]/30'
+                    isLegacy
+                      ? 'bg-[#111] border-[#262626]/60 opacity-70'
+                      : 'bg-[#FD3737]/8 border-[#FD3737]/30 hover:border-[#FD3737]/60'
                   }`}
                 >
                   <div className="flex items-center gap-4 mb-3">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                      isNew ? 'bg-[#FD3737]/20' : 'bg-[#1A1A1A]'
+                      isHighlight ? 'bg-[#FD3737]/20' : 'bg-[#1A1A1A]'
                     }`}>
-                      <PlatformIcon platform={platformBase} isNew={isNew} />
+                      <PlatformIcon platform={platformBase} isNew={isHighlight} />
                     </div>
-                    <div className="flex items-center gap-2.5 flex-wrap">
-                      <h4 className={`text-lg font-bold ${isNew ? 'text-[#FD3737]' : 'text-white'}`}>
-                        {account.platform}
-                      </h4>
-                      {isLegacy && (
-                        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#B8B8C0]/10 text-[#B8B8C0] border border-[#B8B8C0]/20 uppercase tracking-wider">
-                          Archiving
-                        </span>
-                      )}
-                      {isNew && (
-                        <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#FD3737]/15 text-[#FD3737] border border-[#FD3737]/30 uppercase tracking-wider">
-                          New
-                        </span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2.5 flex-wrap">
+                        <h4 className={`text-lg font-bold ${isHighlight ? 'text-[#FD3737]' : 'text-white'}`}>
+                          {account.platform}
+                        </h4>
+                        {isLegacy && (
+                          <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#B8B8C0]/10 text-[#B8B8C0] border border-[#B8B8C0]/20 uppercase tracking-wider">
+                            Archiving
+                          </span>
+                        )}
+                        {isNew && (
+                          <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#FD3737]/15 text-[#FD3737] border border-[#FD3737]/30 uppercase tracking-wider">
+                            New
+                          </span>
+                        )}
+                      </div>
+                      {account.followers && (
+                        <p className={`text-sm font-semibold mt-0.5 ${isHighlight ? 'text-[#FD3737]/70' : 'text-[#666]'}`}>
+                          {account.followers >= 1000 ? `${(account.followers / 1000).toFixed(account.followers >= 10000 ? 0 : 1)}K` : account.followers} followers
+                        </p>
                       )}
                     </div>
                   </div>
                   {account.note && (
                     <p className="text-sm text-[#B8B8C0] leading-relaxed">{account.note}</p>
-                  )}
-                  {!account.note && account.handle && (
-                    <p className="text-sm text-[#666]">{account.handle}</p>
                   )}
                 </div>
               );

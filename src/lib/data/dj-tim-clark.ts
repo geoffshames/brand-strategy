@@ -34,9 +34,9 @@ export const djTimClark: BrandStrategy = {
       { platform: 'Instagram (New)', handle: 'TBD — launching with rebrand', note: 'Fresh account with clean audience. Primary account post-rebrand.' },
       { platform: 'TikTok', handle: '@timclarklive', url: 'https://tiktok.com/@timclarklive', note: 'Legacy account — transitioning to fan page. Low-affinity audience from ads.' },
       { platform: 'TikTok (New)', handle: 'TBD — launching with rebrand', note: 'Fresh account for sound seeding with real fans.' },
-      { platform: 'Facebook', handle: '@TimClarkLiveFB', url: 'https://facebook.com/TimClarkLiveFB' },
-      { platform: 'YouTube', handle: 'Tim Clark Music', url: 'https://youtube.com/@timclarklive' },
-      { platform: 'SoundCloud', handle: 'tim-clark-music', url: 'https://soundcloud.com/tim-clark-music' },
+      { platform: 'Facebook', handle: '@TimClarkLiveFB', url: 'https://facebook.com/TimClarkLiveFB', followers: 3200, note: 'Active page. Event promotion and community engagement.' },
+      { platform: 'YouTube', handle: 'Tim Clark Music', url: 'https://youtube.com/@timclarklive', followers: 1800, note: 'DJ set recordings, music videos, Inspire Radio episodes.' },
+      { platform: 'SoundCloud', handle: 'tim-clark-music', url: 'https://soundcloud.com/tim-clark-music', followers: 950, note: 'Extended mixes and unreleased edits. Core DJ audience.' },
     ],
     pressHighlights: [
       { outlet: 'Las Vegas Weekly', title: 'Best DJ 2025 — Readers\' Choice', date: '2025', tier: 'tier2' },
