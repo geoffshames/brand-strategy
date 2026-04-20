@@ -39,14 +39,14 @@ export const djTimClark: BrandStrategy = {
     ],
     pressHighlights: [
       { outlet: 'Las Vegas Weekly', title: 'Best DJ 2025 — Readers\' Choice', date: '2025', tier: 'tier2' },
-      { outlet: 'DJ Mag', title: 'Global Ad Campaign Feature', date: '2025', tier: 'tier1' },
+      { outlet: 'DJ Mag', title: 'Global Ad Campaign Feature (Paid Placement)', date: '2025', tier: 'niche' },
       { outlet: 'Magnetic Magazine', title: 'Exclusive Interview', date: 'Dec 2024', tier: 'niche' },
       { outlet: 'EDMTunes', title: 'Interview Feature', date: 'May 2024', tier: 'niche' },
       { outlet: 'YourEDM', title: 'EDMA Nominee Coverage', date: '2024', tier: 'niche' },
       { outlet: 'L.A. Weekly', title: 'NYE 2024 Coverage', date: '2024', tier: 'tier2' },
     ],
     credibilityScore: 72,
-    gap: 'The "finance guy turned DJ" narrative is an anchor. Current press, website, and social lead with Tradebloc background instead of music-first identity. This creates a 50:1 ratio gap: 120K Instagram followers but only 2.4K Spotify monthly listeners. The audience knows Tim Clark the persona; they don\'t know Tim Clark the artist.',
+    gap: 'The "finance guy turned DJ" narrative is an anchor. Current press, website, and social lead with Tradebloc background instead of music-first identity. Previous management built inflated metrics through paid follower acquisition and pay-to-play press—the DJ Mag feature was a paid ad, not organic coverage. This creates a 50:1 ratio gap: 120K Instagram followers but only 2.4K Spotify monthly listeners and sub-100 likes per feed post. The audience is largely bots; real engagement suggests only a few hundred genuine followers paying attention at any given time.',
   },
 
   // ─── Competitive Landscape ───
@@ -97,10 +97,10 @@ export const djTimClark: BrandStrategy = {
         exploitableGaps: ['Tim has higher credibility (EDMA wins)', 'Tim\'s underground positioning differentiates from pop-crossover'],
       },
     ],
-    marketAnalysis: 'The underground trance/progressive market is consolidating around Coldharbour and a small cohort of allied labels. Nifra, Estiva, and Daxson are the reference tier, each with 150K–350K monthly listeners. Pavlo Vicci represents the emerging wave. Tim Clark has EDMA wins and Schulz mentorship that rival Nifra\'s credentials, but Spotify listeners are lagging by 130K–330K. The gap is not production quality—it\'s brand visibility and algorithmic seeding. The opportunity: Tim can climb faster because his social foundation (120K Instagram) is being under-leveraged. Most Coldharbour artists have 3–5x Tim\'s streaming with a fraction of his social following. This is a conversion asymmetry.',
+    marketAnalysis: 'The underground trance/progressive market is consolidating around Coldharbour and a small cohort of allied labels. Nifra, Estiva, and Daxson are the reference tier, each with 150K–350K monthly listeners. Pavlo Vicci represents the emerging wave. Tim Clark has EDMA wins and Schulz mentorship that rival Nifra\'s credentials, but Spotify listeners are lagging by 130K–330K. The gap is not production quality—it\'s a poisoned brand narrative and a social following built on paid acquisition rather than real fans. The 120K Instagram is not an underleveraged asset—it\'s a liability that signals inauthenticity to anyone who looks closely. The opportunity: a clean-slate rebrand paired with a fan page network that builds real, engaged audiences from scratch.',
     crowdedness: 'moderate',
     opportunities: [
-      'The 50:1 social-to-streaming ratio is an untapped conversion engine.',
+      'Fan page network: genre-focused owned pages that seed Tim Clark content to real audiences—replacing the botted 120K with authentic reach.',
       'Release cadence discipline (every 3-4 weeks) vs. competitor irregular scheduling.',
       'Coldharbour pipeline + EDMA wins create festival booking credibility.',
       'International touring history (Japan, Amsterdam, Miami) proves demand beyond Vegas.',
@@ -310,20 +310,20 @@ export const djTimClark: BrandStrategy = {
 
   // ─── Executive Summary ───
   executiveSummary: {
-    thesis: 'Tim Clark has built an impressive brand infrastructure—120K Instagram, EDMA awards, Coldharbour releases, Markus Schulz mentorship—but the brand is fundamentally misaligned. The "finance titan turned DJ" story got him press, but it\'s now an anchor preventing the music from leading. With 2.4K Spotify monthly listeners against 120K Instagram followers, the conversion pipeline is broken: audiences know Tim Clark the persona but aren\'t listening to Tim Clark the artist.',
+    thesis: 'Tim Clark has real assets—EDMA awards, Coldharbour releases, Markus Schulz mentorship, a weekly radio show on Insomniac—but the brand built around them is a liability. Previous management built inflated metrics through paid follower acquisition and pay-to-play press, creating a "finance titan turned DJ" narrative that undermines credibility in every room that matters. The 120K Instagram followers are largely bots (sub-100 likes, 3 comments per post). The conversion pipeline isn\'t broken—it was never real. The strategy: clean-slate rebrand, a fan page network that builds real audiences, and disciplined execution that lets the music lead.',
     keyFindings: [
-      'Social-to-streaming ratio is 50:1 (120K Instagram vs 2.4K Spotify ML) — massive untapped funnel',
-      'Finance narrative is credibility liability in underground community; authenticity is currency',
+      '120K Instagram followers are largely bots—sub-100 likes, 3 comments per feed post. Previous management built fake metrics through paid follower acquisition. This is not a funnel to convert; it\'s a liability to archive and repurpose as a fan page.',
+      'Finance narrative and "celebrity DJ" positioning are credibility killers—the brand was built wrong from the start',
       'Downtown Vegas overexposure dilutes credibility; local frequency needs to decrease',
       'Release cadence is inconsistent; competitors face same challenge (differentiation opportunity)',
-      'Fan data infrastructure (email/SMS) is nonexistent; this is the single biggest gap to close',
-      'Inspire Radio distribution reaches 50K+ weekly listeners; not being leveraged for streaming conversion',
+      'Fan data infrastructure (email/SMS) is nonexistent; fan page network + direct-to-fan channels are the foundation to build',
+      'Inspire Radio reaches 50K+ weekly listeners but has zero streaming conversion infrastructure—no pre-save links, no CTAs, no fan data capture',
     ],
-    primaryRecommendation: 'Complete a music-first rebrand (website, press kit, visual identity) while launching fresh social accounts to replace botted legacy profiles. Execute a disciplined 3-4 week release cadence with fan data capture (email/SMS) as the central infrastructure priority. Reduce local Vegas frequency and focus on brand-building for 6+ months before exploring more robust touring opportunities. Target 50K Spotify monthly listeners and 10K email subscribers within 12 months.',
+    primaryRecommendation: 'Complete a music-first rebrand (website, press kit, visual identity) with fresh social accounts replacing the botted legacy profiles. Transition the 120K legacy Instagram into a fan page and build a strategic network of genre-focused fan pages that seed Tim Clark content to real audiences. Execute a disciplined 3-4 week release cadence with fan data capture (email/SMS) as the central infrastructure. Reduce local Vegas frequency and focus exclusively on brand-building for the first 6 months. Target 50K Spotify monthly listeners and 10K email subscribers within 12 months.',
     timelineToTarget: '12 months (April 2026 – April 2027) with quarterly acceleration checkpoints',
     rebrandGoals: [
       { number: 1, title: 'Shed the origin story', description: 'Kill the "finance titan turned DJ" narrative across every touchpoint. Website, press kit, social bios, booking materials — music leads, everything else disappears.' },
-      { number: 2, title: 'Build the streaming engine', description: 'Launch fresh social accounts, execute a disciplined 3-4 week release cadence, and seed every track through TikTok and creator partnerships. Convert followers into listeners.' },
+      { number: 2, title: 'Build the streaming engine', description: 'Launch fresh social accounts backed by a strategic fan page network. Execute a disciplined 3-4 week release cadence, seed every track through TikTok, creator partnerships, and owned fan pages. Build real audiences that actually convert to listeners.' },
       { number: 3, title: 'Capture the fans directly', description: 'Build email/SMS infrastructure from zero to 10K+ subscribers. Pre-save funnels, exclusive content, direct communication. Stop depending entirely on algorithms you do not control.' },
     ],
     fullNarrative: 'The path forward is a 12-month transformation from local celebrity to credible artist — leveraging the Coldharbour connection, the Markus Schulz mentorship, and disciplined execution as accelerants, not crutches. By Q1 2027, the target is 50K+ Spotify monthly listeners, 10K+ email subscribers, and a brand identity where "Tim Clark" immediately connotes a specific sound — not a financial background.\n\nThis strategy is achievable because the raw materials exist. The music, the label support, the radio distribution, the production budget. What\'s missing is alignment between narrative and execution. The rebrand closes that gap. The execution closes the funnel.',
@@ -362,7 +362,24 @@ export const djTimClark: BrandStrategy = {
         'Launch TikTok sound seeding strategy',
       ],
     },
-        {
+    {
+      title: 'Build the Fan Page Network',
+      thesis: 'The 120K legacy Instagram cannot be salvaged for artist credibility—but it can be repurposed as one node in a strategic network of genre-focused fan pages. These pages (trance news, festival content, DJ culture) become owned media inventory: 90–95% genre content that builds real followers, 5–10% Tim Clark content seeded naturally. This is a proven playbook for building promotional ecosystems around artist properties. The fan page network replaces the botted followers with real, genre-aligned audiences that actually convert to streams and ticket sales.',
+      successMetrics: [
+        '4–6 genre-focused fan pages launched within 60 days',
+        'Combined fan page following: 50K+ within 6 months',
+        'Tim Clark content seeded through network with every release',
+        'Fan page network drives measurable streaming conversions',
+      ],
+      keyInitiatives: [
+        'Launch trance-focused fan pages (Dream State adjacent, trance culture)',
+        'Launch broader electronic music fan pages (festival highlights, DJ culture)',
+        'Hire assistant or team to manage daily posting across network',
+        'Develop content calendar: 90–95% genre, 5–10% Tim Clark',
+        'Track attribution from fan pages to streaming and social growth',
+      ],
+    },
+    {
       title: 'Build Toward Touring',
       thesis: 'The first 6 months are exclusively about releases and brand-building. No touring push. After 6 months of consistent releases and demonstrable streaming growth, more robust touring opportunities can be explored — starting with secondary market shows and building from there. Premium residencies and festival bookings are a long-term outcome, not a near-term promise.',
       successMetrics: [
@@ -408,6 +425,8 @@ export const djTimClark: BrandStrategy = {
         { action: 'Build pre-save funnel infrastructure', deadline: 'May 15, 2026' },
         { action: 'Launch email/SMS list collection', deadline: 'May 30, 2026' },
         { action: 'Begin TikTok sound seeding strategy', deadline: 'Jun 1, 2026' },
+        { action: 'Launch fan page network (4–6 genre-focused pages)', deadline: 'Jun 1, 2026' },
+        { action: 'Transition 120K legacy Instagram to fan page', deadline: 'Jun 15, 2026' },
         { action: 'Reduce Troy Liquor Bar frequency to 2x/month', deadline: 'Jun 15, 2026' },
       ],
       expectedOutcomes: [
@@ -415,6 +434,8 @@ export const djTimClark: BrandStrategy = {
         'Release calendar locked for next 12 months',
         'First release on new cadence executed',
         'Email list: 1K+ early subscribers',
+        'Fan page network launched with consistent posting cadence',
+        'Legacy Instagram transitioned to fan page',
       ],
     },
     {
@@ -428,11 +449,13 @@ export const djTimClark: BrandStrategy = {
         { action: 'Activate creator seeding program (20-30 micro-creators)', deadline: 'Jul 30, 2026' },
         { action: 'Focus on fan data capture and email list growth', deadline: 'Sep 30, 2026' },
         { action: 'Build content pipeline for consistent releases', deadline: 'Sep 30, 2026' },
+        { action: 'Grow fan page network to 25K+ combined following', deadline: 'Sep 30, 2026' },
       ],
       expectedOutcomes: [
         'Spotify monthly listeners: 2.4K → 10K–15K',
         'Email list: 5K+ subscribers',
         'TikTok followers: 5K → 20K',
+        'Fan page network: 25K+ combined following',
         'Content pipeline established',
         'Fan data collection systems active',
       ],
@@ -549,6 +572,19 @@ export const djTimClark: BrandStrategy = {
         frequency: 'Weekly (52 hours per year)',
       },
       {
+        name: 'Fan Page Network',
+        objective: 'Build owned media inventory that seeds Tim Clark content to real, genre-aligned audiences.',
+        tactics: [
+          'Launch 4–6 genre-focused pages (trance culture, festival highlights, DJ culture)',
+          '90–95% genre content to build real following, 5–10% Tim Clark content seeded naturally',
+          'Post 3–5x daily per page to build algorithmic momentum',
+          'Cross-promote Tim Clark releases through network on every drop',
+          'Use fan pages for comment engagement and algorithmic boosting on artist posts',
+        ],
+        contentTypes: ['Genre news and culture', 'Festival highlights', 'Memes and community content', 'Artist spotlights (with Tim Clark seeded in)'],
+        frequency: '3–5 posts per page per day',
+      },
+      {
         name: 'Email & SMS',
         objective: 'Direct-to-fan communication. Pre-save automation and exclusive updates.',
         tactics: [
@@ -656,6 +692,14 @@ export const djTimClark: BrandStrategy = {
       rationale: 'Festival bookings validate touring artist status. First 6 months focus on brand-building; touring strategy evaluated based on streaming metrics and fan data.',
     },
 {
+      metric: 'Fan Page Network Combined Following',
+      current: '0',
+      target: '50,000',
+      benchmark: 'Genre fan pages at 10K–50K each within 6 months with consistent daily posting',
+      timeframe: '6 months',
+      rationale: 'Owned media inventory replaces dependency on botted legacy following. Fan pages drive real, genre-aligned audience growth and provide seeding infrastructure for every release.',
+    },
+    {
       metric: 'Tier 1 Press Features (DJ Mag, Mixmag, etc.)',
       current: '2 (EDMA coverage, L.A. Weekly)',
       target: '8',
@@ -696,6 +740,13 @@ export const djTimClark: BrandStrategy = {
       likelihood: 'medium',
       impact: 'medium',
       mitigation: 'Legacy accounts remain active as fan pages, providing continuity. New accounts benefit from clean algorithm signal and real engagement. Cross-promote new accounts from legacy pages. Allocate modest paid budget for awareness on new accounts.',
+    },
+    {
+      title: 'Client Ego Management',
+      description: 'Tim identifies as a celebrity DJ and may resist the rebrand\'s core premise—that the current brand is a liability. Showing him 25K real followers as a target instead of the current 120K could trigger resistance.',
+      likelihood: 'high',
+      impact: 'high',
+      mitigation: 'Lead with math: 25K real fans who convert vs. 120K bots who don\'t. Show mockup of clean new feed before pitching the archive. Frame the fan page network as an expansion of his reach, not a loss. Use the 50:1 streaming ratio as undeniable proof the current approach failed. Present the vision as premium and exciting—not a downgrade.',
     },
   ],
 
@@ -742,6 +793,14 @@ export const djTimClark: BrandStrategy = {
       expectedOutcome: 'Release sounds reach 1M–5M TikTok impressions. Spotify pre-save funnel activates.',
     },
     {
+      title: 'Launch Fan Page Network',
+      description: 'Build 4–6 genre-focused fan pages (trance culture, festival highlights, DJ culture) as owned media inventory. 90–95% genre content, 5–10% Tim Clark seeding.',
+      rationale: 'Fan pages build real, genre-aligned audiences that convert to streams and ticket sales. Replaces botted legacy following with authentic reach and gives every release a built-in promotional ecosystem.',
+      timeline: '30–60 days (high priority)',
+      priority: 'high',
+      expectedOutcome: 'Combined fan page following of 50K+ within 6 months. Owned inventory for every release launch. Measurable streaming attribution.',
+    },
+    {
       title: 'Build Direct-to-Fan Infrastructure',
       description: 'Email/SMS list with automated pre-save funnels. Launch exclusive community platform for superfans.',
       rationale: 'Email list (10K target) enables pre-save automation and merchandise upsell. Community platform = retention and engagement.',
@@ -765,5 +824,5 @@ export const djTimClark: BrandStrategy = {
   preparedFor: 'DJ Tim Clark',
   preparedBy: 'Crowd Control Digital',
   date: 'April 2026',
-  version: '1.0',
+  version: '2.0',
 };
