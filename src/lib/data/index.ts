@@ -1,9 +1,11 @@
 import { BrandStrategy } from '@/lib/types/strategy';
 import { djTimClark } from './dj-tim-clark';
+import { keyveatz } from './keyveatz';
 import { quenlinBlackwell } from './quenlin-blackwell';
 
 export const strategyMap: Record<string, BrandStrategy> = {
   'dj-tim-clark': djTimClark,
+  'keyveatz': keyveatz,
   'quenlin-blackwell': quenlinBlackwell,
 };
 
