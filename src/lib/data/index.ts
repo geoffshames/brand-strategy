@@ -1,8 +1,10 @@
 import { BrandStrategy } from '@/lib/types/strategy';
 import { djTimClark } from './dj-tim-clark';
+import { quenlinBlackwell } from './quenlin-blackwell';
 
 export const strategyMap: Record<string, BrandStrategy> = {
   'dj-tim-clark': djTimClark,
+  'quenlin-blackwell': quenlinBlackwell,
 };
 
 export function getStrategy(slug: string): BrandStrategy | null {
