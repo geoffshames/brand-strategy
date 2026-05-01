@@ -117,7 +117,7 @@ function BrandPosition({ strategy }: BrandPositionProps) {
                       </div>
                       {account.followers && (
                         <p className={`text-sm font-semibold mt-0.5 ${isHighlight ? 'text-[#FD3737]/70' : 'text-[#666]'}`}>
-                          {account.followers >= 1000 ? `${(account.followers / 1000).toFixed(account.followers >= 10000 ? 0 : 1)}K` : account.followers} followers
+                          {account.followers >= 1000000 ? `${(account.followers / 1000000).toFixed(account.followers >= 10000000 ? 1 : 1)}M` : account.followers >= 1000 ? `${(account.followers / 1000).toFixed(account.followers >= 10000 ? 0 : 1)}K` : account.followers} followers
                         </p>
                       )}
                     </div>
