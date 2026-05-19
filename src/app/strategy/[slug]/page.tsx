@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getStrategy, getAllSlugs } from '@/lib/data';
+import { getStrategy, getStrategyForLocale, getAllSlugs } from '@/lib/data';
 import StrategyClient from './client';
 
 interface StrategyPageProps {
@@ -57,6 +57,7 @@ export async function generateMetadata({
 
 export default function StrategyPage({ params }: StrategyPageProps) {
   const strategy = getStrategy(params.slug);
+  const strategyKo = getStrategyForLocale(params.slug, 'ko');
 
   if (!strategy) {
     return (
@@ -73,5 +74,5 @@ export default function StrategyPage({ params }: StrategyPageProps) {
     );
   }
 
-  return <StrategyClient strategy={strategy} />;
+  return <StrategyClient strategy={strategy} strategyKo={strategyKo !== strategy ? strategyKo : null} />;
 }
