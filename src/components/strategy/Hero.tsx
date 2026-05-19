@@ -8,7 +8,7 @@ interface HeroProps {
 
 function Hero({ strategy }: HeroProps) {
   return (
-    <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-black to-[#0A0A0A]">
+    <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-black to-[#0A0A0A] pt-24 md:pt-0">
       {strategy.images.hero1 && (
         <div
           className="absolute inset-0 opacity-20"
