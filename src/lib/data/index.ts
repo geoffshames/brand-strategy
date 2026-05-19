@@ -3,12 +3,14 @@ import { djTimClark } from './dj-tim-clark';
 import { keyveatz } from './keyveatz';
 import { quenlinBlackwell } from './quenlin-blackwell';
 import { beautySchoolDropout } from './beauty-school-dropout';
+import { eightyTwoMajor } from './82major';
 
 export const strategyMap: Record<string, BrandStrategy> = {
   'dj-tim-clark': djTimClark,
   'keyveatz': keyveatz,
   'quenlin-blackwell': quenlinBlackwell,
   'beauty-school-dropout': beautySchoolDropout,
+  '82major': eightyTwoMajor,
 };
 
 export function getStrategy(slug: string): BrandStrategy | null {
