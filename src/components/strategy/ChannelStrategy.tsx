@@ -16,23 +16,51 @@ function ChannelStrategy({ strategy }: { strategy: BrandStrategy }) {
           <p className="text-base md:text-lg text-[#E4E4E9] leading-relaxed max-w-3xl">{channels.overview}</p>
         </div>
 
-        <div className="mb-16 p-6 md:p-8 rounded-2xl bg-[#111] border border-[#262626]/80">
+        <div className="mb-16 p-6 md:p-8 rounded-2xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-[#262626]/80">
           <h3 className="text-2xl font-bold text-white mb-8">Budget Allocation</h3>
-          <div className="space-y-4">
-            {channels.allocationModel.channels.map((channel, i) => (
-              <div key={i}>
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-semibold text-[#E4E4E9]">{channel.channel}</span>
-                  <span className="text-sm font-bold text-[#FD3737]">{channel.allocation}%</span>
-                </div>
-                <div className="h-2.5 rounded-full bg-[#0A0A0A] overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#FD3737] to-[#FF6B6B] rounded-full"
-                    style={{ width: `${channel.allocation}%` }}
-                  />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 md:gap-12 items-center">
+            <div className="relative mx-auto w-[220px] h-[220px]">
+              <svg viewBox="0 0 200 200" className="w-full h-full -rotate-90">
+                {(() => {
+                  const palette = ['#FD3737', '#D42D2D', '#A33A3A', '#A1A1AA', '#6E6E76', '#4A4A50', '#333333'];
+                  const r = 80;
+                  const c = 2 * Math.PI * r;
+                  let acc = 0;
+                  return channels.allocationModel.channels.map((channel, i) => {
+                    const frac = channel.allocation / 100;
+                    const seg = (
+                      <circle
+                        key={i}
+                        cx="100" cy="100" r={r}
+                        fill="none"
+                        stroke={palette[i % palette.length]}
+                        strokeWidth="26"
+                        strokeDasharray={`${Math.max(frac * c - 3, 1)} ${c}`}
+                        strokeDashoffset={-acc * c}
+                      />
+                    );
+                    acc += frac;
+                    return seg;
+                  });
+                })()}
+              </svg>
+              <div className="absolute inset-0 flex flex-col items-center justify-center rotate-0">
+                <span className="text-3xl font-bold text-white" style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}>100%</span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-[#8A8A92] mt-1">of budget</span>
               </div>
-            ))}
+            </div>
+            <div className="space-y-3">
+              {channels.allocationModel.channels.map((channel, i) => {
+                const palette = ['#FD3737', '#D42D2D', '#A33A3A', '#A1A1AA', '#6E6E76', '#4A4A50', '#333333'];
+                return (
+                  <div key={i} className="flex items-center gap-3">
+                    <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: palette[i % palette.length] }} />
+                    <span className="text-sm font-medium text-[#E4E4E9] flex-1">{channel.channel}</span>
+                    <span className="text-sm font-bold text-[#FD3737] tabular-nums">{channel.allocation}%</span>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 

@@ -216,6 +216,31 @@ export interface Recommendation {
   expectedOutcome: string;
 }
 
+// ─── Optional Visual Modules ───
+
+export interface FunnelStage {
+  stage: string;
+  value: number;
+  display: string;
+  note?: string;
+}
+
+export interface TrajectoryPoint {
+  label: string;
+  value: number;
+}
+
+export interface Trajectory {
+  metricLabel: string;
+  actual: TrajectoryPoint[];
+  projected: TrajectoryPoint[];
+}
+
+export interface StatHighlight {
+  value: string;
+  label: string;
+}
+
 // ─── Images ───
 
 export interface StrategyImages {
@@ -266,6 +291,11 @@ export interface BrandStrategy {
   riskMatrix: Risk[];
   recommendations: Recommendation[];
   
+  // Optional visual modules (render only when present)
+  funnel?: FunnelStage[];
+  trajectory?: Trajectory;
+  statHighlights?: StatHighlight[];
+
   // Metadata
   images: StrategyImages;
   preparedFor: string;

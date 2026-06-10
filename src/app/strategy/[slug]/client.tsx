@@ -17,6 +17,9 @@ import Recommendations from '@/components/strategy/Recommendations';
 import AudienceIntelligence from '@/components/strategy/AudienceIntelligence';
 import SectionDivider from '@/components/strategy/SectionDivider';
 import Footer from '@/components/strategy/Footer';
+import StatBand from '@/components/strategy/StatBand';
+import FunnelDiagnostic from '@/components/strategy/FunnelDiagnostic';
+import TrajectoryChart from '@/components/strategy/TrajectoryChart';
 import LanguageToggle from '@/components/strategy/LanguageToggle';
 
 interface StrategyClientProps {
@@ -43,7 +46,9 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
       <ScrollProgress />
       {hasKo && <LanguageToggle locale={locale} setLocale={setLocale} />}
       <Hero strategy={active} />
+      <StatBand strategy={active} />
       <BrandPosition strategy={active} />
+      <FunnelDiagnostic strategy={active} />
       <SWOTAnalysis strategy={active} />
       <SectionDivider />
       <ExecutiveSummary strategy={active} />
@@ -56,6 +61,7 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
       <SectionDivider />
       <ChannelStrategy strategy={active} />
       <SectionDivider />
+      <TrajectoryChart strategy={active} />
       <KPIFramework strategy={active} />
       <RiskMatrix strategy={active} />
       <SectionDivider />

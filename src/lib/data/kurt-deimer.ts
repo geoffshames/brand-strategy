@@ -460,6 +460,35 @@ export const kurtDeimer: BrandStrategy = {
     },
   ],
 
+  // ─── Visual Modules ───
+  statHighlights: [
+    { value: '275K+', label: 'Social followers' },
+    { value: '4.49M', label: 'YouTube views' },
+    { value: '#33', label: 'Active Rock peak' },
+    { value: '3x', label: 'Listener growth, Feb-Jun' },
+  ],
+  funnel: [
+    { stage: 'Reach — video views', value: 4490000, display: '4.49M', note: 'Lifetime YouTube channel views (Chartmetric, June 2026)' },
+    { stage: 'Awareness — social followers', value: 275000, display: '275K+', note: 'Facebook 150K · Instagram 61K · YouTube 16.9K · TikTok 11.2K' },
+    { stage: 'Habit — monthly listeners', value: 27890, display: '27.9K', note: 'Spotify monthly listeners — 10% of the social audience listens monthly' },
+    { stage: 'Owned — email / SMS contacts', value: 6000, display: '6K', note: 'The most durable asset on the sheet; target 10K+' },
+    { stage: 'Fandom — Spotify followers', value: 4480, display: '4.48K', note: '0.16 follower-to-listener ratio vs Wednesday 13 at 0.87' },
+    { stage: 'Revenue — paying members', value: 1, display: '0', note: 'The Grog House launches October 2026 — target 400+' },
+  ],
+  trajectory: {
+    metricLabel: 'Spotify monthly listeners',
+    actual: [
+      { label: "Feb '26", value: 9151 },
+      { label: "May '26", value: 29000 },
+      { label: "Jun '26", value: 27890 },
+    ],
+    projected: [
+      { label: "Oct '26", value: 40000 },
+      { label: "Feb '27", value: 48000 },
+      { label: "May '27", value: 60000 },
+    ],
+  },
+
   // ─── Images ───
   images: {
     hero1: '/images/kurt-deimer/hero1.png',
