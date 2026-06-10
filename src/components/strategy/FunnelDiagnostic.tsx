@@ -38,7 +38,7 @@ function FunnelDiagnostic({ strategy }: { strategy: BrandStrategy }) {
                   className="relative h-14 md:h-16 rounded-lg overflow-hidden flex items-center justify-between px-4 md:px-6"
                   style={{
                     width: isInView ? `${w}%` : '24%',
-                    minWidth: '230px',
+                    minWidth: '310px',
                     background: `linear-gradient(90deg, rgba(212,45,45,${0.22 + brightness * 0.7}), rgba(253,55,55,${0.16 + brightness * 0.55}))`,
                     border: '1px solid rgba(253,55,55,0.25)',
                     transition: `width 1s cubic-bezier(0.22, 1, 0.36, 1) ${i * 120}ms`,
