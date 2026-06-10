@@ -25,7 +25,7 @@ function CompetitiveLandscape({ strategy }: CompetitiveLandscapeProps) {
             {landscape.competitors.map((competitor, i) => (
               <div
                 key={i}
-                className="p-6 rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-colors"
+                className="p-6 rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]"
               >
                 <h3 className="text-xl font-bold text-white mb-4">{competitor.name}</h3>
                 <div className="space-y-4 mb-6">

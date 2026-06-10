@@ -36,7 +36,7 @@ function AudienceIntelligence({ strategy }: AudienceIntelligenceProps) {
             <h3 className="text-2xl font-bold text-[#E4E4E9] mb-6">Psychographic Drivers</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {audience.psychographics.map((item: string, idx: number) => (
-                <div key={idx} className="bg-[#111] border border-[#262626]/80 rounded-xl p-5 hover:border-[#FD3737]/40 transition-colors">
+                <div key={idx} className="bg-[#111] border border-[#262626]/80 rounded-xl p-5 hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]">
                   <div className="flex gap-3">
                     <span className="text-[#FD3737] text-lg flex-shrink-0">&#9670;</span>
                     <p className="text-[#E4E4E9] text-sm md:text-base leading-relaxed">{item}</p>
@@ -53,7 +53,7 @@ function AudienceIntelligence({ strategy }: AudienceIntelligenceProps) {
             <h3 className="text-2xl font-bold text-[#E4E4E9] mb-6">Fan Segmentation</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {audience.fanSegments.map((seg: any, idx: number) => (
-                <div key={idx} className="bg-[#111] border border-[#262626]/80 rounded-2xl p-6 hover:border-[#FD3737]/40 transition-colors">
+                <div key={idx} className="bg-[#111] border border-[#262626]/80 rounded-2xl p-6 hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]">
                   <h4 className="text-lg font-bold text-white mb-3">{seg.segment}</h4>
                   {seg.characteristics && (
                     <ul className="space-y-2">

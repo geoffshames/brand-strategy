@@ -18,7 +18,7 @@ function StrategicPillars({ strategy }: { strategy: BrandStrategy }) {
           {strategy.strategicPillars.map((pillar, i) => (
             <div
               key={i}
-              className="p-6 md:p-8 rounded-2xl bg-[#111] border border-[#262626]/80 border-l-4 border-l-[#FD3737] hover:border-[#FD3737]/40 transition-colors"
+              className="p-6 md:p-8 rounded-2xl bg-[#111] border border-[#262626]/80 border-l-4 border-l-[#FD3737] hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]"
             >
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-[#FD3737] flex items-center justify-center flex-shrink-0">

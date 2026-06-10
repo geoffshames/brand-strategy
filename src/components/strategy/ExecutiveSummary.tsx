@@ -36,7 +36,7 @@ function ExecutiveSummary({ strategy }: ExecutiveSummaryProps) {
               {summary.rebrandGoals.map((goal: any) => (
                 <div
                   key={goal.number}
-                  className="flex gap-6 items-start p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1A1A1A] to-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-colors"
+                  className="flex gap-6 items-start p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1A1A1A] to-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]"
                 >
                   <div className="w-14 h-14 rounded-xl bg-[#FD3737] flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold text-2xl">{goal.number}</span>

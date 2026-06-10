@@ -18,7 +18,7 @@ export default function Recommendations({ strategy }: { strategy: BrandStrategy 
           {strategy.recommendations.map((rec, index) => (
             <div
               key={index}
-              className="border border-[#262626]/80 rounded-2xl p-6 bg-[#111] hover:border-[#FD3737]/40 transition-colors"
+              className="border border-[#262626]/80 rounded-2xl p-6 bg-[#111] hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]"
             >
               <div className="flex items-start gap-3 mb-4">
                 <div className="w-9 h-9 rounded-xl bg-[#FD3737] flex items-center justify-center flex-shrink-0">

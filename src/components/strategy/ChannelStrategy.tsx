@@ -42,7 +42,7 @@ function ChannelStrategy({ strategy }: { strategy: BrandStrategy }) {
             {channels.channelPlans.map((plan, i) => (
               <div
                 key={i}
-                className="p-6 rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-colors"
+                className="p-6 rounded-2xl bg-[#111] border border-[#262626]/80 hover:border-[#FD3737]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_14px_44px_-18px_rgba(253,55,55,0.25)]"
               >
                 <h4 className="text-lg font-bold text-[#FD3737] mb-2">{plan.name}</h4>
                 <p className="text-sm text-[#B8B8C0] mb-4 leading-relaxed">{plan.objective}</p>
