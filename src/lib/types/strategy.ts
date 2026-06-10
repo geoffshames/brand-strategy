@@ -241,6 +241,12 @@ export interface StatHighlight {
   label: string;
 }
 
+export interface ImageBreakSlide {
+  image: string;
+  kicker?: string;
+  statement?: string;
+}
+
 // ─── Images ───
 
 export interface StrategyImages {
@@ -295,6 +301,8 @@ export interface BrandStrategy {
   funnel?: FunnelStage[];
   trajectory?: Trajectory;
   statHighlights?: StatHighlight[];
+  imageBreaks?: ImageBreakSlide[];
+  ticker?: string[];
 
   // Metadata
   images: StrategyImages;

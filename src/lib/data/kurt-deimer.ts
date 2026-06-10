@@ -461,6 +461,23 @@ export const kurtDeimer: BrandStrategy = {
   ],
 
   // ─── Visual Modules ───
+  ticker: [
+    'A Grog Is Born · Out Now',
+    'Scared to Death · On Demand',
+    '#33 Active Rock',
+    'Produced by Chris Lord-Alge',
+    'feat. Josh Todd + Geoff Tate',
+    'Grogtober · October 2026',
+    'The Grog House · Founding 150',
+  ],
+  imageBreaks: [
+    { image: '/images/kurt-deimer/hero2.png', kicker: 'The Thesis', statement: 'The machine is built. Now build the fandom.' },
+    { image: '/images/kurt-deimer/editorial.png', kicker: 'The Position', statement: 'Horror rock for the radio generation.' },
+    { image: '/images/kurt-deimer/data.png', kicker: 'The Plan', statement: 'Four pillars. Twelve months. One funnel.' },
+    { image: '/images/kurt-deimer/texture.png', kicker: 'Mark the Calendar', statement: 'Grogtober is coming.' },
+    { image: '/images/kurt-deimer/closing.png', kicker: 'The Bottom Line', statement: 'The audience is already here. Ask them to stay.' },
+  ],
+
   statHighlights: [
     { value: '275K+', label: 'Social followers' },
     { value: '4.49M', label: 'YouTube views' },

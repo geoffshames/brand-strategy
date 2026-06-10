@@ -20,6 +20,9 @@ import Footer from '@/components/strategy/Footer';
 import StatBand from '@/components/strategy/StatBand';
 import FunnelDiagnostic from '@/components/strategy/FunnelDiagnostic';
 import TrajectoryChart from '@/components/strategy/TrajectoryChart';
+import FullBleedBreak from '@/components/strategy/FullBleedBreak';
+import MarqueeBand from '@/components/strategy/MarqueeBand';
+import CursorGlow from '@/components/strategy/CursorGlow';
 import LanguageToggle from '@/components/strategy/LanguageToggle';
 
 interface StrategyClientProps {
@@ -40,22 +43,28 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
 
   const active = locale === 'ko' && strategyKo ? strategyKo : strategy;
   const hasKo = !!strategyKo;
+  const breaks = active.imageBreaks || [];
 
   return (
     <>
       <ScrollProgress />
+      <CursorGlow />
       {hasKo && <LanguageToggle locale={locale} setLocale={setLocale} />}
       <Hero strategy={active} />
       <StatBand strategy={active} />
+      <MarqueeBand strategy={active} />
       <BrandPosition strategy={active} />
       <FunnelDiagnostic strategy={active} />
       <SWOTAnalysis strategy={active} />
+      {breaks[0] && <FullBleedBreak {...breaks[0]} />}
       <SectionDivider />
       <ExecutiveSummary strategy={active} />
       <AudienceIntelligence strategy={active} />
+      {breaks[1] && <FullBleedBreak {...breaks[1]} />}
       <SectionDivider />
       <CompetitiveLandscape strategy={active} />
       <StrategicPillars strategy={active} />
+      {breaks[2] && <FullBleedBreak {...breaks[2]} />}
       <SectionDivider />
       <PhasedRoadmap strategy={active} />
       <SectionDivider />
@@ -63,9 +72,11 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
       <SectionDivider />
       <TrajectoryChart strategy={active} />
       <KPIFramework strategy={active} />
+      {breaks[3] && <FullBleedBreak {...breaks[3]} />}
       <RiskMatrix strategy={active} />
       <SectionDivider />
       <Recommendations strategy={active} />
+      {breaks[4] && <FullBleedBreak {...breaks[4]} />}
       <Footer />
     </>
   );
