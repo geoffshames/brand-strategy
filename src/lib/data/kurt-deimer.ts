@@ -511,6 +511,23 @@ export const kurtDeimer: BrandStrategy = {
         ],
       },
     ],
+    addons: [
+      {
+        name: 'Fan Page Network',
+        badge: 'Per Set',
+        monthly: '$2,500',
+        cadenceLabel: '/month · per set of pages',
+        spendFee: '15%',
+        creativeRate: '$125/hr',
+        description: 'The clean-data engagement engine from the strategy: owned fan pages we build and program daily with clips, edits, and Grog-universe content. One set covers Facebook + Instagram + TikTok; stack sets per property (Kurt music, Grog films, and beyond) as the universe grows.',
+        includes: [
+          'One set = Facebook + Instagram + TikTok, built and run by CCD',
+          'Daily clip and edit output from a dedicated CCD edit pod',
+          'Self-cleaning data: engagement audiences feed retargeting on the main channels',
+          'India/Philippines legacy-audience problem bypassed with a fresh, clean data pool',
+        ],
+      },
+    ],
     cap: {
       title: 'Full Universe Cap',
       monthly: '$20,000',

@@ -57,6 +57,38 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
           ))}
         </div>
 
+        {pricing.addons && pricing.addons.map((addon, i) => (
+          <div key={i} className="relative rounded-2xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-dashed border-[#3A3A3A] hover:border-[#FD3737]/50 transition-all duration-300 p-7 md:p-8 mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+              <div className="lg:w-[300px] flex-shrink-0">
+                <div className="flex items-center gap-3 mb-3">
+                  <p className="text-[10px] text-[#FD3737] uppercase tracking-[0.25em] font-semibold">Add-On</p>
+                  {addon.badge && (
+                    <span className="text-[10px] uppercase tracking-[0.15em] font-semibold text-[#E4E4E9] bg-[#262626] border border-[#333] rounded-full px-3 py-1">{addon.badge}</span>
+                  )}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{addon.name}</h3>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-4xl font-bold text-[#FD3737] tabular-nums" style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}>{addon.monthly}</span>
+                  <span className="text-sm text-[#B8B8C0]">{addon.cadenceLabel || '/month'}</span>
+                </div>
+                <p className="text-xs text-[#B8B8C0]">+ {addon.spendFee} of ad spend &nbsp;·&nbsp; creative at {addon.creativeRate}</p>
+              </div>
+              <div className="flex-1">
+                <p className="text-sm text-[#B8B8C0] leading-relaxed mb-5">{addon.description}</p>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2.5">
+                  {addon.includes.map((item, j) => (
+                    <li key={j} className="flex gap-2.5 text-sm text-[#E4E4E9]">
+                      <span className="text-[#FD3737] flex-shrink-0 mt-0.5">✓</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+
         <div className="relative rounded-2xl border border-[#FD3737]/40 bg-gradient-to-r from-[#1A0D0D] via-[#141010] to-[#1A0D0D] p-7 md:p-9 mb-10 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_120%_at_50%_-30%,rgba(253,55,55,0.12),transparent)]" />
           <div className="relative flex flex-col md:flex-row md:items-center gap-6">

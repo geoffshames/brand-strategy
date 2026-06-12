@@ -255,6 +255,7 @@ export interface PricingTier {
 export interface PricingInfo {
   intro: string;
   tiers: PricingTier[];
+  addons?: PricingTier[];
   cap: { title: string; monthly: string; description: string };
   terms: string[];
   ctaLabel: string;
