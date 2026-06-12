@@ -55,6 +55,14 @@ function Hero({ strategy }: HeroProps) {
           >
             See Roadmap
           </a>
+          {strategy.pricing && (
+            <a
+              href="#pricing"
+              className="px-8 py-3.5 rounded-lg border-2 border-[#3A3A3A] text-[#FAFAFA] font-bold hover:border-[#FD3737] hover:text-[#FD3737] transition-colors text-base"
+            >
+              See Pricing
+            </a>
+          )}
         </div>
       </div>
 
