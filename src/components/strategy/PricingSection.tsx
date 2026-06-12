@@ -40,7 +40,7 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
                 <h3 className="text-xl font-bold text-white mb-4">{tier.name}</h3>
                 <div className="mb-1 flex items-baseline gap-2">
                   <span className="text-4xl font-bold text-[#FD3737] tabular-nums" style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}>{tier.monthly}</span>
-                  <span className="text-sm text-[#B8B8C0]">/month</span>
+                  <span className="text-sm text-[#B8B8C0]">{tier.cadenceLabel || '/month'}</span>
                 </div>
                 <p className="text-xs text-[#B8B8C0] mb-5">+ {tier.spendFee} of ad spend &nbsp;·&nbsp; creative at {tier.creativeRate}</p>
                 <p className="text-sm text-[#B8B8C0] leading-relaxed mb-6">{tier.description}</p>

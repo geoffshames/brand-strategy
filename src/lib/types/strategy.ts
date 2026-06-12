@@ -245,6 +245,7 @@ export interface PricingTier {
   name: string;
   badge?: string;
   monthly: string;
+  cadenceLabel?: string;
   spendFee: string;
   creativeRate: string;
   description: string;

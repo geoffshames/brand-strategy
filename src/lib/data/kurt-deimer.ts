@@ -496,13 +496,14 @@ export const kurtDeimer: BrandStrategy = {
       },
       {
         name: 'Additional Properties',
-        badge: '+1s',
+        badge: 'Per Property',
         monthly: '$5,000',
+        cadenceLabel: '/month · per property',
         spendFee: '15%',
         creativeRate: '$125/hr',
         description: 'Each new property plugs into the same machine as it comes online: future films, Scared to Death ongoing, the vodka line, and beyond.',
         includes: [
-          'Same full-service scope per property, per month',
+          'Same full-service scope for each property added: $5K/mo apiece',
           'Two films already slated for 2026, three more in development',
           'Scared to Death profile management as the current agency winds down',
           'Vodka launch support when ready (50% of CCD is brand/CPG, including alcohol)',
