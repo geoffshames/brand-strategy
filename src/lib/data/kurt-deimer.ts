@@ -16,7 +16,7 @@ export const kurtDeimer: BrandStrategy = {
 
   // ─── Brand Audit ───
   brandAudit: {
-    positioning: 'Kurt Deimer is the only artist in the horror-rock lane who actually stars in theatrical horror films. A Cincinnati entrepreneur who built companies before reviving his artistic ambitions in 2018, Deimer has assembled infrastructure most developing artists never touch: co-management by Andy Gould (Rob Zombie, White Zombie, Linkin Park, Guns N\' Roses), production by five-time Grammy winner Chris Lord-Alge, features from Buckcherry\'s Josh Todd and Queensryche\'s Geoff Tate, and Phil X in his live band. The May 2026 one-two punch defines the brand thesis: sophomore album "A Grog Is Born" (Bald Man Records) and a starring role as The Grog in Paul Boyd\'s "Scared to Death" alongside Lin Shaye and Bill Moseley. As Skratch N Sniff put it, he is fusing music and film into a single identity where "albums feel cinematic, movies feel musical." The infrastructure is real, the radio traction is real (#33 Active Rock peak with "In Deep"), and the film reviews are real. What is not yet real is a fandom proportionate to any of it.',
+    positioning: 'Kurt Deimer is the only artist in the horror-rock lane who actually stars in theatrical horror films. A Cincinnati entrepreneur who built companies before reviving his artistic ambitions in 2018, Deimer has assembled infrastructure most developing artists never touch: management by Regime Music Group (the team whose radio arm drove "In Deep" into the Top 40), production by five-time Grammy winner Chris Lord-Alge, features from Buckcherry\'s Josh Todd and Queensryche\'s Geoff Tate, and Phil X in his live band. The May 2026 one-two punch defines the brand thesis: sophomore album "A Grog Is Born" (Bald Man Records) and a starring role as The Grog in Paul Boyd\'s "Scared to Death" alongside Lin Shaye and Bill Moseley. As Skratch N Sniff put it, he is fusing music and film into a single identity where "albums feel cinematic, movies feel musical." The infrastructure is real, the radio traction is real (#33 Active Rock peak with "In Deep"), and the film reviews are real. What is not yet real is a fandom proportionate to any of it.',
     voiceTraits: [
       { trait: 'Blue-collar positivity with a horror skin', evidence: 'BraveWords framed the mission as "work hard, rock hard, play hard and spread positivity." The catalog preaches order-in-chaos and hope over hubris, wrapped in horror aesthetics. That pairing (wholesome core, macabre wrapper) is unusual in the lane and maps to his 35-60 rock radio demo.' },
       { trait: 'Cinematic world-building', evidence: 'The album title "A Grog Is Born" is literally his film character\'s origin story. Album art recasts a vintage family photo into Grog lore. The Hellbilly Hollow franchise ambition in his official bio confirms this is a universe strategy, not a one-off tie-in.' },
@@ -151,7 +151,7 @@ export const kurtDeimer: BrandStrategy = {
       { title: 'Big Toe / Live Or Die', date: 'Mar / Feb 2025', features: 'Pre-album single run' },
       { title: 'Doom', date: 'Aug 11, 2023', features: '359.6K playlist reach · his widest playlist penetration to date' },
     ],
-    labelConnections: ['Bald Man Records (own label) · full ownership of masters and release timing', 'Regime Music Group (Chartmetric label association)', 'Mirror Films · distribution partner on "Scared to Death"'],
+    labelConnections: ['Bald Man Records (own label) · full ownership of masters and release timing', 'Regime Music Group: management + label services (Scott, Mike, Jason, Alex, James)', 'Mirror Films · distribution partner on "Scared to Death"'],
     festivalExperience: ['WJRR Earthday Birthday (Orlando)', '89.7 The River Summer Concert Series, opening for Halestorm', 'A Grog Is Born World Tour 2026: headline club dates (TX, OK, NE, SD, NY) plus Halestorm support including Astro Amphitheater'],
     collaborationHistory: ['Josh Todd (Buckcherry) · "In Deep"', 'Geoff Tate (Queensryche) · "Silent Lucidity"', 'Phil X (Bon Jovi) · live band and longtime collaborator', 'Chris Lord-Alge · producer across 24+ recorded songs', 'Paul Boyd · director, "Scared to Death"'],
     influencerRelationships: ['No structured creator program exists yet; horror-niche creator seeding is a Phase 2 build'],
@@ -163,7 +163,7 @@ export const kurtDeimer: BrandStrategy = {
     strengths: [
       { title: 'Owned horror IP, not borrowed homage', description: 'Ice Nine Kills built 2M monthly listeners referencing other people\'s films. Deimer stars in his own: The Grog is a character he owns, in a film critics called "bound for cult horror status," with a Hellbilly Hollow franchise ambition behind it. Owned IP compounds; licensed homage rents. No one else in the lane holds this card.', evidence: 'Film Threat review; "Scared to Death" theatrical + TVOD release; Hellbilly Hollow franchise in official bio' },
       { title: 'Proven radio access in a format that still converts this demo', description: '"In Deep" peaked at #33 on Active Rock, and the WJRR/89.7 The River festival bookings show programmers will platform him live. Tim Montana just proved this exact pipeline can mint a six-figure streaming audience for a 40+ newcomer. The radio door is open; most developing artists never get it unlocked.', evidence: '#33 Active Rock peak; Earthday Birthday and The River bookings; Montana comp at 163K monthly listeners' },
-      { title: 'A-list infrastructure on call', description: 'Andy Gould co-management, Chris Lord-Alge production, features from Josh Todd and Geoff Tate, Phil X on stage. This is the support system of an arena act bolted onto a developing artist. It de-risks execution: when this strategy calls for a single, a video, or a tour package, the machine to deliver it already exists.', evidence: 'Gould management (Rob Zombie, GNR, Linkin Park); 24+ CLA-produced tracks; guest features on album' },
+      { title: 'A-list infrastructure on call', description: 'Regime Music Group management with a proven radio team, Chris Lord-Alge production, features from Josh Todd and Geoff Tate, Phil X on stage. This is the support system of an arena act bolted onto a developing artist. It de-risks execution: when this strategy calls for a single, a video, or a tour package, the machine to deliver it already exists.', evidence: 'Regime Music Group full-service management; 24+ CLA-produced tracks; guest features on album' },
       { title: 'Album cycle demonstrated real momentum', description: 'Monthly listeners tripled from 9.2K in February to 29K by June on the strength of the album and film one-two. The market responded when given coordinated output. That elasticity is the whole bet: the audience moves when the machine fires, which means the constraint is cadence and conversion, not appeal.', evidence: 'Verified 9,151 monthly listeners / 3,648 followers Feb 2026 snapshot vs 29K management baseline June 2026' },
       { title: 'An awareness base most peers would kill for', description: '275K+ followers across platforms, 3.7M+ YouTube views, 2.6M+ streams. Wednesday 13 sustains a 25-year career on a fraction of that reach. The raw material for a six-figure listener base already follows him; it has simply never been asked to do anything.', evidence: 'One-sheet platform stats; management baselines June 2026' },
     ],
@@ -460,6 +460,70 @@ export const kurtDeimer: BrandStrategy = {
     },
   ],
 
+  // ─── Engagement & Pricing ───
+  pricing: {
+    intro: 'Three things, billed simply: a monthly retainer scoped to the properties we run, a percentage of managed ad spend, and creative billed hourly, fully a la carte (when your in-house edit suite has it covered, you do not pay us for it). The structure scales property by property as the universe grows, and caps so it never punishes momentum.',
+    tiers: [
+      {
+        name: 'Kurt Deimer · Music',
+        badge: 'Core',
+        monthly: '$6,000',
+        spendFee: '15%',
+        creativeRate: '$125/hr',
+        description: 'Everything in this strategy for the artist himself: the conversion engine around the album, touring, and the fan funnel.',
+        includes: [
+          'Full social + content strategy across all Kurt channels',
+          'Paid media planning, buying, and conversion optimization',
+          'Streaming growth: cadence, pitching, catalog campaigns',
+          'Email/SMS + The Grog House membership build (Klaviyo, set.live, Feature.fm stack)',
+          'Web store / D2C push: drops, funnels, DVD and Blu-ray D2C',
+        ],
+      },
+      {
+        name: 'Hellbilly Hollow · Film',
+        badge: 'Sept 2026',
+        monthly: '$5,000',
+        spendFee: '15%',
+        creativeRate: '$125/hr',
+        description: 'Stand the film property up from scratch and run it through theatrical, VOD, and the Halloween DVD window.',
+        includes: [
+          'New YouTube + all film socials, built and run by CCD',
+          'Co-posting architecture with Kurt\'s channels (the cross-pollination is the brand)',
+          'Trailer, clip, and Grog-character content engine',
+          'Influencer + activation strategy (haunt partnerships, horror creators)',
+          'Release-window paid campaigns: theatrical, VOD, DVD/Blu-ray',
+        ],
+      },
+      {
+        name: 'Additional Properties',
+        badge: '+1s',
+        monthly: '$5,000',
+        spendFee: '15%',
+        creativeRate: '$125/hr',
+        description: 'Each new property plugs into the same machine as it comes online: future films, Scared to Death ongoing, the vodka line, and beyond.',
+        includes: [
+          'Same full-service scope per property, per month',
+          'Two films already slated for 2026, three more in development',
+          'Scared to Death profile management as the current agency winds down',
+          'Vodka launch support when ready (50% of CCD is brand/CPG, including alcohol)',
+          'Shared learnings across the universe: one audience graph, every property benefits',
+        ],
+      },
+    ],
+    cap: {
+      title: 'Full Universe Cap',
+      monthly: '$20,000',
+      description: 'If we get to three-plus films with CCD running every social channel across the universe, the retainer caps at $20K/month + 15% of spend + $125/hr creative, no matter how many properties are live. The more Kurt builds, the better the per-property economics get.',
+    },
+    terms: [
+      'Three-month minimum commitment to start; long enough to audit, fix the funnel, and prove conversion before Grogtober.',
+      'Annual commitment unlocks preferred pricing; happy to build that option into the agreement.',
+      'Ad-spend percentage scales down at volume, and creative is purely as-needed; use your in-house editors wherever it makes sense.',
+    ],
+    ctaLabel: 'Lock It In',
+    ctaHref: 'mailto:info@crowdcontroldigital.com?subject=Kurt%20Deimer%20x%20CCD%3A%20Let%27s%20Go',
+  },
+
   // ─── Visual Modules ───
   ticker: [
     'A Grog Is Born · Out Now',
@@ -517,7 +581,7 @@ export const kurtDeimer: BrandStrategy = {
   },
 
   // ─── Metadata ───
-  preparedFor: 'Kurt Deimer / Bald Man Records Management',
+  preparedFor: 'Kurt Deimer / Regime Music Group',
   preparedBy: 'Crowd Control Digital',
   date: 'June 2026',
   version: '1.0',

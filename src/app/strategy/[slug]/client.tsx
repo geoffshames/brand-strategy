@@ -23,6 +23,7 @@ import TrajectoryChart from '@/components/strategy/TrajectoryChart';
 import FullBleedBreak from '@/components/strategy/FullBleedBreak';
 import MarqueeBand from '@/components/strategy/MarqueeBand';
 import CursorGlow from '@/components/strategy/CursorGlow';
+import PricingSection from '@/components/strategy/PricingSection';
 import LanguageToggle from '@/components/strategy/LanguageToggle';
 
 interface StrategyClientProps {
@@ -76,6 +77,7 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
       <RiskMatrix strategy={active} />
       <SectionDivider />
       <Recommendations strategy={active} />
+      <PricingSection strategy={active} />
       {breaks[4] && <FullBleedBreak {...breaks[4]} />}
       <Footer />
     </>

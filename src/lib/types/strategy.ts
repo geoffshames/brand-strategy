@@ -241,6 +241,25 @@ export interface StatHighlight {
   label: string;
 }
 
+export interface PricingTier {
+  name: string;
+  badge?: string;
+  monthly: string;
+  spendFee: string;
+  creativeRate: string;
+  description: string;
+  includes: string[];
+}
+
+export interface PricingInfo {
+  intro: string;
+  tiers: PricingTier[];
+  cap: { title: string; monthly: string; description: string };
+  terms: string[];
+  ctaLabel: string;
+  ctaHref: string;
+}
+
 export interface ImageBreakSlide {
   image: string;
   kicker?: string;
@@ -303,6 +322,7 @@ export interface BrandStrategy {
   statHighlights?: StatHighlight[];
   imageBreaks?: ImageBreakSlide[];
   ticker?: string[];
+  pricing?: PricingInfo;
 
   // Metadata
   images: StrategyImages;
