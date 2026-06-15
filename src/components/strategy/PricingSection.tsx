@@ -57,6 +57,36 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
           ))}
         </div>
 
+        <div className="relative rounded-2xl border border-[#FD3737]/40 bg-gradient-to-r from-[#1A0D0D] via-[#141010] to-[#1A0D0D] p-7 md:p-9 mb-10 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_120%_at_50%_-30%,rgba(253,55,55,0.12),transparent)]" />
+          <div className="relative flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex-1">
+              <p className="text-[10px] text-[#FD3737] uppercase tracking-[0.25em] font-semibold mb-2">{pricing.cap.title}</p>
+              <div className="flex items-baseline gap-2 mb-3">
+                <span className="text-5xl font-bold text-white tabular-nums" style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}>{pricing.cap.monthly}</span>
+                <span className="text-sm text-[#B8B8C0]">/month ceiling</span>
+              </div>
+              <p className="text-sm md:text-base text-[#E4E4E9] leading-relaxed max-w-2xl">{pricing.cap.description}</p>
+            </div>
+            <a
+              href={pricing.ctaHref}
+              className="flex-shrink-0 inline-flex items-center justify-center rounded-xl bg-[#FD3737] hover:bg-[#D42D2D] transition-colors px-8 py-4 text-white font-bold uppercase tracking-[0.12em] text-sm"
+              style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}
+            >
+              {pricing.ctaLabel}
+            </a>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+          {pricing.terms.map((term, i) => (
+            <div key={i} className="flex gap-3 rounded-xl bg-[#111] border border-[#262626]/60 px-5 py-4">
+              <span className="text-[#FD3737] font-bold flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
+              <p className="text-sm text-[#B8B8C0] leading-relaxed">{term}</p>
+            </div>
+          ))}
+        </div>
+
         {pricing.addons && pricing.addons.length > 0 && (
           <div className="mb-8 pt-4 border-t border-[#1E1E1E]">
             <p className="text-xs text-[#FD3737] uppercase tracking-[0.2em] font-semibold mb-3">Optional Add-Ons</p>
@@ -97,36 +127,6 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
             </div>
           </div>
         ))}
-
-        <div className="relative rounded-2xl border border-[#FD3737]/40 bg-gradient-to-r from-[#1A0D0D] via-[#141010] to-[#1A0D0D] p-7 md:p-9 mb-10 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_120%_at_50%_-30%,rgba(253,55,55,0.12),transparent)]" />
-          <div className="relative flex flex-col md:flex-row md:items-center gap-6">
-            <div className="flex-1">
-              <p className="text-[10px] text-[#FD3737] uppercase tracking-[0.25em] font-semibold mb-2">{pricing.cap.title}</p>
-              <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-5xl font-bold text-white tabular-nums" style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}>{pricing.cap.monthly}</span>
-                <span className="text-sm text-[#B8B8C0]">/month ceiling</span>
-              </div>
-              <p className="text-sm md:text-base text-[#E4E4E9] leading-relaxed max-w-2xl">{pricing.cap.description}</p>
-            </div>
-            <a
-              href={pricing.ctaHref}
-              className="flex-shrink-0 inline-flex items-center justify-center rounded-xl bg-[#FD3737] hover:bg-[#D42D2D] transition-colors px-8 py-4 text-white font-bold uppercase tracking-[0.12em] text-sm"
-              style={{ fontFamily: "'N27', 'Work Sans', sans-serif" }}
-            >
-              {pricing.ctaLabel}
-            </a>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {pricing.terms.map((term, i) => (
-            <div key={i} className="flex gap-3 rounded-xl bg-[#111] border border-[#262626]/60 px-5 py-4">
-              <span className="text-[#FD3737] font-bold flex-shrink-0">{String(i + 1).padStart(2, '0')}</span>
-              <p className="text-sm text-[#B8B8C0] leading-relaxed">{term}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </SectionWrapper>
   );
