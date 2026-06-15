@@ -18,7 +18,7 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
           <p className="text-base md:text-lg text-[#B8B8C0] max-w-3xl leading-relaxed">{pricing.intro}</p>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-8">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mb-10 max-w-4xl mx-auto">
           {pricing.tiers.map((tier, i) => (
             <div
               key={i}
@@ -56,6 +56,15 @@ function PricingSection({ strategy }: { strategy: BrandStrategy }) {
             </div>
           ))}
         </div>
+
+        {pricing.addons && pricing.addons.length > 0 && (
+          <div className="mb-8 pt-4 border-t border-[#1E1E1E]">
+            <p className="text-xs text-[#FD3737] uppercase tracking-[0.2em] font-semibold mb-3">Optional Add-Ons</p>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Switch On When You Want Them</h3>
+            <div className="w-16 h-1 bg-[#FD3737] mb-5" />
+            <p className="text-sm md:text-base text-[#B8B8C0] max-w-3xl leading-relaxed">Everything beyond the two core properties is optional and billed separately. Add it as the universe grows. None of it is required to start.</p>
+          </div>
+        )}
 
         {pricing.addons && pricing.addons.map((addon, i) => (
           <div key={i} className="relative rounded-2xl bg-gradient-to-b from-[#141414] to-[#0E0E0E] border border-dashed border-[#3A3A3A] hover:border-[#FD3737]/50 transition-all duration-300 p-7 md:p-8 mb-8">

@@ -462,7 +462,7 @@ export const kurtDeimer: BrandStrategy = {
 
   // ─── Engagement & Pricing ───
   pricing: {
-    intro: 'Three things, billed simply: a monthly retainer scoped to the properties we run, a percentage of managed ad spend, and creative billed hourly, fully a la carte (when your in-house edit suite has it covered, you do not pay us for it). The structure scales property by property as the universe grows, and caps so it never punishes momentum.',
+    intro: 'Two core properties drive the engagement: Kurt the artist and the Hellbilly Hollow film. Each is billed simply: a monthly retainer, a percentage of managed ad spend, and creative billed hourly and fully a la carte (when your in-house edit suite has it covered, you do not pay us for it). Everything past those two, additional properties as they come online and the fan-page network, lives in an optional add-on bucket you switch on only when you want it.',
     tiers: [
       {
         name: 'Kurt Deimer · Music',
@@ -494,6 +494,8 @@ export const kurtDeimer: BrandStrategy = {
           'Release-window paid campaigns: theatrical, VOD, DVD/Blu-ray',
         ],
       },
+    ],
+    addons: [
       {
         name: 'Additional Properties',
         badge: 'Per Property',
@@ -501,7 +503,7 @@ export const kurtDeimer: BrandStrategy = {
         cadenceLabel: '/month · per property',
         spendFee: '15%',
         creativeRate: '$125/hr',
-        description: 'Each new property plugs into the same machine as it comes online: future films, Scared to Death ongoing, the vodka line, and beyond.',
+        description: 'Optional, switched on only as you want it. Each new property plugs into the same machine as it comes online: future films, Scared to Death ongoing, the vodka line, and beyond. The two core retainers stand on their own; this is purely how the universe scales when you are ready.',
         includes: [
           'Same full-service scope for each property added: $5K/mo apiece',
           'Two films already slated for 2026, three more in development',
@@ -510,8 +512,6 @@ export const kurtDeimer: BrandStrategy = {
           'Shared learnings across the universe: one audience graph, every property benefits',
         ],
       },
-    ],
-    addons: [
       {
         name: 'Fan Page Network',
         badge: 'Per Set',
@@ -532,7 +532,7 @@ export const kurtDeimer: BrandStrategy = {
     cap: {
       title: 'Full Universe Cap',
       monthly: '$20,000',
-      description: 'If we get to three-plus films with CCD running every social channel across the universe, the property retainers cap at $20K/month + 15% of spend + $125/hr creative, no matter how many properties are live. The more Kurt builds, the better the per-property economics get. The cap covers property retainers only; Fan Page Network sets are billed separately at $3,500/month per set.',
+      description: 'Only relevant if you switch on enough optional properties: if CCD ends up running three-plus films plus Kurt across the universe, the property retainers cap at $20K/month + 15% of spend + $125/hr creative, no matter how many are live. The more Kurt builds, the better the per-property economics get. The cap covers property retainers only; the Fan Page Network is billed separately at $3,500/month per set.',
     },
     terms: [
       'Three-month minimum commitment to start; long enough to audit, fix the funnel, and prove conversion before Grogtober.',
