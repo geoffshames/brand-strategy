@@ -5,11 +5,14 @@ import Lenis from 'lenis';
 import { gsap, ScrollTrigger } from './motion';
 import Opening from './SceneOpening';
 import Wound from './SceneWound';
+import Catalog from './SceneCatalog';
 import Wilderness from './SceneWilderness';
 import Detonation from './SceneDetonation';
 import Precedent from './ScenePrecedent';
 import Return from './SceneReturn';
+import Funnel from './SceneFunnel';
 import Runway from './SceneRunway';
+import Trajectory from './SceneTrajectory';
 import Scoreboard from './SceneScoreboard';
 import Closing from './SceneClosing';
 
@@ -87,11 +90,14 @@ export default function BrxceExperience() {
 
       <Opening />
       <Wound />
+      <Catalog />
       <Wilderness />
       <Detonation />
       <Precedent />
       <Return />
+      <Funnel />
       <Runway />
+      <Trajectory />
       <Scoreboard />
       <Closing />
     </main>

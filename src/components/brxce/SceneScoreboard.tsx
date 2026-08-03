@@ -12,6 +12,13 @@ const KPIS = [
   { metric: 'Risk posture', now: 'Spike-and-decay', target: 'Compounding', note: 'Funnel + catalog + world = attention that stays caught.' },
 ];
 
+const ENGINE = [
+  { platform: 'Instagram', now: '34.1K', target: '100K', pct: 34.1, live: true },
+  { platform: 'TikTok', now: 'Underbuilt', target: '100K', pct: 2, live: false },
+  { platform: 'YouTube', now: 'Underbuilt', target: '50K', pct: 2, live: false },
+  { platform: 'Email / SMS list', now: '0', target: '100K', pct: 0.5, live: false },
+];
+
 export default function Scoreboard() {
   const root = useRef<HTMLDivElement>(null);
 
@@ -49,6 +56,22 @@ export default function Scoreboard() {
           { scaleX: 1, duration: 0.7, ease: 'power2.inOut', scrollTrigger: { trigger: el, start: 'top 86%' } }
         );
       });
+
+      // engine bars fill
+      gsap.utils.toArray<HTMLElement>('.bx-eng-fill').forEach((el, i) => {
+        gsap.fromTo(
+          el,
+          { scaleX: 0 },
+          { scaleX: 1, duration: 1.0, ease: 'power3.inOut', delay: i * 0.08, scrollTrigger: { trigger: el, start: 'top 90%' } }
+        );
+      });
+      gsap.utils.toArray<HTMLElement>('.bx-eng-row').forEach((el, i) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 24 },
+          { opacity: 1, y: 0, duration: 0.7, ease: EASE_OUT, delay: i * 0.06, scrollTrigger: { trigger: el, start: 'top 92%' } }
+        );
+      });
     },
     { scope: root }
   );
@@ -70,6 +93,33 @@ export default function Scoreboard() {
           </p>
         </div>
 
+
+        <div className="mb-16 md:mb-20">
+          <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.3em] text-[#FD3737]">The Engine, now against target</p>
+          <div className="flex flex-col gap-7">
+            {ENGINE.map((e, i) => (
+              <div key={i} className="bx-eng-row">
+                <div className="mb-2 flex items-baseline justify-between gap-4">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#B8B8C0]">{e.platform}</p>
+                  <p className="font-display text-sm text-white md:text-base">
+                    <span className={e.live ? 'text-white' : 'text-[#B8B8C0]'}>{e.now}</span>
+                    <span className="mx-2 text-[#B8B8C0]/60">/</span>
+                    <span className="text-[#FD3737]">{e.target}</span>
+                  </p>
+                </div>
+                <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-white/[0.07]">
+                  <div
+                    className="bx-eng-fill absolute inset-y-0 left-0 origin-left rounded-full bg-gradient-to-r from-[#7A1B1B] to-[#FD3737]"
+                    style={{ width: `${e.pct}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-xs leading-relaxed text-[#B8B8C0] md:text-sm">
+            Fill shows verified current footprint against the twelve-month target. TikTok and YouTube are active but pre-engine, counted at zero until the relaunch.
+          </p>
+        </div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {KPIS.map((k, i) => (
             <div
