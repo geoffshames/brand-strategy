@@ -6,6 +6,7 @@ import { beautySchoolDropout } from './beauty-school-dropout';
 import { eightyTwoMajor } from './82major';
 import { eightyTwoMajorKo } from './82major-ko';
 import { kurtDeimer } from './kurt-deimer';
+import { brxceGrimm } from './brxce-grimm';
 
 export const strategyMap: Record<string, BrandStrategy> = {
   'dj-tim-clark': djTimClark,
@@ -14,6 +15,7 @@ export const strategyMap: Record<string, BrandStrategy> = {
   'beauty-school-dropout': beautySchoolDropout,
   '82major': eightyTwoMajor,
   'kurt-deimer': kurtDeimer,
+  'brxce-grimm': brxceGrimm,
 };
 
 // Locale-specific overrides — when a slug has a translation, getStrategyForLocale returns the localized version

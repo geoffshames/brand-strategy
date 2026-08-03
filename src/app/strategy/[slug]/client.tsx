@@ -23,6 +23,7 @@ import TrajectoryChart from '@/components/strategy/TrajectoryChart';
 import FullBleedBreak from '@/components/strategy/FullBleedBreak';
 import MarqueeBand from '@/components/strategy/MarqueeBand';
 import CursorGlow from '@/components/strategy/CursorGlow';
+import LaunchArc from '@/components/strategy/LaunchArc';
 import PricingSection from '@/components/strategy/PricingSection';
 import LanguageToggle from '@/components/strategy/LanguageToggle';
 
@@ -60,6 +61,7 @@ export default function StrategyClient({ strategy, strategyKo }: StrategyClientP
       {breaks[0] && <FullBleedBreak {...breaks[0]} />}
       <SectionDivider />
       <ExecutiveSummary strategy={active} />
+      {active.launchArc && <LaunchArc arc={active.launchArc} />}
       <AudienceIntelligence strategy={active} />
       {breaks[1] && <FullBleedBreak {...breaks[1]} />}
       <SectionDivider />

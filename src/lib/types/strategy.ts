@@ -268,6 +268,28 @@ export interface ImageBreakSlide {
   statement?: string;
 }
 
+// ─── Reality Launch Arc (show/runway-based artist strategies) ───
+
+export interface LaunchArcStage {
+  phase: string;
+  timeframe: string;
+  title: string;
+  description: string;
+  value: number;
+  display: string;
+}
+
+export interface LaunchArcData {
+  kicker: string;
+  title: string;
+  intro: string;
+  anchor: string;
+  anchorValue: number;
+  anchorDisplay: string;
+  stages: LaunchArcStage[];
+  claim: string;
+}
+
 // ─── Images ───
 
 export interface StrategyImages {
@@ -325,6 +347,7 @@ export interface BrandStrategy {
   imageBreaks?: ImageBreakSlide[];
   ticker?: string[];
   pricing?: PricingInfo;
+  launchArc?: LaunchArcData;
 
   // Metadata
   images: StrategyImages;
