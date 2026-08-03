@@ -35,8 +35,9 @@ export default function LaunchArc({ arc }: { arc: LaunchArcData }) {
   const area = `${path} L${xs(n - 1)},${y(0)} L${xs(0)},${y(0)} Z`;
   const gridVals = [Math.round(maxV * 0.25), Math.round(maxV * 0.5), Math.round(maxV * 0.75)];
 
-  // anchor marker at its own x (slightly before the final stage)
-  const ax = xs(n - 1) - iw * 0.18;
+  // anchor marker sits exactly on the detonation stage point
+  const ax = xs(anchorIdx);
+  const ay = y(stages[anchorIdx].value);
 
   return (
     <SectionWrapper id="launch-arc" className="bg-[#0A0A0A] border-y border-[#1E1E1E]">
@@ -80,9 +81,8 @@ export default function LaunchArc({ arc }: { arc: LaunchArcData }) {
             {/* Detonation anchor marker */}
             <g>
               <line x1={ax} y1={PAD.top - 14} x2={ax} y2={y(0)} stroke="#FD3737" strokeWidth="1.5" strokeDasharray="2 6" opacity="0.7" />
-              <circle cx={ax} cy={y(arc.anchorValue)} r="12" fill="none" stroke="#FD3737" strokeWidth="2.5" />
-              <circle cx={ax} cy={y(arc.anchorValue)} r="5" fill="#FD3737" />
-              <text x={ax} y={y(arc.anchorValue) - 24} textAnchor="middle" fontSize="14" fontWeight="800" fill="#FFFFFF">{arc.anchorDisplay}</text>
+              <circle cx={ax} cy={ay} r="13" fill="none" stroke="#FD3737" strokeWidth="2.5" />
+              <circle cx={ax} cy={ay} r="5.5" fill="#FD3737" />
               <text x={ax} y={PAD.top - 24} textAnchor="middle" fontSize="12" fontWeight="700" fill="#FD3737" letterSpacing="0.1em">{arc.anchor}</text>
             </g>
 
@@ -91,7 +91,7 @@ export default function LaunchArc({ arc }: { arc: LaunchArcData }) {
               return (
                 <g key={i}>
                   <circle cx={pt[0]} cy={pt[1]} r={isAnchor ? 0 : 5.5} fill="#FD3737" stroke="#0A0A0A" strokeWidth="2" />
-                  <text x={pt[0]} y={pt[1] - 16} textAnchor="middle" fontSize="14" fontWeight="700" fill="#FFFFFF">{stages[i].display}</text>
+                  <text x={pt[0]} y={pt[1] - (isAnchor ? 24 : 16)} textAnchor="middle" fontSize="14" fontWeight="700" fill="#FFFFFF">{stages[i].display}</text>
                   <text x={pt[0]} y={H - 34} textAnchor="middle" fontSize="12" fill="#8A8A92">{stages[i].phase}</text>
                   <text x={pt[0]} y={H - 18} textAnchor="middle" fontSize="11" fontWeight="600" fill="#E4E4E9">{stages[i].timeframe}</text>
                 </g>
@@ -106,7 +106,7 @@ export default function LaunchArc({ arc }: { arc: LaunchArcData }) {
         </div>
 
         {/* Stage cards */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
           {stages.map((s, i) => (
             <div
               key={i}

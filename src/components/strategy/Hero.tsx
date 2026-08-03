@@ -11,7 +11,7 @@ function Hero({ strategy }: HeroProps) {
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black via-black to-[#0A0A0A] pt-24 md:pt-0">
       {strategy.images.hero1 && (
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-30"
           style={{
             backgroundImage: `url(${strategy.images.hero1})`,
             backgroundSize: 'cover',
@@ -19,7 +19,7 @@ function Hero({ strategy }: HeroProps) {
           }}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="mb-6">
@@ -38,7 +38,7 @@ function Hero({ strategy }: HeroProps) {
           {strategy.tagline}
         </p>
 
-        <p className="text-base md:text-lg text-[#B8B8C0] max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg text-[#E4E4E9] max-w-2xl mx-auto leading-relaxed">
           {strategy.executiveSummary.thesis}
         </p>
 

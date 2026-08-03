@@ -46,6 +46,22 @@ function PlatformIcon({ platform, isNew }: { platform: string; isNew: boolean })
           <path d="M2 17h1v-4H2" /><path d="M5 17h1v-6H5" /><path d="M8 17h1V9H8" /><path d="M11 17h1V7h-1" />
         </svg>
       );
+    case 'Spotify':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M7 9.5c3.5-1 7-.5 10 1" />
+          <path d="M7.5 12.5c3-.8 5.8-.4 8.3 1" />
+          <path d="M8 15.4c2.4-.6 4.6-.3 6.6.8" />
+        </svg>
+      );
+    case 'Threads':
+      return (
+        <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M16 8v5a2 2 0 0 0 4 0v-1a8 8 0 1 0-3 6.3" />
+        </svg>
+      );
     default:
       return (
         <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

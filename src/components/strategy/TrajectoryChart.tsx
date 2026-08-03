@@ -39,7 +39,7 @@ function TrajectoryChart({ strategy }: { strategy: BrandStrategy }) {
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">The Trajectory</h2>
           <div className="w-24 h-1 bg-[#FD3737] mb-6" />
           <p className="text-base md:text-lg text-[#B8B8C0] max-w-3xl">
-            {t.metricLabel}: what the album cycle proved (solid), and the path this plan commits to (dashed).
+            {t.intro || `${t.metricLabel}: what the album cycle proved (solid), and the path this plan commits to (dashed).`}
           </p>
         </div>
 
@@ -85,8 +85,8 @@ function TrajectoryChart({ strategy }: { strategy: BrandStrategy }) {
           </svg>
 
           <div className="mt-4 flex flex-wrap items-center gap-6 px-2">
-            <span className="flex items-center gap-2 text-xs text-[#B8B8C0]"><span className="inline-block w-6 h-0.5 bg-[#FD3737] rounded" /> Actual (Chartmetric)</span>
-            <span className="flex items-center gap-2 text-xs text-[#B8B8C0]"><span className="inline-block w-6 h-0.5 rounded" style={{ backgroundImage: 'repeating-linear-gradient(90deg,#FD3737 0 4px,transparent 4px 8px)' }} /> Planned trajectory</span>
+            <span className="flex items-center gap-2 text-xs text-[#B8B8C0]"><span className="inline-block w-6 h-0.5 bg-[#FD3737] rounded" /> {t.actualLabel || 'Actual (Chartmetric)'}</span>
+            <span className="flex items-center gap-2 text-xs text-[#B8B8C0]"><span className="inline-block w-6 h-0.5 rounded" style={{ backgroundImage: 'repeating-linear-gradient(90deg,#FD3737 0 4px,transparent 4px 8px)' }} /> {t.projectedLabel || 'Planned trajectory'}</span>
           </div>
         </div>
       </div>

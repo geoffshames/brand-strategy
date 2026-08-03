@@ -225,6 +225,12 @@ export interface FunnelStage {
   note?: string;
 }
 
+export interface FunnelCopy {
+  kicker?: string;
+  title?: string;
+  intro?: string;
+}
+
 export interface TrajectoryPoint {
   label: string;
   value: number;
@@ -232,6 +238,9 @@ export interface TrajectoryPoint {
 
 export interface Trajectory {
   metricLabel: string;
+  intro?: string;
+  actualLabel?: string;
+  projectedLabel?: string;
   actual: TrajectoryPoint[];
   projected: TrajectoryPoint[];
 }
@@ -342,6 +351,7 @@ export interface BrandStrategy {
   
   // Optional visual modules (render only when present)
   funnel?: FunnelStage[];
+  funnelCopy?: FunnelCopy;
   trajectory?: Trajectory;
   statHighlights?: StatHighlight[];
   imageBreaks?: ImageBreakSlide[];

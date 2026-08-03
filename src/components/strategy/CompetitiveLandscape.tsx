@@ -31,7 +31,11 @@ function CompetitiveLandscape({ strategy }: CompetitiveLandscapeProps) {
                 <div className="space-y-4 mb-6">
                   <div>
                     <p className="text-xs text-[#B8B8C0] uppercase tracking-wide mb-1">Spotify Monthly Listeners</p>
-                    <p className="text-2xl font-bold text-[#FD3737]">{competitor.spotifyMonthlyListeners >= 1000000 ? `${(competitor.spotifyMonthlyListeners / 1000000).toFixed(1)}M` : `${(competitor.spotifyMonthlyListeners / 1000).toFixed(0)}K`}</p>
+                    {competitor.spotifyMonthlyListeners > 0 ? (
+                      <p className="text-2xl font-bold text-[#FD3737]">{competitor.spotifyMonthlyListeners >= 1000000 ? `${(competitor.spotifyMonthlyListeners / 1000000).toFixed(1)}M` : `${(competitor.spotifyMonthlyListeners / 1000).toFixed(0)}K`}</p>
+                    ) : (
+                      <p className="text-2xl font-bold text-[#8A8A92]">—</p>
+                    )}
                   </div>
                   <div>
                     <p className="text-xs text-[#B8B8C0] uppercase tracking-wide mb-1">Positioning</p>
