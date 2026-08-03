@@ -8,7 +8,7 @@ const KPIS = [
   { metric: 'Owned email / SMS list', now: '0', target: '100K+', note: '25K by premiere. The one asset no algorithm can take away.' },
   { metric: 'Catalog depth', now: '~10 tracks', target: '60 songs', note: 'Paced, pitched, and show-timed — a system, not a dump.' },
   { metric: 'Combined social reach', now: '34K', target: '250K+', note: 'IG 100K+, TikTok 100K+, YT 50K+ through the show window.' },
-  { metric: 'DJ bookings', now: 'Villa circuit', target: 'Clubs → festivals', note: 'Credibility earned on real decks, amplified by the arc.' },
+  { metric: 'DJ bookings', now: 'Villa circuit', target: 'Clubs to festivals', note: 'Credibility earned on real decks, amplified by the arc.' },
   { metric: 'Risk posture', now: 'Spike-and-decay', target: 'Compounding', note: 'Funnel + catalog + world = attention that stays caught.' },
 ];
 
@@ -42,7 +42,7 @@ export default function Scoreboard() {
             y: 0,
             duration: 0.8,
             ease: EASE_OUT,
-            delay: (i % 3) * 0.09,
+            delay: i * 0.05,
             scrollTrigger: { trigger: el, start: 'top 88%' },
           }
         );
@@ -120,19 +120,23 @@ export default function Scoreboard() {
             Fill shows verified current footprint against the twelve-month target. TikTok and YouTube are active but pre-engine, counted at zero until the relaunch.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+        <div className="border-b border-white/10">
           {KPIS.map((k, i) => (
             <div
               key={i}
-              className="bx-kpi group rounded-2xl border border-white/10 bg-gradient-to-b from-[#151515] to-[#0E0E0E] p-7 transition-colors duration-500 hover:border-[#FD3737]/40 md:p-8"
+              className="bx-kpi flex flex-col gap-3 border-t border-white/10 py-8 md:grid md:grid-cols-[minmax(0,34%)_1fr] md:grid-rows-[auto_auto] md:gap-x-14 md:gap-y-2 md:py-9"
             >
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#B8B8C0]">{k.metric}</p>
-              <div className="mt-5 flex items-center gap-3">
-                <span className="font-display text-xl text-[#B8B8C0] md:text-2xl">{k.now}</span>
-                <span className="bx-kpi-arrow h-px flex-1 origin-left bg-gradient-to-r from-[#B8B8C0]/40 to-[#FD3737]" />
-                <span className="font-display text-2xl text-[#FD3737] md:text-3xl">{k.target}</span>
+              <p className="order-1 font-mono text-[10px] uppercase tracking-[0.25em] text-[#FD3737] md:col-start-1 md:row-start-1 md:self-center">
+                {k.metric}
+              </p>
+              <div className="order-2 flex items-baseline gap-4 md:col-start-2 md:row-span-2 md:row-start-1 md:gap-6 md:self-center">
+                <span className="font-display text-2xl text-[#B8B8C0] md:text-3xl">{k.now}</span>
+                <span className="bx-kpi-arrow h-px min-w-8 flex-1 origin-left self-center bg-gradient-to-r from-[#B8B8C0]/40 to-[#FD3737]" />
+                <span className="text-right font-display text-3xl text-[#FD3737] md:text-4xl">{k.target}</span>
               </div>
-              <p className="mt-4 text-xs leading-relaxed text-[#B8B8C0] md:text-sm">{k.note}</p>
+              <p className="order-3 max-w-md text-xs leading-relaxed text-[#B8B8C0] md:col-start-1 md:row-start-2 md:text-sm">
+                {k.note}
+              </p>
             </div>
           ))}
         </div>
