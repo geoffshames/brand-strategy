@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Work Sans', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['N27', 'Work Sans', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         '2xs': ['0.75rem', { lineHeight: '1rem' }],
