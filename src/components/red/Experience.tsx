@@ -8,6 +8,7 @@ import Grind from './SceneGrind';
 import BlindSpot from './SceneBlindSpot';
 import Arsenal from './SceneArsenal';
 import Precedent from './ScenePrecedent';
+import ContentIntel from './SceneContentIntel';
 import Conversion from './SceneConversion';
 import Runway from './SceneRunway';
 import Scoreboard from './SceneScoreboard';
@@ -90,6 +91,7 @@ export default function RedExperience() {
       <BlindSpot />
       <Arsenal />
       <Precedent />
+      <ContentIntel />
       <Conversion />
       <Runway />
       <Scoreboard />
