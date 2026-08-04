@@ -20,7 +20,7 @@ const KPIS = [
     metric: 'TikTok followers',
     now: '26.8K',
     target: '500K+',
-    note: '335 videos already on @redgranttv. Daily short-form from 48 weeks of tour footage will compound the existing base rapidly.',
+    note: 'Top TikTok: 219K plays, 16.7K likes on the Katt Williams clip. 335 videos already on @redgranttv with proven viral potential.',
   },
   {
     metric: 'Email/SMS owned list',

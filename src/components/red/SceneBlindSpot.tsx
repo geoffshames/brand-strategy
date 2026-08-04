@@ -25,7 +25,7 @@ const PANELS = [
   {
     tag: 'The Social Footprint',
     title: '5 platforms, no system',
-    body: 'Instagram: 409K followers. Facebook: 78K likes. TikTok (@redgranttv): 26.8K. X (@rodneyredgrant): 26.4K. YouTube: 22.8K. The audience is real and substantial across every platform — but the accounts operate independently with no shared content calendar, no cross-promotion, and no unified format. Facebook has two pages (red.grant.129 and redgrantlaughs). The show simulcasts to six platforms with no repurposing pipeline. The audience is there — it needs a single front door.',
+    body: 'Instagram: 409K followers. Facebook: 78K likes. TikTok (@redgranttv): 26.8K. X (@rodneyredgrant): 26.4K. YouTube: 22.8K. The audience is real and substantial across every platform. His standup clips on other channels (KUSH Comedy, LOL Network, Netflix Is A Joke) have over 1.5 million combined views. The opportunity is to unify under one content calendar, cross-promote, and capture the audience that already exists but is scattered across accounts that do not feed each other. Facebook has two pages that should be consolidated.',
     image: '/images/red-grant/data.png',
   },
 ];
