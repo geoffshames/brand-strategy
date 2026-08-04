@@ -80,7 +80,7 @@ export default function Grind() {
   return (
     <section id="grind" ref={root} className="relative">
       {/* Pinned monologue */}
-      <div className="rg-read flex min-h-[100dvh] items-center">
+      <div className="rg-read flex min-h-[100dvh] items-center pt-[60px]">
         <div className="mx-auto w-full max-w-5xl px-6 md:px-10">
           <div className="mb-10 flex items-center gap-4">
             <span className="font-display text-sm text-[#FD3737]">I</span>

@@ -86,7 +86,7 @@ export default function BlindSpot() {
 
   return (
     <section id="blindspot" ref={root} className="relative overflow-hidden bg-[#0D0D0D]">
-      <div className="flex min-h-[100dvh] flex-col justify-center py-10 md:py-0">
+      <div className="flex min-h-[100dvh] flex-col justify-center py-10 pt-[70px] md:py-0 md:pt-[60px]">
         <div className="mx-auto mb-10 w-full max-w-6xl px-6 md:mb-14 md:px-10">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm text-[#FD3737]">II</span>

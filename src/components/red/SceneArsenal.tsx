@@ -54,6 +54,7 @@ export default function Arsenal() {
             start: 'top top',
             end: '+=220%',
             pin: true,
+            pinSpacing: true,
             scrub: 0.5,
           },
         });
@@ -115,7 +116,7 @@ export default function Arsenal() {
 
   return (
     <section id="arsenal" ref={root} className="relative overflow-hidden">
-      <div className="relative flex min-h-[100dvh] flex-col items-center justify-center">
+      <div className="relative flex min-h-[100dvh] flex-col items-center justify-center pt-[60px]">
         {/* bg */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"

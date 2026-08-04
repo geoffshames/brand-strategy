@@ -72,12 +72,12 @@ export default function RedExperience() {
 
   return (
     <main className="relative w-full max-w-full overflow-x-clip bg-[#0A0A0A] text-[#E4E4E9]">
-      {/* Chrome: progress + act + identity */}
-      <div className="pointer-events-none fixed inset-x-0 top-0 z-50">
+      {/* Persistent header */}
+      <div className="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-[#0A0A0A]/95 backdrop-blur-md">
         <div ref={progressRef} className="h-[2px] w-full origin-left scale-x-0 bg-[#FD3737]" />
-        <div className="flex items-center justify-between px-5 md:px-10 pt-5">
+        <div className="flex items-center justify-between px-5 py-3 md:px-10 md:py-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/CC-LOGO-2024-WHITE.png" alt="Crowd Control" className="h-5 md:h-6 w-auto opacity-90" />
+          <img src="/brand/CC-LOGO-2024-WHITE.png" alt="Crowd Control" className="h-5 md:h-7 w-auto opacity-90" />
           <div className="hidden md:flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-[#B8B8C0]">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FD3737]" />
             {act || 'Strategy Briefing'}
