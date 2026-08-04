@@ -138,30 +138,28 @@ export default function ContentIntel() {
               className="rg-ci-card group overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-[#0E0E0E] transition-colors duration-500 hover:border-[#FD3737]/30"
             >
               {/* Video embed shadowbox */}
-              <div className="relative aspect-video w-full overflow-hidden bg-black">
-                {v.embedType === 'youtube' ? (
-                  <iframe
-                    src={`https://www.youtube.com/embed/${v.embedId}`}
-                    title={v.title}
-                    className="absolute inset-0 h-full w-full"
-                    frameBorder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <blockquote
-                    className="tiktok-embed absolute inset-0 h-full w-full"
-                    cite={`https://www.tiktok.com/@redgranttv/video/${v.embedId}`}
-                    data-video-id={v.embedId}
-                    style={{ maxWidth: '100%', minWidth: '100%' }}
-                  >
-                    <section className="flex h-full w-full items-center justify-center bg-black">
-                      <a target="_blank" rel="noopener noreferrer" href={`https://www.tiktok.com/@redgranttv/video/${v.embedId}`}>
-                        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#B8B8C0]">Watch on TikTok</span>
-                      </a>
-                    </section>
-                  </blockquote>
-                )}
+              <div className={`relative w-full overflow-hidden bg-black ${v.embedType === 'tiktok' ? 'mx-auto max-w-[320px]' : ''}`}>
+                <div className={`relative w-full ${v.embedType === 'tiktok' ? 'aspect-[9/16]' : 'aspect-video'}`}>
+                  {v.embedType === 'youtube' ? (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${v.embedId}`}
+                      title={v.title}
+                      className="absolute inset-0 h-full w-full"
+                      frameBorder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <iframe
+                      src={`https://www.tiktok.com/embed/v2/${v.embedId}`}
+                      title={v.title}
+                      className="absolute inset-0 h-full w-full"
+                      frameBorder="0"
+                      allow="encrypted-media"
+                      allowFullScreen
+                    />
+                  )}
+                </div>
               </div>
 
               {/* Stats overlay bar */}
@@ -218,8 +216,6 @@ export default function ContentIntel() {
         </div>
       </div>
 
-      {/* TikTok embed script */}
-      <script async src="https://www.tiktok.com/embed.js" />
     </section>
   );
 }
