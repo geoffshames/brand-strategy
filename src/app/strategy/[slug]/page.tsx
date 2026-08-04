@@ -9,9 +9,10 @@ interface StrategyPageProps {
 }
 
 export async function generateStaticParams() {
-  // brxce-grimm is served by a bespoke static route (src/app/strategy/brxce-grimm)
-  // which takes precedence over this dynamic template — exclude it here.
-  const slugs = getAllSlugs().filter((slug) => slug !== 'brxce-grimm');
+  // brxce-grimm and red-grant are served by bespoke static routes
+  // (src/app/strategy/brxce-grimm, src/app/strategy/red-grant)
+  // which take precedence over this dynamic template — exclude them here.
+  const slugs = getAllSlugs().filter((slug) => slug !== 'brxce-grimm' && slug !== 'red-grant');
   return slugs.map((slug) => ({
     slug,
   }));
