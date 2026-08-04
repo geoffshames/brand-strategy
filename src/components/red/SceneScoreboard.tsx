@@ -84,9 +84,9 @@ export default function Scoreboard() {
   );
 
   return (
-    <section ref={root} className="relative py-32 md:py-44">
+    <section ref={root} className="relative py-20 md:py-44">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="rg-score-head mb-16 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
+        <div className="rg-score-head mb-12 flex flex-col gap-6 md:mb-20 md:flex-row md:items-end md:justify-between">
           <div>
             <Kicker className="mb-5">The Scoreboard</Kicker>
             <h2 className="font-display text-4xl leading-[1.05] text-white md:text-6xl">
@@ -104,7 +104,7 @@ export default function Scoreboard() {
           {KPIS.map((k, i) => (
             <div
               key={i}
-              className="rg-kpi group rounded-2xl border border-white/10 bg-gradient-to-b from-[#151515] to-[#0E0E0E] p-7 transition-colors duration-500 hover:border-[#FD3737]/40 md:p-8"
+              className="rg-kpi group rounded-2xl border border-white/10 bg-gradient-to-b from-[#151515] to-[#0E0E0E] p-5 transition-colors duration-500 hover:border-[#FD3737]/40 md:p-8"
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-[#B8B8C0]">{k.metric}</p>
               <div className="mt-5 flex items-center gap-3">

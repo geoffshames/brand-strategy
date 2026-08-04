@@ -72,9 +72,9 @@ export default function Runway() {
   );
 
   return (
-    <section ref={root} className="relative bg-[#0D0D0D] py-32 md:py-44">
+    <section ref={root} className="relative bg-[#0D0D0D] py-20 md:py-44">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mb-20 max-w-3xl md:mb-28">
+        <div className="mb-16 max-w-3xl md:mb-28">
           <Kicker className="mb-5">The Runway · Twelve months</Kicker>
           <h2 className="font-display text-4xl leading-[1.05] text-white md:text-6xl">
             Twelve months to
@@ -95,7 +95,7 @@ export default function Runway() {
             <path d="M1 0 L1 1000" stroke="#ffffff" strokeWidth="1" fill="none" opacity="0.07" />
           </svg>
 
-          <div className="space-y-20 md:space-y-32">
+          <div className="space-y-14 md:space-y-32">
             {PHASES.map((p, i) => {
               const left = i % 2 === 0;
               return (

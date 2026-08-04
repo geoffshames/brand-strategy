@@ -62,16 +62,16 @@ export default function Precedent() {
   );
 
   return (
-    <section ref={root} className="relative bg-[#0D0D0D] py-32 md:py-44">
+    <section ref={root} className="relative bg-[#0D0D0D] py-20 md:py-44">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="rg-prec-head mb-16 max-w-3xl md:mb-20">
+        <div className="rg-prec-head mb-12 max-w-3xl md:mb-20">
           <Kicker className="mb-5">The Precedent</Kicker>
           <h2 className="font-display text-4xl leading-[1.05] text-white md:text-6xl">
             Comedians who built
             <br />
             digital empires<span className="text-[#FD3737]">.</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[#B8B8C0] md:text-lg">
+          <p className="mt-8 max-w-2xl text-sm leading-relaxed text-[#B8B8C0] md:mt-6 md:text-lg">
             Every one of these comedians started with less stage résumé than Red Grant — and every one
             built an owned platform that turned their career into a compounding asset.
           </p>
@@ -116,7 +116,7 @@ export default function Precedent() {
           })}
         </div>
 
-        <p className="mt-10 max-w-3xl text-center font-display text-xl leading-snug text-white md:text-2xl">
+        <p className="mt-8 max-w-3xl text-center font-display text-lg leading-snug text-white md:mt-10 md:text-2xl">
           Every one built an owned platform. Red Grant has the résumé.
           <br />
           <span className="text-[#FD3737]">He doesn't have the platform — yet.</span>

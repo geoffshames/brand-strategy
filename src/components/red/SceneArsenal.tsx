@@ -45,32 +45,50 @@ export default function Arsenal() {
         return;
       }
 
-      // Master pinned sequence
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: root.current,
-          start: 'top top',
-          end: '+=320%',
-          pin: true,
-          scrub: 0.5,
-        },
+      // Master pinned sequence — shorter on mobile to avoid dead space
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 768px)', () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: root.current,
+            start: 'top top',
+            end: '+=320%',
+            pin: true,
+            scrub: 0.5,
+          },
+        });
+
+        tl.fromTo('.rg-ars-line', { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 })
+          .to('.rg-ars-line', { opacity: 0, y: -40, duration: 0.8 }, '+=0.6')
+          .fromTo('.rg-ars-quote', { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 1 })
+          .to('.rg-ars-quote', { opacity: 0, y: -40, duration: 0.8 }, '+=0.8')
+          .fromTo('.rg-ars-reveal', { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 1.2 })
+          .fromTo('.rg-ars-grid', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, immediateRender: false }, '<0.2')
+          .fromTo(
+            '.rg-ars-card',
+            { opacity: 0, y: 24 },
+            { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, immediateRender: false },
+            '<0.15'
+          );
       });
 
-      // Beat 1: the setup line
-      tl.fromTo('.rg-ars-line', { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1 })
-        .to('.rg-ars-line', { opacity: 0, y: -40, duration: 0.8 }, '+=0.6')
-        // Beat 2: the quote
-        .fromTo('.rg-ars-quote', { opacity: 0, scale: 0.96 }, { opacity: 1, scale: 1, duration: 1 })
-        .to('.rg-ars-quote', { opacity: 0, y: -40, duration: 0.8 }, '+=0.8')
-        // Beat 3: the reveal — arsenal grid
-        .fromTo('.rg-ars-reveal', { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 1.2 })
-        .fromTo('.rg-ars-grid', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, immediateRender: false }, '<0.2')
-        .fromTo(
-          '.rg-ars-card',
-          { opacity: 0, y: 24 },
-          { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, immediateRender: false },
-          '<0.15'
-        );
+      mm.add('(max-width: 767px)', () => {
+        // Mobile: sequential fade — beat 1, then beat 2, then reveal + cards
+        // Beat 1 fades in, then out
+        gsap.fromTo('.rg-ars-line', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '.rg-ars-line', start: 'top 80%' } });
+        gsap.to('.rg-ars-line', { opacity: 0, y: -30, duration: 0.5, scrollTrigger: { trigger: '.rg-ars-line', start: 'bottom 60%' } });
+
+        // Beat 2 fades in after beat 1, then out
+        gsap.fromTo('.rg-ars-quote', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '.rg-ars-quote', start: 'top 75%' } });
+        gsap.to('.rg-ars-quote', { opacity: 0, y: -30, duration: 0.5, scrollTrigger: { trigger: '.rg-ars-quote', start: 'bottom 55%' } });
+
+        // Beat 3 reveal
+        gsap.fromTo('.rg-ars-reveal', { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.7, scrollTrigger: { trigger: '.rg-ars-reveal', start: 'top 70%' } });
+        gsap.fromTo('.rg-ars-grid', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, scrollTrigger: { trigger: '.rg-ars-grid', start: 'top 80%' } });
+        gsap.utils.toArray<HTMLElement>('.rg-ars-card').forEach((card, i) => {
+          gsap.fromTo(card, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, delay: i * 0.05, scrollTrigger: { trigger: card, start: 'top 88%' } });
+        });
+      });
 
       // Ring pulse expands as you keep scrolling
       gsap.utils.toArray<HTMLElement>('.rg-ars-ring').forEach((ring) => {
@@ -117,14 +135,14 @@ export default function Arsenal() {
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-center md:px-10">
-          <div className="mb-12 flex items-center justify-center gap-4">
+          <div className="mb-6 flex items-center justify-center gap-4 md:mb-12">
             <span className="font-display text-sm text-[#FD3737]">III</span>
             <span className="h-px w-12 bg-[#FD3737]/60" />
             <Kicker>The Arsenal</Kicker>
           </div>
 
           {/* Stacked beats — absolutely centered over each other */}
-          <div className="relative grid min-h-[42vh] place-items-center">
+          <div className="relative grid min-h-[30vh] place-items-center md:min-h-[42vh]">
             {/* Beat 1 */}
             <div className="rg-ars-line col-start-1 row-start-1 opacity-0">
               <p className="mx-auto max-w-3xl font-display text-3xl leading-[1.15] text-white md:text-5xl">
@@ -157,7 +175,7 @@ export default function Arsenal() {
           </div>
 
           {/* Arsenal grid (arrives with reveal, stays) */}
-          <div className="rg-ars-grid mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 opacity-0 md:grid-cols-3 md:gap-5">
+          <div className="rg-ars-grid mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-4 opacity-0 md:mt-12 md:grid-cols-3 md:gap-5">
             {ARSENAL.map((item, i) => (
               <div
                 key={i}

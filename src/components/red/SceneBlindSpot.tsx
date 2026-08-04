@@ -86,7 +86,7 @@ export default function BlindSpot() {
 
   return (
     <section id="blindspot" ref={root} className="relative overflow-hidden bg-[#0D0D0D]">
-      <div className="flex min-h-[100dvh] flex-col justify-center py-20 md:py-0">
+      <div className="flex min-h-[100dvh] flex-col justify-center py-10 md:py-0">
         <div className="mx-auto mb-10 w-full max-w-6xl px-6 md:mb-14 md:px-10">
           <div className="flex items-center gap-4">
             <span className="font-display text-sm text-[#FD3737]">II</span>
@@ -114,7 +114,7 @@ export default function BlindSpot() {
           {PANELS.map((p, i) => (
             <article
               key={i}
-              className="group relative h-[62vh] w-full flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 md:h-[68vh] md:w-[44vw]"
+              className="group relative h-[50vh] w-full flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 md:h-[68vh] md:w-[44vw]"
             >
               <div
                 className="rg-panel-img absolute inset-[-10%] bg-cover bg-center transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.04]"

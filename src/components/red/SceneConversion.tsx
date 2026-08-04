@@ -92,9 +92,9 @@ export default function Conversion() {
   );
 
   return (
-    <section id="conversion" ref={root} className="relative py-32 md:py-44">
+    <section id="conversion" ref={root} className="relative py-20 md:py-44">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="mb-16 max-w-3xl md:mb-24">
+        <div className="mb-12 max-w-3xl md:mb-24">
           <div className="mb-5 flex items-center gap-4">
             <span className="font-display text-sm text-[#FD3737]">IV</span>
             <span className="h-px w-12 bg-[#FD3737]/60" />
@@ -114,8 +114,8 @@ export default function Conversion() {
               className="rg-pillar sticky overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-[#0E0E0E] will-change-transform"
               style={{ top: `calc(88px + ${i * 14}px)` }}
             >
-              <div className="grid grid-cols-1 gap-6 p-7 md:grid-cols-[auto_1fr_1fr] md:gap-12 md:p-12">
-                <span className="font-display text-5xl text-[#FD3737]/90 md:text-7xl">{p.n}</span>
+              <div className="grid grid-cols-1 gap-4 p-5 md:grid-cols-[auto_1fr_1fr] md:gap-12 md:p-12">
+                <span className="font-display text-4xl text-[#FD3737]/90 md:text-7xl">{p.n}</span>
                 <div>
                   <h3 className="font-display text-2xl text-white md:text-4xl">{p.title}</h3>
                   <p className="mt-4 max-w-lg text-sm leading-relaxed text-[#B8B8C0] md:text-base">{p.thesis}</p>

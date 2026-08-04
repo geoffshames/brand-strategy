@@ -94,7 +94,7 @@ export default function Grind() {
       </div>
 
       {/* The hard numbers */}
-      <div className="mx-auto max-w-6xl px-6 pb-36 pt-10 md:px-10 md:pb-48">
+      <div className="mx-auto max-w-6xl px-6 pb-20 pt-8 md:px-10 md:pb-48 md:pt-10">
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-3">
           {TRUTHS.map((t, i) => (
             <div key={i} className="rg-truth bg-[#0D0D0D] p-8 md:p-10">
@@ -106,7 +106,7 @@ export default function Grind() {
             </div>
           ))}
         </div>
-        <p className="rg-truth mx-auto mt-14 max-w-3xl text-center text-base leading-relaxed text-[#B8B8C0] md:text-lg">
+        <p className="rg-truth mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-[#B8B8C0] md:mt-14 md:text-lg">
           The grind is not a lack of opportunity. It is three decades of stage time, film credits,
           and touring — with no digital infrastructure built to catch any of it. The career outpaces the brand by a mile.
         </p>
