@@ -7,25 +7,25 @@ const PANELS = [
   {
     tag: 'The Tour Host',
     title: 'Katt Williams\' Golden Age',
-    body: 'Currently hosting the biggest comedy tour in the country. Nightly exposure to arena-sized audiences — zero owned capture from any of it. Every show is a missed chance to turn a fan into a follower.',
+    body: 'Currently hosting the biggest comedy tour in the country. Arena-sized audiences, nightly, for months. The exposure is enormous — the capture infrastructure to turn those fans into a owned audience is the next step.',
     image: '/images/red-grant/hero2.png',
   },
   {
     tag: 'The Morning Show',
     title: 'Red Grant in the Morning',
-    body: 'A weekly live show across YouTube, Instagram, Facebook, Twitch, and Kick. Multiple platforms, inconsistent formatting, 22.8K YouTube subscribers. The content engine runs — it just never compounds.',
+    body: 'A weekly live show simulcast across YouTube, Instagram, Facebook, Twitch, Kick, and X. The content engine runs every Monday at 10 AM — the opportunity is to systematize the output so each episode compounds across platforms instead of disappearing after the live stream ends.',
     image: '/images/red-grant/editorial.png',
   },
   {
     tag: 'The Political Run',
     title: 'DC Mayor to Council Run',
-    body: 'A 2022 mayoral campaign that earned national press. A City Council run after that. A civic profile most comedians would kill for — and a story that has never been woven into the brand.',
+    body: 'A 2022 mayoral campaign that earned national press. A City Council run after that. A civic profile most comedians would kill for — and a story that belongs front and center in the brand, not separate from it.',
     image: '/images/red-grant/texture.png',
   },
   {
-    tag: 'The Social Gap',
-    title: '78K Facebook likes',
-    body: 'Facebook is his strongest platform at 78K likes. Instagram has 409K followers but posting is inconsistent. TikTok is split across multiple accounts — @redgranttv, @redgrant, and others — with no single hub. The show simulcasts on five platforms with no unified format or repurposing. The audience is there — it is scattered across accounts that do not cross-promote, and no single property aggregates it.',
+    tag: 'The Social Footprint',
+    title: '5 platforms, no system',
+    body: 'Instagram: 409K followers. Facebook: 78K likes. TikTok (@redgranttv): 26.8K. X (@rodneyredgrant): 26.4K. YouTube: 22.8K. The audience is real and substantial across every platform — but the accounts operate independently with no shared content calendar, no cross-promotion, and no unified format. Facebook has two pages (red.grant.129 and redgrantlaughs). The show simulcasts to six platforms with no repurposing pipeline. The audience is there — it needs a single front door.',
     image: '/images/red-grant/data.png',
   },
 ];
@@ -91,7 +91,7 @@ export default function BlindSpot() {
           <div className="flex items-center gap-4">
             <span className="font-display text-sm text-[#FD3737]">II</span>
             <span className="h-px w-12 bg-[#FD3737]/60" />
-            <Kicker>The Blind Spot · Drag through the gaps</Kicker>
+            <Kicker>The Opportunity · Where to scale</Kicker>
           </div>
         </div>
 
@@ -103,11 +103,10 @@ export default function BlindSpot() {
               <br />
               everywhere<span className="text-[#FD3737]">.</span>
               <br />
-              And invisible.
+              Time to be found.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-[#B8B8C0]">
-              The career is arena-scale. The digital footprint is a whisper. Four blind spots where
-              millions of dollars in audience equity is leaking away every year.
+              The career is arena-scale. The digital footprint is real but unsystematized. Four opportunities to take what is already working and multiply it.
             </p>
           </div>
 

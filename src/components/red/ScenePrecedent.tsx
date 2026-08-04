@@ -119,7 +119,7 @@ export default function Precedent() {
         <p className="mt-8 max-w-3xl text-center font-display text-lg leading-snug text-white md:mt-10 md:text-2xl">
           Every one built an owned platform. Red Grant has the résumé.
           <br />
-          <span className="text-[#FD3737]">He doesn't have the platform — yet.</span>
+          <span className="text-[#FD3737]">The platform is the next step.</span>
         </p>
       </div>
     </section>

@@ -55,9 +55,8 @@ export default function Closing() {
         </h2>
 
         <p className="rg-close-fade mt-8 max-w-xl text-base leading-relaxed text-[#E4E4E9] opacity-0 md:text-lg">
-          Thirty years of grind. An arsenal no comedian can match. A digital machine that doesn't exist yet.
-          The strategy is not to make Red Grant funny — the world already knows that. It is to make him findable,
-          ownable, and unstoppable.
+          Thirty years of grind. An arsenal no comedian can match. A career built from the ground up.
+          The strategy is not to make Red Grant funny — the world already knows that. It is to build the digital machine that takes it to the next level.
         </p>
 
         <div className="rg-close-fade mt-12 flex flex-col items-start gap-8 opacity-0 md:flex-row md:items-center md:justify-between">

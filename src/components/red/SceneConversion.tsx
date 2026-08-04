@@ -8,18 +8,18 @@ const PILLARS = [
     n: '01',
     title: 'Unify the Brand',
     thesis:
-      'Consolidate scattered accounts into one coherent identity across IG, YT, TikTok, FB. Today the footprint is split: @redgranttv and @redgrant on TikTok with no shared hub, a personal Facebook page alongside the public one, and a show that simulcasts to five platforms with no unified format. One voice, one visual system, one content calendar. The audience exists — it just needs a single front door.',
+      'Red Grant has a verified presence on every major platform — Instagram (409K), Facebook (78K), TikTok (26.8K), X (26.4K), YouTube (22.8K). The audience is already there. The opportunity is to unify them under one content calendar, one visual system, and one cross-promotion strategy so every post on every platform feeds the others. Facebook currently has two pages that should be consolidated.',
     moves: [
-      'Audit and consolidate 5+ fragmented accounts into one hub per platform',
-      'Unified visual identity across every platform',
-      'Single content calendar driving all channels',
+      'Consolidate Facebook pages (red.grant.129 + redgrantlaughs) into one hub',
+      'Unified visual identity and content calendar across all five platforms',
+      'Cross-promotion system so each platform feeds the others',
     ],
   },
   {
     n: '02',
     title: 'Build the Content Engine',
     thesis:
-      'Transform the weekly show and touring footage into a systematic short-form content pipeline. 48 weeks on the road = 48 weeks of raw material. The content already exists — it just has never been systematized.',
+      'Transform the weekly show and touring footage into a systematic short-form content pipeline. 48 weeks on the road is 48 weeks of raw material. The content already exists — the system to distribute it daily across platforms is what we build.',
     moves: [
       'Daily short-form cut from tour footage',
       'Show clips reformatted natively for each platform',

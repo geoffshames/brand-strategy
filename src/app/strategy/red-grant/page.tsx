@@ -3,7 +3,7 @@ import RedExperience from '@/components/red/Experience';
 
 const TITLE = 'Red Grant — Brand Growth Strategy | Crowd Control Digital';
 const DESCRIPTION =
-  'Thirty years on stage. Forty-eight weeks a year on the road. A multi-hyphenate arsenal nobody has connected — yet. The strategy to build the digital machine. Prepared by Crowd Control.';
+  'Thirty years on stage. Forty-eight weeks a year on the road. A multi-hyphenate arsenal ready for the next level. The strategy to build the digital machine. Prepared by Crowd Control.';
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -65,7 +65,7 @@ export default function Opening() {
 
         <p className="rg-fade mx-auto mt-10 max-w-2xl text-base leading-relaxed text-[#E4E4E9] opacity-0 md:text-xl">
           Thirty years on stage. Forty-eight weeks a year on the road.
-          The funniest man most people have never heard of — yet.
+          The funniest man ready for the next level.
         </p>
 
         <div className="rg-fade mt-14 flex flex-col items-center gap-3 opacity-0">

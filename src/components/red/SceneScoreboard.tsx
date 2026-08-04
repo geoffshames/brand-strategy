@@ -6,9 +6,9 @@ import { gsap, useGSAP, EASE_OUT, Kicker } from './motion';
 const KPIS = [
   {
     metric: 'Combined social reach',
-    now: '510K',
+    now: '563K',
     target: '2M+',
-    note: 'Consolidating fragmented accounts (multiple TikTok handles, split FB pages, show on 5 platforms) plus a daily content engine. IG, YT, TikTok, FB unified under one identity.',
+    note: 'Instagram 409K, Facebook 78K, TikTok 26.8K, X 26.4K, YouTube 22.8K — already substantial. Unified content engine and cross-promotion across all five platforms.',
   },
   {
     metric: 'YouTube subscribers',
@@ -18,9 +18,9 @@ const KPIS = [
   },
   {
     metric: 'TikTok followers',
-    now: '~15K',
+    now: '26.8K',
     target: '500K+',
-    note: 'Daily short-form from 48 weeks of tour footage. The raw material already exists — it just has never been systematized.',
+    note: '335 videos already on @redgranttv. Daily short-form from 48 weeks of tour footage will compound the existing base rapidly.',
   },
   {
     metric: 'Email/SMS owned list',
