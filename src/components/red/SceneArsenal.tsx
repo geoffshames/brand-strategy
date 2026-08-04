@@ -142,7 +142,7 @@ export default function Arsenal() {
           </div>
 
           {/* Stacked beats — absolutely centered over each other */}
-          <div className="relative grid min-h-[30vh] place-items-center md:min-h-[42vh]">
+          <div className="relative grid min-h-[50vh] place-items-center md:min-h-[55vh]">
             {/* Beat 1 */}
             <div className="rg-ars-line col-start-1 row-start-1 opacity-0">
               <p className="mx-auto max-w-3xl font-display text-3xl leading-[1.15] text-white md:text-5xl">
