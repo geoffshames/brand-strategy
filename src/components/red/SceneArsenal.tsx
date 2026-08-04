@@ -115,7 +115,7 @@ export default function Arsenal() {
 
   return (
     <section id="arsenal" ref={root} className="relative overflow-hidden">
-      <div className="relative flex min-h-[100dvh] items-center justify-center">
+      <div className="relative flex min-h-[100dvh] flex-col items-center justify-center">
         {/* bg */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -134,7 +134,7 @@ export default function Arsenal() {
           ))}
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 text-center md:px-10">
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 text-center md:px-10">
           <div className="mb-6 flex items-center justify-center gap-4 md:mb-12">
             <span className="font-display text-sm text-[#FD3737]">III</span>
             <span className="h-px w-12 bg-[#FD3737]/60" />
@@ -142,7 +142,7 @@ export default function Arsenal() {
           </div>
 
           {/* Stacked beats — absolutely centered over each other */}
-          <div className="relative grid min-h-[50vh] place-items-center md:min-h-[55vh]">
+          <div className="relative grid h-[55vh] place-items-center md:h-[60vh]">
             {/* Beat 1 */}
             <div className="rg-ars-line col-start-1 row-start-1 opacity-0">
               <p className="mx-auto max-w-3xl font-display text-3xl leading-[1.15] text-white md:text-5xl">
