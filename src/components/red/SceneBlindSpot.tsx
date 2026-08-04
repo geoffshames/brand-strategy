@@ -7,25 +7,25 @@ const PANELS = [
   {
     tag: 'The Tour Host',
     title: 'Katt Williams\' Golden Age',
-    body: 'Currently hosting the biggest comedy tour in the country. Nightly exposure to arena-sized audiences &mdash; zero owned capture from any of it. Every show is a miss to turn a fan into a follower.',
+    body: 'Currently hosting the biggest comedy tour in the country. Nightly exposure to arena-sized audiences — zero owned capture from any of it. Every show is a missed chance to turn a fan into a follower.',
     image: '/images/red-grant/hero2.png',
   },
   {
     tag: 'The Morning Show',
     title: 'Red Grant in the Morning',
-    body: 'A weekly live show across YouTube, Instagram, Facebook, Twitch, and Kick. Multiple platforms, inconsistent formatting, 22.8K YouTube subscribers. The content engine runs &mdash; it just never compounds.',
+    body: 'A weekly live show across YouTube, Instagram, Facebook, Twitch, and Kick. Multiple platforms, inconsistent formatting, 22.8K YouTube subscribers. The content engine runs — it just never compounds.',
     image: '/images/red-grant/editorial.png',
   },
   {
     tag: 'The Political Run',
     title: 'DC Mayor to Council Run',
-    body: 'A 2022 mayoral campaign that earned national press. A City Council run after that. A civic profile most comedians would kill for &mdash; and a story that has never been woven into the brand.',
+    body: 'A 2022 mayoral campaign that earned national press. A City Council run after that. A civic profile most comedians would kill for — and a story that has never been woven into the brand.',
     image: '/images/red-grant/texture.png',
   },
   {
     tag: 'The Social Gap',
     title: '78K Facebook likes',
-    body: 'Facebook is his strongest platform. Instagram and YouTube lag significantly. TikTok presence exists but is fragmented across multiple accounts. The audience is there &mdash; it is scattered, uncaptured, and unsystematized.',
+    body: 'Facebook is his strongest platform at 78K likes. Instagram has 409K followers but posting is inconsistent. TikTok is split across multiple accounts — @redgranttv, @redgrant, and others — with no single hub. The show simulcasts on five platforms with no unified format or repurposing. The audience is there — it is scattered across accounts that do not cross-promote, and no single property aggregates it.',
     image: '/images/red-grant/data.png',
   },
 ];
@@ -135,11 +135,11 @@ export default function BlindSpot() {
           {/* Tail card */}
           <div className="flex w-full flex-shrink-0 flex-col justify-center md:w-[34vw] md:pr-16">
             <p className="font-display text-2xl leading-snug text-white md:text-3xl">
-              &ldquo;The grind.
+              "The grind.
               <br />
               The blind spot.
               <br />
-              The conversion.&rdquo;
+              The conversion."
             </p>
             <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.25em] text-[#B8B8C0]">
               The operating diagnosis. Now the structure of the fix.

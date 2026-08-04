@@ -55,7 +55,7 @@ export default function Closing() {
         </h2>
 
         <p className="rg-close-fade mt-8 max-w-xl text-base leading-relaxed text-[#E4E4E9] opacity-0 md:text-lg">
-          Thirty years of grind. An arsenal no comedian can match. A digital machine that doesn&rsquo;t exist yet.
+          Thirty years of grind. An arsenal no comedian can match. A digital machine that doesn't exist yet.
           The strategy is not to make Red Grant funny — the world already knows that. It is to make him findable,
           ownable, and unstoppable.
         </p>

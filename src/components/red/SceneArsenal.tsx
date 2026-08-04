@@ -136,9 +136,9 @@ export default function Arsenal() {
             {/* Beat 2 — the quote */}
             <figure className="rg-ars-quote col-start-1 row-start-1 opacity-0">
               <blockquote className="mx-auto max-w-3xl font-display text-3xl leading-[1.15] text-white md:text-5xl">
-                &ldquo;He&rsquo;s doing things that other comedians
+                "He's doing things that other comedians
                 <br />
-                <span className="text-[#FD3737]">haven&rsquo;t done since Robert Townsend.&rdquo;</span>
+                <span className="text-[#FD3737]">haven't done since Robert Townsend."</span>
               </blockquote>
               <figcaption className="mt-6 font-mono text-[11px] uppercase tracking-[0.3em] text-[#B8B8C0]">
                 — Industry observer

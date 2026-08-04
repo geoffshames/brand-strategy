@@ -9,7 +9,7 @@ const CASES = [
     from: 'Wild \'N Out',
     proof: '$1.5–3M net worth',
     detail:
-      'Wild \'N Out cast member → 85 South Show podcast → a massively owned platform with millions of daily viewers and a touring empire. The podcast became the asset; the TV show became the top-of-funnel. Every comic who builds a digital empire starts by owning the platform.',
+      'Wild \'N Out cast member turned the 85 South Show podcast into a massively owned platform with millions of daily viewers and a touring empire. The podcast became the asset; the TV show became the top-of-funnel. Every comic who builds a digital empire starts by owning the platform.',
   },
   {
     name: 'Kountry Wayne',
@@ -20,17 +20,17 @@ const CASES = [
   },
   {
     name: 'DeRay Davis',
-    from: 'Standup → social',
+    from: 'Standup to social',
     proof: 'Headlining theaters',
     detail:
-      'Built from standup through a growing social media presence into Wild \'N Out and now headlining theaters. The arc is the same: stage credibility → social scale → institutional validation → larger live business. Every rung climbed by owning the audience at each step.',
+      'Built from standup through a growing social media presence into Wild \'N Out and now headlining theaters. The arc is the same: stage credibility becomes social scale, social scale becomes institutional validation, validation becomes a larger live business. Every rung climbed by owning the audience at each step.',
   },
   {
     name: 'D\'Lai',
     from: 'HBO Def Comedy Jam',
     proof: 'Hashtag-driven brand',
     detail:
-      'HBO Def Comedy Jam → &ldquo;D\'Lai Show&rdquo; weekly broadcast → a merchandising empire built on hashtag-driven brand recognition. He engineered a recurring content property from a single credit, then monetized the recurring property into a product line.',
+      'HBO Def Comedy Jam credit turned into the "D\'Lai Show" weekly broadcast, then a merchandising empire built on hashtag-driven brand recognition. He engineered a recurring content property from a single credit, then monetized the recurring property into a product line.',
   },
 ];
 
@@ -119,7 +119,7 @@ export default function Precedent() {
         <p className="mt-10 max-w-3xl text-center font-display text-xl leading-snug text-white md:text-2xl">
           Every one built an owned platform. Red Grant has the résumé.
           <br />
-          <span className="text-[#FD3737]">He doesn&rsquo;t have the platform — yet.</span>
+          <span className="text-[#FD3737]">He doesn't have the platform — yet.</span>
         </p>
       </div>
     </section>

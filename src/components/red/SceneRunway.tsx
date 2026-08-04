@@ -5,25 +5,25 @@ import { gsap, useGSAP, EASE_OUT, Kicker } from './motion';
 
 const PHASES = [
   {
-    window: 'Sep — Nov 2026',
+    window: 'Sep to Nov 2026',
     title: 'Foundation',
     metric: 'Identity shipped',
     body: 'Account audit, visual identity, and content system built. First show clips reformatted natively. Email capture wired in at every live date. Shows: Hollywood Improv, Cordova TN, Bowie MD, Detroit Fox Theatre.',
   },
   {
-    window: 'Dec 2026 — Feb 2027',
+    window: 'Dec 2026 to Feb 2027',
     title: 'Content Engine Live',
-    metric: 'Email list → 10K',
+    metric: 'Email list to 10K',
     body: 'Daily posting cadence locked. Show clips pipeline running. Tour content from Katt Williams dates feeding the engine. Email list to 10K through show capture and social calls to action.',
   },
   {
-    window: 'Mar — May 2027',
+    window: 'Mar to May 2027',
     title: 'Scale',
-    metric: 'Email → 25K · TikTok → 100K+',
+    metric: 'Email 25K · TikTok 100K+',
     body: 'Theater routing begins. First branded tour dates booked. Email list to 25K. TikTok growth to 100K+ through native short-form. The owned audience starts to compound.',
   },
   {
-    window: 'Jun — Aug 2027',
+    window: 'Jun to Aug 2027',
     title: 'The Special',
     metric: '50K owned · 500K+ reach',
     body: 'Special taping strategy executed. Streaming platform conversations opened. 50K owned audience. 500K+ combined social reach. The machine that did not exist a year ago now funds its own expansion.',

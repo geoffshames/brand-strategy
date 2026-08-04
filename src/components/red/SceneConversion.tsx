@@ -8,9 +8,9 @@ const PILLARS = [
     n: '01',
     title: 'Unify the Brand',
     thesis:
-      'Consolidate scattered accounts into one coherent identity across IG, YT, TikTok, FB. One voice, one visual system, one content calendar. The audience exists — it just needs a single front door.',
+      'Consolidate scattered accounts into one coherent identity across IG, YT, TikTok, FB. Today the footprint is split: @redgranttv and @redgrant on TikTok with no shared hub, a personal Facebook page alongside the public one, and a show that simulcasts to five platforms with no unified format. One voice, one visual system, one content calendar. The audience exists — it just needs a single front door.',
     moves: [
-      'Audit and consolidate 5+ fragmented accounts',
+      'Audit and consolidate 5+ fragmented accounts into one hub per platform',
       'Unified visual identity across every platform',
       'Single content calendar driving all channels',
     ],
@@ -30,11 +30,11 @@ const PILLARS = [
     n: '03',
     title: 'Own the Audience',
     thesis:
-      'Build email/SMS list from every show, every stream, every post. The one asset no algorithm controls. Every comedian who built a digital empire started here — and Red Grant has more raw audience access than any of them did.',
+      'Red already captures email on tour through a custom-built system. That system works but is not portable, not integrated with social, and does not feed back into content or show marketing. Port it to Laylo or an equivalent owned-audience platform — one that captures from the stage, the stream, and the social post, then segments and activates. Every comedian who built a digital empire started here, and Red has more raw audience access than any of them did.',
     moves: [
-      'Capture at every live show via QR and sign-up',
-      'Email/SMS from show streams and social',
-      '50K+ owned contacts in 12 months',
+      'Port existing tour email capture to Laylo or equivalent platform',
+      'Capture at every live show, stream, and social post through one system',
+      '50K+ owned contacts in 12 months, segmented and activatable',
     ],
   },
   {

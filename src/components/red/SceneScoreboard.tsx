@@ -8,7 +8,7 @@ const KPIS = [
     metric: 'Combined social reach',
     now: '510K',
     target: '2M+',
-    note: 'Consolidating fragmented accounts + daily content engine. IG, YT, TikTok, FB unified under one identity.',
+    note: 'Consolidating fragmented accounts (multiple TikTok handles, split FB pages, show on 5 platforms) plus a daily content engine. IG, YT, TikTok, FB unified under one identity.',
   },
   {
     metric: 'YouTube subscribers',
@@ -26,7 +26,7 @@ const KPIS = [
     metric: 'Email/SMS owned list',
     now: '0',
     target: '50K+',
-    note: 'The one asset no algorithm controls. Captured at every live show, every stream, every post.',
+    note: 'Existing custom tour capture ported to Laylo. The one asset no algorithm controls, captured from every show, stream, and post.',
   },
   {
     metric: 'Touring venues',

@@ -4,12 +4,12 @@ import { useRef } from 'react';
 import { gsap, useGSAP, EASE_OUT, SplitWords, Kicker } from './motion';
 
 const MONOLOGUE =
-  'Thirty years. Apollo Theatre to sold-out arenas. Comedy Central, Showtime, Shaq\'s All Star Comedy Jam. Eleven films. A production company with Lionsgate. Seven Viacom shows. Five hundred thousand DVDs sold. He has been everywhere comedy lives &mdash; and somehow, nowhere the algorithm can find him.';
+  'Thirty years. Apollo Theatre to sold-out arenas. Comedy Central, Showtime, Shaq\'s All Star Comedy Jam. Eleven films. A production company with Lionsgate. Seven Viacom shows. Five hundred thousand DVDs sold. He has been everywhere comedy lives — and somehow, nowhere the algorithm can find him.';
 
 const TRUTHS = [
   { value: '30', label: 'years on stage', sub: 'Apollo Theatre 1996 to Katt Williams\' Golden Age Tour 2026' },
   { value: '48', label: 'weeks per year on the road', sub: 'A touring work ethic virtually unmatched in comedy' },
-  { value: '11', label: 'film appearances', sub: 'American Hustle, First Sunday, Family Reunion &mdash; and counting' },
+  { value: '11', label: 'film appearances', sub: 'American Hustle, First Sunday, Family Reunion — and counting' },
 ];
 
 export default function Grind() {
@@ -108,7 +108,7 @@ export default function Grind() {
         </div>
         <p className="rg-truth mx-auto mt-14 max-w-3xl text-center text-base leading-relaxed text-[#B8B8C0] md:text-lg">
           The grind is not a lack of opportunity. It is three decades of stage time, film credits,
-          and touring &mdash; with no digital infrastructure built to catch any of it. The career outpaces the brand by a mile.
+          and touring — with no digital infrastructure built to catch any of it. The career outpaces the brand by a mile.
         </p>
       </div>
     </section>
