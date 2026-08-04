@@ -89,7 +89,7 @@ export default function Precedent() {
                   isOpen ? 'bg-[#141414]' : 'bg-[#0F0F0F] hover:bg-[#121212]'
                 }`}
               >
-                <div className="flex flex-col gap-2 px-6 py-6 md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6 md:px-10 md:py-7">
+                <div className="flex flex-col gap-2 px-6 py-6 md:grid md:grid-cols-[1fr_auto_1fr] md:items-baseline md:gap-6 md:px-10 md:py-7">
                   <div className="flex items-baseline gap-4">
                     <span className="font-mono text-[10px] tracking-[0.25em] text-[#FD3737]">0{i + 1}</span>
                     <h3 className={`font-display text-2xl transition-colors duration-500 md:text-4xl ${isOpen ? 'text-white' : 'text-[#B8B8C0]'}`}>
@@ -116,7 +116,7 @@ export default function Precedent() {
           })}
         </div>
 
-        <p className="mt-8 max-w-3xl text-center font-display text-lg leading-snug text-white md:mt-10 md:text-2xl">
+        <p className="mt-8 max-w-3xl font-display text-lg leading-snug text-white md:mt-10 md:text-2xl">
           Every one built an owned platform. Red Grant has the résumé.
           <br />
           <span className="text-[#FD3737]">The platform is the next step.</span>
