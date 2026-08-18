@@ -72,7 +72,10 @@ export function useRevealPhase<T extends HTMLElement>(disabled: boolean) {
 
         if (!armed) {
           armed = true;
-          if (e.isIntersecting || e.boundingClientRect.top < vpBottom) {
+          /* Arm the hidden state only in a genuinely visible document: a
+             backgrounded tab has no rAF to run the show animation, so hiding
+             there could strand content for screenshot tools and previews. */
+          if (document.visibilityState === 'hidden' || e.isIntersecting || e.boundingClientRect.top < vpBottom) {
             io.disconnect();
             return;
           }
