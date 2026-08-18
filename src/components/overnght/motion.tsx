@@ -305,11 +305,18 @@ export function useHeroEntrance(maxStartMs = 3000): RevealPhase {
   const [phase, setPhase] = useState<RevealPhase>('static');
 
   useLayoutEffect(() => {
-    if (reduced || performance.now() > maxStartMs) return;
+    /* Never hide when the tab is not visible: rAF is suspended there, so an
+       entrance could strand the hero at its pre-animation state. Hidden tabs
+       (and anything screenshotting them) get the fully visible static hero. */
+    if (reduced || performance.now() > maxStartMs || document.visibilityState === 'hidden') return;
     setPhase('hidden');
     const raf = requestAnimationFrame(() => setPhase('shown'));
+    /* Timers fire even when rAF does not: if the tab loses visibility mid-
+       entrance, snap to shown. */
+    const watchdog = window.setTimeout(() => setPhase('shown'), 700);
     return () => {
       cancelAnimationFrame(raf);
+      window.clearTimeout(watchdog);
       setPhase('shown');
     };
   }, [reduced, maxStartMs]);
