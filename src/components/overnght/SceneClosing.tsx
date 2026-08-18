@@ -16,7 +16,7 @@ export default function Closing() {
       gsap.fromTo(
         '.ov-cl-in',
         { opacity: 0, y: 26 },
-        { opacity: 1, y: 0, duration: 0.9, ease: EASE_OUT, stagger: 0.1, scrollTrigger: { trigger: root.current, start: 'top 70%' } }
+        { opacity: 1, y: 0, duration: 0.9, ease: EASE_OUT, immediateRender: false, stagger: 0.1, scrollTrigger: { trigger: root.current, start: 'top 70%' } }
       );
     },
     { scope: root }

@@ -36,7 +36,7 @@ export default function Position() {
           opacity: 1,
           y: 0,
           duration: 0.85,
-          ease: EASE_OUT,
+          ease: EASE_OUT, immediateRender: false,
           stagger: 0.08,
           scrollTrigger: { trigger: root.current, start: 'top 68%' },
         }

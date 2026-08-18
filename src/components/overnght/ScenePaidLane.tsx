@@ -37,7 +37,7 @@ export default function PaidLane() {
       gsap.fromTo(
         '.ov-paid-in',
         { opacity: 0, y: 26 },
-        { opacity: 1, y: 0, duration: 0.85, ease: EASE_OUT, stagger: 0.09, scrollTrigger: { trigger: root.current, start: 'top 68%' } }
+        { opacity: 1, y: 0, duration: 0.85, ease: EASE_OUT, immediateRender: false, stagger: 0.09, scrollTrigger: { trigger: root.current, start: 'top 68%' } }
       );
     },
     { scope: root }

@@ -48,7 +48,7 @@ export default function Roadmap() {
         gsap.fromTo(
           el,
           { opacity: 0, y: 26 },
-          { opacity: 1, y: 0, duration: 0.85, ease: EASE_OUT, scrollTrigger: { trigger: el, start: 'top 82%' } }
+          { opacity: 1, y: 0, duration: 0.85, ease: EASE_OUT, immediateRender: false, scrollTrigger: { trigger: el, start: 'top 82%' } }
         );
       });
     },
