@@ -1,142 +1,395 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import {
+  LazyMotion,
+  MotionConfig,
+  domAnimation,
+  m,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from 'framer-motion';
+import type { MotionValue, Transition, Variants } from 'framer-motion';
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+export { m };
 
-export { gsap, ScrollTrigger, useGSAP };
+/* ------------------------------------------------------------------ */
+/* Provider                                                            */
+/* ------------------------------------------------------------------ */
 
-/** Ease language for the whole briefing */
-export const EASE_OUT = 'power4.out';
-export const EASE_INOUT = 'power3.inOut';
-
-/** Split a string into word-wrapped char spans (chars animate, words keep line-breaks clean). */
-export function SplitChars({ text, className = '', charClass = 'ov-char' }: { text: string; className?: string; charClass?: string }) {
+export function MotionProvider({ children }: { children: React.ReactNode }) {
   return (
-    <span className={className} aria-label={text} role="text">
-      {text.split(' ').map((word, wi) => (
-        <span key={wi} className="inline-block overflow-hidden align-bottom whitespace-pre">
-          {Array.from(word).map((ch, ci) => (
-            <span key={ci} className={`${charClass} inline-block will-change-transform`} aria-hidden="true">
-              {ch}
-            </span>
-          ))}
-          {wi < text.split(' ').length - 1 ? <span aria-hidden="true">{' '}</span> : null}
-        </span>
-      ))}
-    </span>
+    <LazyMotion features={domAnimation} strict>
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
+    </LazyMotion>
   );
 }
 
-/** Split a string into word spans for opacity-scrub reading. */
-export function SplitWords({ text, className = '', wordClass = 'ov-word' }: { text: string; className?: string; wordClass?: string }) {
-  return (
-    <span className={className} aria-label={text} role="text">
-      {text.split(' ').map((word, i) => (
-        <span key={i} aria-hidden="true" className={`${wordClass} inline-block whitespace-pre`}>
-          {word}
-          {' '}
-        </span>
-      ))}
-    </span>
-  );
-}
+/* ------------------------------------------------------------------ */
+/* Presets                                                             */
+/* ------------------------------------------------------------------ */
 
-/** Lines that rise out of an overflow mask. Pass an array of lines. */
-export function MaskedLines({ lines, className = '', lineClass = 'ov-line' }: { lines: string[]; className?: string; lineClass?: string }) {
-  return (
-    <span className={className}>
-      {lines.map((line, i) => (
-        <span key={i} className="block overflow-hidden">
-          <span className={`${lineClass} block will-change-transform`}>{line}</span>
-        </span>
-      ))}
-    </span>
-  );
-}
+export const presets = {
+  rise: { type: 'spring', stiffness: 260, damping: 34, mass: 0.9 },
+  riseSoft: { type: 'spring', stiffness: 170, damping: 30, mass: 1 },
+  scaleIn: { type: 'spring', stiffness: 300, damping: 30, mass: 0.8 },
+  snap: { type: 'spring', stiffness: 420, damping: 30 },
+  bar: { type: 'spring', stiffness: 320, damping: 38 },
+  fade: { duration: 0.5, ease: 'easeOut' },
+  collapse: { duration: 0.28, ease: 'easeInOut' },
+} satisfies Record<string, Transition>;
 
-/** Magnetic CTA with the arrow nested in its own circle. */
-export function MagneticButton({ href, label }: { href: string; label: string }) {
-  const ref = useRef<HTMLAnchorElement>(null);
+export type RevealPhase = 'static' | 'hidden' | 'shown';
+
+/* ------------------------------------------------------------------ */
+/* Tri-state reveal. SSR renders "static" (no styles). "hidden" is     */
+/* reachable only inside a live IntersectionObserver callback, and     */
+/* only for elements genuinely below the viewport. If the observer     */
+/* never runs, nothing is ever hidden.                                 */
+/* ------------------------------------------------------------------ */
+
+export function useRevealPhase<T extends HTMLElement>(disabled: boolean) {
+  const ref = useRef<T>(null);
+  const [phase, setPhase] = useState<RevealPhase>('static');
 
   useEffect(() => {
+    if (disabled) {
+      setPhase((p) => (p === 'hidden' ? 'shown' : p));
+      return;
+    }
     const el = ref.current;
-    if (!el) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (window.matchMedia('(hover: none)').matches) return;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
 
-    const xTo = gsap.quickTo(el, 'x', { duration: 0.5, ease: 'power3.out' });
-    const yTo = gsap.quickTo(el, 'y', { duration: 0.5, ease: 'power3.out' });
+    let armed = false;
+    const io = new IntersectionObserver(
+      (entries) => {
+        const e = entries[entries.length - 1];
+        const vpBottom = e.rootBounds?.bottom ?? window.innerHeight;
+        const vpH = e.rootBounds?.height ?? window.innerHeight;
 
-    const move = (e: MouseEvent) => {
-      const r = el.getBoundingClientRect();
-      xTo((e.clientX - (r.left + r.width / 2)) * 0.25);
-      yTo((e.clientY - (r.top + r.height / 2)) * 0.25);
-    };
-    const leave = () => {
-      xTo(0);
-      yTo(0);
-    };
-    el.addEventListener('mousemove', move);
-    el.addEventListener('mouseleave', leave);
-    return () => {
-      el.removeEventListener('mousemove', move);
-      el.removeEventListener('mouseleave', leave);
-    };
-  }, []);
+        if (!armed) {
+          armed = true;
+          if (e.isIntersecting || e.boundingClientRect.top < vpBottom) {
+            io.disconnect();
+            return;
+          }
+          setPhase('hidden');
+          return;
+        }
+        if (e.intersectionRatio >= 0.25 || e.intersectionRect.height >= vpH * 0.35) {
+          setPhase('shown');
+          io.disconnect();
+        }
+      },
+      { threshold: [0, 0.05, 0.1, 0.15, 0.2, 0.25] }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [disabled]);
 
+  return { ref, phase };
+}
+
+type RevealCustom = { y: number; scale?: number; transition: Transition; stagger?: number };
+
+export const revealVariants: Variants = {
+  static: {},
+  hidden: (c?: RevealCustom) => ({
+    opacity: 0,
+    y: c?.y ?? 14,
+    ...(c?.scale != null ? { scale: c.scale } : {}),
+    transition: { duration: 0 },
+  }),
+  shown: (c?: RevealCustom) => ({
+    opacity: 1,
+    y: 0,
+    ...(c?.scale != null ? { scale: 1 } : {}),
+    transition: {
+      ...(c?.transition ?? presets.rise),
+      ...(c?.stagger ? { staggerChildren: c.stagger, delayChildren: 0.06 } : {}),
+    },
+  }),
+};
+
+export const revealItemVariants: Variants = {
+  static: {},
+  hidden: { opacity: 0, y: 12, transition: { duration: 0 } },
+  shown: { opacity: 1, y: 0, transition: presets.rise },
+};
+
+type RevealProps = {
+  children: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+  y?: number;
+  scale?: number;
+  transition?: Transition;
+  stagger?: number;
+  as?: 'div' | 'section' | 'article' | 'li';
+};
+
+export function Reveal({ children, className, style, y = 14, scale, transition = presets.rise, stagger }: RevealProps) {
+  const reduced = useReducedMotion();
+  const { ref, phase } = useRevealPhase<HTMLDivElement>(!!reduced);
   return (
-    <a
+    <m.div
       ref={ref}
-      href={href}
-      className="group inline-flex items-center gap-4 rounded-full bg-[#FD3737] pl-8 pr-2 py-2 text-white font-display uppercase tracking-[0.14em] text-sm md:text-base transition-colors duration-500 hover:bg-[#e02e2e] active:scale-[0.98]"
+      className={className}
+      style={style}
+      variants={revealVariants}
+      custom={{ y, scale, transition, stagger } satisfies RevealCustom}
+      initial={false}
+      animate={reduced ? 'static' : phase}
     >
-      {label}
-      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-black/25 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M3 13L13 3M13 3H5.5M13 3V10.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </span>
-    </a>
+      {children}
+    </m.div>
   );
 }
 
-/** Section eyebrow in house mono style. */
-export function Kicker({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+export function RevealItem({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <p className={`font-mono text-[11px] md:text-xs uppercase tracking-[0.3em] text-[#FD3737] ${className}`}>{children}</p>
+    <m.div className={className} variants={revealItemVariants}>
+      {children}
+    </m.div>
   );
 }
 
-/** Standard scene header: kicker + N27 title + optional strap. */
-export function SceneHeader({
-  kicker,
-  title,
-  strap,
-  align = 'left',
+/* ------------------------------------------------------------------ */
+/* Collapse: measured height auto tween, content stays mounted.        */
+/* ------------------------------------------------------------------ */
+
+const contentIn: Transition = { duration: 0.2, ease: 'easeOut', delay: 0.12 };
+const contentOut: Transition = { duration: 0.14, ease: 'easeOut' };
+const instant: Transition = { duration: 0 };
+
+export function Collapse({
+  open,
+  id,
+  labelledBy,
+  children,
+  className,
 }: {
-  kicker: string;
-  title: string;
-  strap?: string;
-  align?: 'left' | 'center';
+  open: boolean;
+  id: string;
+  labelledBy?: string;
+  children: React.ReactNode;
+  className?: string;
 }) {
-  const alignCls = align === 'center' ? 'text-center items-center' : 'text-left items-start';
+  const reduced = useReducedMotion();
   return (
-    <div className={`ov-scenehead flex flex-col gap-5 ${alignCls}`}>
-      <div className="flex items-center gap-4">
-        <span className="h-px w-8 bg-[#FD3737]/70" />
-        <Kicker>{kicker}</Kicker>
-      </div>
-      <h2 className="font-display text-4xl uppercase leading-[0.95] tracking-tight text-[#FAFAFA] md:text-6xl">{title}</h2>
-      {strap ? <p className="max-w-2xl text-base leading-relaxed text-[#B8B8C0] md:text-lg">{strap}</p> : null}
-    </div>
+    <m.div
+      id={id}
+      role="region"
+      aria-labelledby={labelledBy}
+      aria-hidden={!open}
+      className={className}
+      style={{ overflow: 'hidden' }}
+      initial={false}
+      animate={{ height: open ? 'auto' : 0 }}
+      transition={reduced ? instant : presets.collapse}
+    >
+      <m.div
+        initial={false}
+        animate={{ opacity: open ? 1 : 0 }}
+        transition={reduced ? instant : open ? contentIn : contentOut}
+        style={{ pointerEvents: open ? 'auto' : 'none' }}
+      >
+        {children}
+      </m.div>
+    </m.div>
   );
 }
 
-/** Mono micro-label. */
-export function Mono({ children, className = '' }: { children: React.ReactNode; className?: string }) {
-  return <span className={`font-mono text-[11px] uppercase tracking-[0.18em] text-[#8A8A93] ${className}`}>{children}</span>;
+export function PlusMark({ open }: { open: boolean }) {
+  const reduced = useReducedMotion();
+  return (
+    <m.span
+      aria-hidden
+      className="inline-flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 font-mono text-base text-[#FAFAFA]"
+      initial={false}
+      animate={{ rotate: open ? 45 : 0 }}
+      transition={reduced ? instant : presets.snap}
+    >
+      +
+    </m.span>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Chrome: hide-on-down top bar + progress rule.                       */
+/* ------------------------------------------------------------------ */
+
+export function useChromeHidden(showAfter = 12, hideAfter = 28, topLock = 96) {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const hiddenRef = useRef(false);
+  const dirRef = useRef<1 | -1>(-1);
+  const anchorRef = useRef(0);
+  const lastRef = useRef(0);
+
+  useMotionValueEvent(scrollY, 'change', (y) => {
+    const dir: 1 | -1 = y > lastRef.current ? 1 : -1;
+    lastRef.current = y;
+    if (dir !== dirRef.current) {
+      dirRef.current = dir;
+      anchorRef.current = y;
+    }
+    const commit = (v: boolean) => {
+      if (hiddenRef.current !== v) {
+        hiddenRef.current = v;
+        setHidden(v);
+      }
+    };
+    if (y <= topLock) return commit(false);
+    const travelled = Math.abs(y - anchorRef.current);
+    if (dir === 1 && travelled > hideAfter) commit(true);
+    else if (dir === -1 && travelled > showAfter) commit(false);
+  });
+
+  return hidden;
+}
+
+const topBarVariants: Variants = {
+  shown: { y: 0 },
+  hidden: { y: '-110%' },
+};
+
+export function BarShell({ children, className }: { children: React.ReactNode; className?: string }) {
+  const hidden = useChromeHidden();
+  const reduced = useReducedMotion();
+  return (
+    <m.header
+      className={className}
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50 }}
+      variants={topBarVariants}
+      initial={false}
+      animate={hidden ? 'hidden' : 'shown'}
+      transition={reduced ? instant : presets.bar}
+    >
+      {children}
+      <ScrollProgressBar />
+    </m.header>
+  );
+}
+
+export function ScrollProgressBar() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 220, damping: 36, restDelta: 0.001 });
+  return (
+    <m.div
+      aria-hidden
+      style={{
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: -1,
+        height: 2,
+        transformOrigin: '0% 50%',
+        scaleX,
+        background: '#FD3737',
+      }}
+    />
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Hero entrance: SSR fully visible; hides for at most one frame       */
+/* pre-paint, then springs in. Late hydration stays static.            */
+/* ------------------------------------------------------------------ */
+
+export function useHeroEntrance(maxStartMs = 3000): RevealPhase {
+  const reduced = useReducedMotion();
+  const [phase, setPhase] = useState<RevealPhase>('static');
+
+  useLayoutEffect(() => {
+    if (reduced || performance.now() > maxStartMs) return;
+    setPhase('hidden');
+    const raf = requestAnimationFrame(() => setPhase('shown'));
+    return () => {
+      cancelAnimationFrame(raf);
+      setPhase('shown');
+    };
+  }, [reduced, maxStartMs]);
+
+  return phase;
+}
+
+export const heroVariants: Variants = {
+  static: {},
+  hidden: {},
+  shown: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+};
+
+export const heroTitleVariants: Variants = {
+  static: {},
+  hidden: { opacity: 0, y: 20, transition: { duration: 0 } },
+  shown: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 200, damping: 28, mass: 1 } },
+};
+
+export const heroStrapVariants: Variants = {
+  static: {},
+  hidden: { opacity: 0, y: 14, transition: { duration: 0 } },
+  shown: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 170, damping: 30, mass: 1 } },
+};
+
+export const heroMetaVariants: Variants = {
+  static: {},
+  hidden: { opacity: 0, y: 10, transition: { duration: 0 } },
+  shown: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 240, damping: 32, mass: 0.9 } },
+};
+
+/* ------------------------------------------------------------------ */
+/* Scroll word-scrub quote: SSR words carry no opacity styles.         */
+/* ------------------------------------------------------------------ */
+
+export function ScrubQuote({ text, className }: { text: string; className?: string }) {
+  const ref = useRef<HTMLQuoteElement>(null);
+  const reduced = useReducedMotion();
+  const [live, setLive] = useState(false);
+
+  useEffect(() => {
+    if (reduced) {
+      setLive(false);
+      return;
+    }
+    const el = ref.current;
+    if (el && el.getBoundingClientRect().top >= window.innerHeight) setLive(true);
+  }, [reduced]);
+
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.85', 'end 0.55'] });
+  const words = useMemo(() => text.split(/\s+/).filter(Boolean), [text]);
+
+  return (
+    <blockquote ref={ref} className={className}>
+      {words.map((word, i) => (
+        <ScrubWord key={i} word={word} index={i} total={words.length} progress={scrollYProgress} live={live} />
+      ))}
+    </blockquote>
+  );
+}
+
+function ScrubWord({
+  word,
+  index,
+  total,
+  progress,
+  live,
+}: {
+  word: string;
+  index: number;
+  total: number;
+  progress: MotionValue<number>;
+  live: boolean;
+}) {
+  const start = index / total;
+  const end = Math.min(1, (index + 1.5) / total);
+  const opacity = useTransform(progress, [start, end], [0.25, 1]);
+  return (
+    <>
+      <m.span style={live ? { opacity } : undefined}>{word}</m.span>{' '}
+    </>
+  );
 }

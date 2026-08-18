@@ -1,9 +1,14 @@
 import { Metadata } from 'next';
+import { Archivo_Black, Barlow_Condensed } from 'next/font/google';
 import OvernghtExperience from '@/components/overnght/Experience';
+
+/* Broadcast faces used ONLY inside the sample ad mocks. */
+const archivo = Archivo_Black({ weight: '400', subsets: ['latin'], variable: '--font-archivo', display: 'swap' });
+const barlow = Barlow_Condensed({ weight: ['600', '700'], subsets: ['latin'], variable: '--font-barlow', display: 'swap' });
 
 const TITLE = 'Overnght Creative Strategy | Crowd Control Digital';
 const DESCRIPTION =
-  'The rights are signed. The audience is next. Competitor creative intelligence, category listening, and the ad system that turns exclusive niche sports rights into subscribers. Prepared by Crowd Control Digital.';
+  'The rights are signed. The audience is next. Full competitor clip dossiers, a messaging teardown, sample ad builds in the Overnght brand, and the 90-day test that opens on Worlds. Prepared by Crowd Control Digital.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -30,5 +35,9 @@ export const metadata: Metadata = {
 };
 
 export default function OvernghtStrategyPage() {
-  return <OvernghtExperience />;
+  return (
+    <div className={`${archivo.variable} ${barlow.variable}`}>
+      <OvernghtExperience />
+    </div>
+  );
 }
