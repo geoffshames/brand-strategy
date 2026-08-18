@@ -7,7 +7,7 @@ import { Shell, Ruler, Bug } from './ui';
 const STATS: { value: string; label: string }[] = [
   { value: '6', label: 'Rights deals signed' },
   { value: '14.2K', label: 'IG followers today' },
-  { value: '$1.925M', label: 'Competitor settlement' },
+  { value: '$1.925M', label: 'Class action settled' },
   { value: '0', label: 'Competitor Meta ads' },
   { value: '75x', label: 'Best vs worst clip' },
   { value: 'AUG 24', label: 'Worlds opens' },

@@ -91,15 +91,15 @@ export function Bug({
   strong?: boolean;
 }) {
   return (
-    <div className="flex items-stretch border border-white/25">
+    <div className="flex min-w-0 items-stretch border border-white/25">
       <span
-        className={`flex items-center border-r-2 border-white/25 px-3 py-2 font-display text-xl md:text-2xl tabular-nums leading-none ${
+        className={`flex shrink-0 items-center border-r-2 border-white/25 px-3 py-2 font-display text-xl md:text-2xl tabular-nums leading-none ${
           strong ? 'text-[#FAFAFA]' : 'text-[#E4E4E9]'
         }`}
       >
         {value}
       </span>
-      <span className="flex items-center px-3 py-2 font-mono uppercase text-xs tracking-[0.12em] leading-tight text-[#B8B8C0]">
+      <span className="flex min-w-0 items-center px-3 py-2 font-mono uppercase text-xs tracking-[0.12em] leading-tight text-[#B8B8C0]">
         {label}
       </span>
     </div>

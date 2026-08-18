@@ -358,10 +358,10 @@ function DossierRow({ d, open, onToggle }: { d: Dossier; open: boolean; onToggle
         aria-expanded={open}
         aria-controls={panelId}
         onClick={onToggle}
-        className="grid w-full grid-cols-[44px_96px_1fr_44px] items-center gap-4 py-4 text-left transition-colors hover:bg-white/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD3737] md:grid-cols-[56px_120px_1fr_220px_120px_44px] md:gap-6"
+        className="grid w-full grid-cols-[44px_1fr_44px] items-center gap-4 py-4 text-left transition-colors hover:bg-white/[0.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD3737] sm:grid-cols-[44px_96px_1fr_44px] md:grid-cols-[56px_120px_1fr_220px_120px_44px] md:gap-6"
       >
         <span className="font-mono text-sm tabular-nums tracking-[0.1em] text-[#8A8A93]">{d.n}</span>
-        <span className="relative block aspect-video w-[96px] overflow-hidden md:w-[120px]">
+        <span className="relative hidden aspect-video w-[96px] overflow-hidden sm:block md:w-[120px]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={d.plate}

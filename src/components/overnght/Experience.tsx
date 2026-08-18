@@ -79,7 +79,7 @@ export default function OvernghtExperience() {
 
   return (
     <MotionProvider>
-      <main className="relative bg-[#0A0A0A] text-[#E4E4E9] antialiased selection:bg-[#FD3737] selection:text-white">
+      <main className="relative overflow-x-clip bg-[#0A0A0A] text-[#E4E4E9] antialiased selection:bg-[#FD3737] selection:text-white">
         {/* Sticky chrome */}
         <BarShell className="h-14 border-b border-white/10 bg-[#0A0A0A]/90 backdrop-blur-md">
           <Shell className="flex h-14 items-center justify-between">

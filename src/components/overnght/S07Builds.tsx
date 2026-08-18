@@ -285,7 +285,7 @@ export default function S07Builds() {
                 <div className="relative">{b.el}</div>
                 <div className="mt-5 w-[270px] md:w-[320px]">
                   <p className="text-base leading-[1.6] text-[#E4E4E9]">{b.note}</p>
-                  <p className="mt-2 font-mono uppercase text-xs tracking-[0.14em] text-[#8A8A93]">{b.runs}</p>
+                  <p className="mt-2 font-mono uppercase text-xs tracking-[0.14em] text-[#B8B8C0]">{b.runs}</p>
                 </div>
               </figure>
             ))}
