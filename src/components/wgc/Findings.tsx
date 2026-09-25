@@ -10,7 +10,6 @@ import {
   FORMAT_LABEL,
   PROFILE,
   BREAKOUTS,
-  BREAKOUT_PATTERN,
   UNDERPERFORMERS,
   SIGNALS,
   HOUSEKEEPING,
@@ -319,14 +318,21 @@ export function SContent() {
             ))}
           </div>
 
-          <Reveal className="mt-12 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-5">
-            {BREAKOUT_PATTERN.map((p) => (
-              <div key={p.n} className="bg-[#0A0A0A] p-5 md:p-6">
-                <span className="font-mono text-sm text-[#FD3737]">{p.n}</span>
-                <p className="mt-3 font-display uppercase text-lg leading-[1.1] text-[#FAFAFA]">{p.title}</p>
-                <p className="mt-3 text-[15px] leading-[1.6] text-[#B8B8C0]">{p.body}</p>
-              </div>
-            ))}
+          <Reveal className="mt-8">
+            <a
+              href="#s03-teardown"
+              className="group flex flex-wrap items-center justify-between gap-4 border border-white/15 p-5 transition-colors hover:border-[#FD3737] md:p-6"
+            >
+              <span>
+                <span className="block font-mono uppercase text-xs tracking-[0.14em] text-[#FD3737]">Section 03</span>
+                <span className="mt-2 block font-display uppercase text-xl md:text-2xl leading-[1.1] text-[#FAFAFA]">
+                  Both Shorts taken apart frame by frame, with the soundtrack, the comments and the formula
+                </span>
+              </span>
+              <span className="font-mono text-lg text-[#FAFAFA] transition-colors group-hover:text-[#FD3737]" aria-hidden="true">
+                &darr;
+              </span>
+            </a>
           </Reveal>
         </div>
 
@@ -389,7 +395,7 @@ export function SAudience() {
     <section id="s03-audience" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="03"
+          index="04"
           act="Findings"
           title="The Audience"
           strap="Teen boys who collect, or want to. They speak the feed’s language, know the clone map cold and notice when a cap is on backwards."

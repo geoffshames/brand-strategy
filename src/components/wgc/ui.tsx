@@ -6,7 +6,7 @@ import React from 'react';
    N27 display (font-display), Work Sans body, JetBrains Mono labels.
    No rounded corners in page chrome. Hairlines at white/10. */
 
-export const TOTAL_SECTIONS = '14';
+export const TOTAL_SECTIONS = '15';
 
 export function Shell({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-[1400px] px-5 md:px-10 xl:px-16 ${className}`}>{children}</div>;

@@ -14,7 +14,7 @@ export function SLadder() {
     <section id="s10-ladder" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="10"
+          index="11"
           act="Plan"
           title="Product Ladder"
           strap="Five rungs from an affiliate code to a WGC fragrance. Each rung has a gate, and nothing gets made before the audience has proven it buys."
@@ -92,7 +92,7 @@ export function SSafety() {
     <section id="s11-safety" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="11"
+          index="12"
           act="Plan"
           title="Safety and Setup"
           strap="Ten rules for running a teen creator channel with a face, a following and eventually a product. Most take ten minutes to set up once."
@@ -120,7 +120,7 @@ export function STargets() {
     <section id="s12-targets" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="12"
+          index="13"
           act="Plan"
           title="Targets"
           strap="Where the channel is today, where it should be by the end of December, and where it should be in September 2027."
@@ -184,7 +184,7 @@ export function SRisks() {
   return (
     <section id="s13-risks" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
-        <SectionHeader index="13" act="Plan" title="Risks" strap="Six things that could slow the plan down, and what handles each one." />
+        <SectionHeader index="14" act="Plan" title="Risks" strap="Six things that could slow the plan down, and what handles each one." />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {RISKS.map((r) => (
             <Reveal key={r.title} className="flex flex-col border border-white/10 p-6">
@@ -213,7 +213,7 @@ export function SFirst30() {
   return (
     <section id="s14-first30" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
-        <SectionHeader index="14" act="Plan" title="First 30 Days" strap="Ten moves, in order. Most of them happen in the first week." />
+        <SectionHeader index="15" act="Plan" title="First 30 Days" strap="Ten moves, in order. Most of them happen in the first week." />
         <Reveal>
           <ol className="grid gap-px border border-white/10 bg-white/10 md:grid-cols-2">
             {FIRST_30.map((f, i) => (

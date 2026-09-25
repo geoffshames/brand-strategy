@@ -138,8 +138,8 @@ export const BREAKOUTS = [
     likes: '156',
     comments: '19',
     dur: '8 sec',
-    onScreen: '“POV you use cologne instead of deodorant.” A deodorant stick labeled ME gets swatted aside for a cologne bottle on a carpet full of the collection.',
-    why: 'A joke with a villain (deodorant), readable in one second, about a tension every teenager knows. It also started an argument in the comments about which deodorant is acceptable, which kept the thread alive.',
+    onScreen: '“POV you use cologne instead of deodorant,” with ME pinned bottom left. A green JPG bottle goes down on the rug, then three deodorants stack up beside it, one per beat of an “uh oh stinky” meme sound.',
+    why: 'The caption makes a claim and the video contradicts it three times, while the sound says the joke out loud. The brand lineup (Dr. Squatch, MILES, LŪ Boys) left an argument for the comments.',
   },
   {
     id: 'HJkYZ7dgT-I',
@@ -148,8 +148,8 @@ export const BREAKOUTS = [
     likes: '249',
     comments: '33',
     dur: '9 sec',
-    onScreen: '“POV school starts at 8, me at 7:99.” Hands cycle through bottles scattered across the carpet, the whole collection in frame.',
-    why: 'The channel’s most-liked and most-commented Short. A shared routine every student recognizes, a small joke in the clock time, and visible abundance that says “this person is a real collector.”',
+    onScreen: '“POV school starts at 8 me at 7:99” over frantic whip-pans across about twenty bottles, then three picks in three seconds, set to the “She’s Homeless” chorus.',
+    why: 'The channel’s most-liked Short. A clock time that does not exist pulled nearly half the comments into one argument, and the scan-and-pick edit acts out the morning panic every student knows.',
   },
 ];
 
@@ -315,7 +315,7 @@ export const SWOT = {
   threats: [
     { title: 'Reused-content rules', body: 'YouTube applies them to the whole channel, and crediting another creator does not make their clip usable. Original footage protects every future earning option.' },
     { title: 'A rising monetization bar', body: 'From Feb 1, 2027, new Partner Program entry needs 1,000 subscribers plus 20M Shorts views in 90 days. Ads cannot be the business plan.' },
-    { title: 'Exposure on camera', body: 'A face brings conversion and attention, including the wrong kind. The setup rules in section 11 handle it.' },
+    { title: 'Exposure on camera', body: 'A face brings conversion and attention, including the wrong kind. The setup rules in section 12 handle it.' },
     { title: 'Spend pressure', body: 'A buy-to-post model burns money fast. The plan leans on the existing shelf, decants and audience votes, not weekly purchases.' },
   ],
   synthesis:
@@ -332,7 +332,7 @@ export const PILLARS = [
     thesis:
       'Every channel over 50K subscribers in this set shows a face. It is a correlation, but a consistent one: Archer converts 4.2 subscribers per 1,000 views, K&A 2.2, faceless peers 0.6 to 1.3. People subscribe to people. The shift can be gradual, and the shelf-and-hands look stays as the visual signature.',
     initiatives: [
-      'Voiceover on every Short from week one: the verdict in your own voice',
+      'Your voice from week one, reacting and joking, never narrating specs: nine narrated Shorts, none above 1,437 views',
       'Face in the reaction beat from week two: the first sniff, the “nah,” the grin',
       'One talking-to-camera verdict a week',
       'Keep the flash-lit shelf as the recurring B-roll look',
@@ -345,7 +345,7 @@ export const PILLARS = [
     thesis:
       'The audience does not come for bottles. It comes for a teenager who is obsessed with bottles. Both breakouts are school and hygiene jokes with fragrance as the prop. The plan turns that lane into a daily series and a calendar of real moments.',
     initiatives: [
-      'The “7:59” school-morning series, three times a week',
+      'The “7:99” school-morning series, three times a week, with the impossible clock time as its signature',
       'A moments calendar: first day, test day, picture day, game day, dances, holidays',
       'A running hook bank, refilled every Sunday from comments and trends',
       'The whole shelf in frame, under ten seconds, one line of text',
@@ -388,20 +388,20 @@ export const VERDICT = [
 
 export const SERIES = [
   {
-    name: '7:59',
+    name: '7:99',
     tag: 'School-morning pick',
     cadence: '3 a week (Mon, Wed, Fri)',
     length: '7 to 10 sec',
-    format: 'The flash-lit shelf, a hand hovering, one line of text, a face reaction or spoken pick at the end.',
+    format: 'The flash-lit shelf, a hand hovering, one line of text with one impossible detail, a sound whose words finish the joke, and a face reaction at the pick.',
     hooks: [
-      'POV: school starts at 8. Me at 7:59.',
+      'POV: school starts at 8. Me at 7:99.',
       'What I wear to a test I didn’t study for',
       'Picture day rotation',
       'Game day pick',
       'When you have a presentation first period',
     ],
-    why: 'The proven lane. “Me before school” (13.7K) and the deodorant POV (17.8K) are this series before it had a name.',
-    image: '/images/wgcologne/frame-759.webp',
+    why: 'The proven lane. “Me before school” is this series before it had a name: 17 of its 38 comments are one argument about “7:99.” Keep the clock wrong on purpose.',
+    image: '/images/wgcologne/frame-799.webp',
   },
   {
     name: 'Blind Test',
@@ -447,17 +447,17 @@ export const SERIES = [
 ];
 
 export const WEEK = [
-  { day: 'Mon', slot: '7:59' },
+  { day: 'Mon', slot: '7:99' },
   { day: 'Tue', slot: 'Rate Your Top 5' },
-  { day: 'Wed', slot: '7:59' },
+  { day: 'Wed', slot: '7:99' },
   { day: 'Thu', slot: 'Blind Test' },
-  { day: 'Fri', slot: '7:59' },
+  { day: 'Fri', slot: '7:99' },
   { day: 'Sat', slot: 'You Pick My Next Bottle / Rate Your Top 5' },
   { day: 'Sun', slot: 'The Verdict' },
 ];
 
 export const RETIRE = [
-  { from: 'Standalone beauty shots', to: 'B-roll inside 7:59 and The Verdict' },
+  { from: 'Standalone beauty shots', to: 'B-roll inside 7:99 and The Verdict' },
   { from: 'ASMR parts', to: 'Retired' },
   { from: '“If you wanna smell like…”', to: 'The description goes inside a verdict' },
   { from: 'Hauls and unboxings', to: 'Week 3 of You Pick My Next Bottle' },
@@ -472,7 +472,7 @@ export const ROADMAP = [
       'Fix the foundations and launch the three series that need no new purchases. The goal of the first month is not views; it is a channel that looks and sounds like one person with a point of view.',
     actions: [
       'Channel setup: banner, description with a family-managed contact email, audience set to “not made for kids”',
-      'Launch 7:59, Blind Test and You Pick My Next Bottle (round 1 nominations)',
+      'Launch 7:99, Blind Test and You Pick My Next Bottle (round 1 nominations)',
       'Voice on every Short; first face-reaction beats in week 2',
       'One Short a day at a fixed time, plus reactive POVs when a trend fits; never two uploads within a few hours',
       'Original footage only; titles are the hook plus one or two keywords',
@@ -593,8 +593,8 @@ export const KPIS = [
 ];
 
 export const RISKS = [
-  { title: 'School load and burnout', level: 'High', body: 'A daily channel competes with school, sports and sleep.', fix: 'Batch-film a week of 7:59s in one weekend session, cap at one Short a day, and treat skipped days as normal.' },
-  { title: 'Attention on camera', level: 'High', body: 'A face brings subscribers and the wrong kind of attention.', fix: 'The setup rules in section 11: one family inbox, no location clues, comment filters.' },
+  { title: 'School load and burnout', level: 'High', body: 'A daily channel competes with school, sports and sleep.', fix: 'Batch-film a week of 7:99s in one weekend session, cap at one Short a day, and treat skipped days as normal.' },
+  { title: 'Attention on camera', level: 'High', body: 'A face brings subscribers and the wrong kind of attention.', fix: 'The setup rules in section 12: one family inbox, no location clues, comment filters.' },
   { title: 'Monetization bar moves', level: 'Medium', body: 'YouTube raises Partner Program entry to 20M Shorts views in 90 days from Feb 1, 2027.', fix: 'Commerce first, ads last. The ladder does not depend on ad revenue.' },
   { title: 'Format overlap', level: 'Medium', body: 'Faceless shelf content is crowded, and similar formats look interchangeable.', fix: 'Named series, the WGC Verdict and original footage make the channel unmistakable.' },
   { title: 'Spend creep', level: 'Medium', body: 'Buying to post gets expensive fast.', fix: 'A monthly budget, decants over full bottles, and one audience-voted purchase a month.' },
@@ -605,7 +605,7 @@ export const FIRST_30 = [
   'Walk through this plan with a parent or guardian and set up the family contact email',
   'Update the banner and description; set the audience to “not made for kids”; turn on held-for-review comment filters',
   'Lock the series names and a simple cover style for each',
-  'Batch-film five to seven 7:59 Shorts in one weekend session',
+  'Batch-film five to seven 7:99 Shorts in one weekend session',
   'Record your voice on every Short from now on',
   'Post “You Pick My Next Bottle,” round 1, and pin the question',
   'Film the first Blind Test with a family member',

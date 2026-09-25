@@ -40,7 +40,7 @@ export function SPillars() {
     <section id="s07-pillars" className="scroll-mt-16 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="07"
+          index="08"
           act="Plan"
           title="Strategy Pillars"
           strap="Four moves. Each one answers a specific finding from part one and carries a number to hit in 90 days."
@@ -106,7 +106,7 @@ export function SSeries() {
     <section id="s08-series" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="08"
+          index="09"
           act="Plan"
           title="Content System"
           strap="Five named series replace one-off posts. Three need no new purchases, and all five are built from formats that already work on this channel or across the field."
@@ -210,8 +210,8 @@ export function SSeries() {
             headline="Voice first, then the reaction, then the verdict"
             body={
               <p>
-                Weeks one and two: the same shelf footage, now with a spoken pick. Weeks two to four: the face enters in
-                the reaction beat at the end of a 7:59 or a Blind Test. From month two: one talking-to-camera Verdict a
+                Weeks one and two: the same shelf footage, now with a spoken reaction, never a product description. Weeks two to four: the face enters in
+                the reaction beat at the end of a 7:99 or a Blind Test. From month two: one talking-to-camera Verdict a
                 week. The hands-and-shelf look never goes away; it becomes the B-roll signature under a person the
                 audience knows.
               </p>
@@ -232,7 +232,7 @@ export function SRoadmap() {
     <section id="s09-roadmap" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="09"
+          index="10"
           act="Plan"
           title="12-Month Roadmap"
           strap="October 2026 to September 2027. Four phases, each ending in numbers that unlock the next one."

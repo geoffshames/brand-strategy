@@ -59,22 +59,22 @@ export default function Hero({ onJump }: { onJump: (id: string) => void }) {
           </m.p>
           <m.div variants={heroMetaVariants} className="flex flex-wrap items-start gap-3 lg:col-span-5 lg:justify-end">
             <button
-              onClick={() => onJump('s02-content')}
+              onClick={() => onJump('s03-teardown')}
               className="border border-white/25 bg-[#0A0A0A]/60 px-4 py-3 font-mono uppercase text-xs md:text-[13px] tracking-[0.14em] text-[#FAFAFA] transition-colors hover:border-[#FD3737] hover:text-[#FD3737] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD3737]"
             >
-              Content analysis / 02
+              Breakout teardown / 03
             </button>
             <button
               onClick={() => onJump('s08-series')}
               className="border border-white/25 bg-[#0A0A0A]/60 px-4 py-3 font-mono uppercase text-xs md:text-[13px] tracking-[0.14em] text-[#FAFAFA] transition-colors hover:border-[#FD3737] hover:text-[#FD3737] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD3737]"
             >
-              The series / 08
+              The series / 09
             </button>
             <button
               onClick={() => onJump('s10-ladder')}
               className="border border-white/25 bg-[#0A0A0A]/60 px-4 py-3 font-mono uppercase text-xs md:text-[13px] tracking-[0.14em] text-[#FAFAFA] transition-colors hover:border-[#FD3737] hover:text-[#FD3737] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD3737]"
             >
-              Product ladder / 10
+              Product ladder / 11
             </button>
           </m.div>
         </div>

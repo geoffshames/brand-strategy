@@ -5,6 +5,7 @@ import { MotionProvider, BarShell } from './motion';
 import { Shell } from './ui';
 import Hero from './Hero';
 import { SChannel, SContent, SAudience } from './Findings';
+import { STeardown } from './Teardown';
 import { SField, SMarket, SSwot } from './Landscape';
 import { PlanDivider, SPillars, SSeries, SRoadmap } from './Plan';
 import { SLadder, SSafety, STargets, SRisks, SFirst30, Closing } from './Build';
@@ -12,18 +13,19 @@ import { SLadder, SSafety, STargets, SRisks, SFirst30, Closing } from './Build';
 export const SECTIONS = [
   { id: 's01-channel', n: '01', title: 'The Channel Today', gist: 'Three weeks, 41 Shorts, one clear signal.', stat: '85.3K views' },
   { id: 's02-content', n: '02', title: 'Content Analysis', gist: 'Every format scored. What breaks out and why.', stat: '61% POV' },
-  { id: 's03-audience', n: '03', title: 'The Audience', gist: 'Who is watching and what they ask for.', stat: '97 comments' },
-  { id: 's04-field', n: '04', title: 'Creator Landscape', gist: 'Fifteen fragrance creators, three tiers.', stat: '0.8 vs 4.2' },
-  { id: 's05-market', n: '05', title: 'Market Context', gist: 'Teen boys, clones and YouTube.', stat: '+22%' },
-  { id: 's06-swot', n: '06', title: 'SWOT', gist: 'What the evidence adds up to.', stat: '4 x 4' },
-  { id: 's07-pillars', n: '07', title: 'Strategy Pillars', gist: 'Four moves, each tied to a finding.', stat: '4 pillars' },
-  { id: 's08-series', n: '08', title: 'Content System', gist: 'Five named series and a weekly rhythm.', stat: '5 series' },
-  { id: 's09-roadmap', n: '09', title: '12-Month Roadmap', gist: 'Reset, build, accelerate, own.', stat: 'Oct to Sep' },
-  { id: 's10-ladder', n: '10', title: 'Product Ladder', gist: 'From an affiliate code to a WGC product.', stat: '5 rungs' },
-  { id: 's11-safety', n: '11', title: 'Safety and Setup', gist: 'How a teen creator runs this safely.', stat: '10 rules' },
-  { id: 's12-targets', n: '12', title: 'Targets', gist: 'Now, 90 days, 12 months.', stat: '15K subs' },
-  { id: 's13-risks', n: '13', title: 'Risks', gist: 'What could go wrong and the fix.', stat: '6 risks' },
-  { id: 's14-first30', n: '14', title: 'First 30 Days', gist: 'Ten moves to start Monday.', stat: '10 moves' },
+  { id: 's03-teardown', n: '03', title: 'Breakout Teardown', gist: 'The two outliers, frame by frame, with Pegasus.', stat: '12 passes each' },
+  { id: 's03-audience', n: '04', title: 'The Audience', gist: 'Who is watching and what they ask for.', stat: '97 comments' },
+  { id: 's04-field', n: '05', title: 'Creator Landscape', gist: 'Fifteen fragrance creators, three tiers.', stat: '0.8 vs 4.2' },
+  { id: 's05-market', n: '06', title: 'Market Context', gist: 'Teen boys, clones and YouTube.', stat: '+22%' },
+  { id: 's06-swot', n: '07', title: 'SWOT', gist: 'What the evidence adds up to.', stat: '4 x 4' },
+  { id: 's07-pillars', n: '08', title: 'Strategy Pillars', gist: 'Four moves, each tied to a finding.', stat: '4 pillars' },
+  { id: 's08-series', n: '09', title: 'Content System', gist: 'Five named series and a weekly rhythm.', stat: '5 series' },
+  { id: 's09-roadmap', n: '10', title: '12-Month Roadmap', gist: 'Reset, build, accelerate, own.', stat: 'Oct to Sep' },
+  { id: 's10-ladder', n: '11', title: 'Product Ladder', gist: 'From an affiliate code to a WGC product.', stat: '5 rungs' },
+  { id: 's11-safety', n: '12', title: 'Safety and Setup', gist: 'How a teen creator runs this safely.', stat: '10 rules' },
+  { id: 's12-targets', n: '13', title: 'Targets', gist: 'Now, 90 days, 12 months.', stat: '15K subs' },
+  { id: 's13-risks', n: '14', title: 'Risks', gist: 'What could go wrong and the fix.', stat: '6 risks' },
+  { id: 's14-first30', n: '15', title: 'First 30 Days', gist: 'Ten moves to start Monday.', stat: '10 moves' },
 ];
 
 export default function WgcExperience() {
@@ -84,7 +86,7 @@ export default function WgcExperience() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/brand/CC-LOGO-2024-WHITE.png" alt="Crowd Control Digital" className="h-5 w-auto" />
               <span className="hidden font-mono uppercase text-xs tracking-[0.16em] text-[#B8B8C0] md:inline">
-                {current.n} / 14 {current.title}
+                {current.n} / 15 {current.title}
               </span>
             </div>
             <button
@@ -94,7 +96,7 @@ export default function WgcExperience() {
               aria-haspopup="dialog"
               aria-expanded={indexOpen}
             >
-              Index {current.n}/14
+              Index {current.n}/15
             </button>
           </Shell>
         </BarShell>
@@ -112,7 +114,7 @@ export default function WgcExperience() {
             <Shell className="py-10 md:py-16">
               <div className="flex items-center justify-between">
                 <p className="font-mono uppercase text-xs md:text-[13px] tracking-[0.16em] text-[#B8B8C0]">
-                  Full read 15 min / Skim 2 min
+                  Full read 20 min / Skim 3 min
                 </p>
                 <button
                   onClick={() => setIndexOpen(false)}
@@ -160,6 +162,7 @@ export default function WgcExperience() {
         <Hero onJump={jump} />
         <SChannel />
         <SContent />
+        <STeardown />
         <SAudience />
         <SField />
         <SMarket />

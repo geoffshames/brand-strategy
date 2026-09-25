@@ -163,7 +163,7 @@ export function SField() {
     <section id="s04-field" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="04"
+          index="05"
           act="Findings"
           title="Creator Landscape"
           strap="Fifteen fragrance creators across three tiers, pulled the same day as the channel data. The pattern is blunt: the channels that scaled show a face, and volume alone never saved anyone."
@@ -220,7 +220,7 @@ export function SMarket() {
     <section id="s05-market" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
         <SectionHeader
-          index="05"
+          index="06"
           act="Findings"
           title="Market Context"
           strap="The channel sits where the category is growing fastest: teen boys, the clone tier and the platform teens use most."
@@ -263,7 +263,7 @@ export function SSwot() {
   return (
     <section id="s06-swot" className="scroll-mt-16 border-t border-white/10 py-20 md:py-32">
       <Shell>
-        <SectionHeader index="06" act="Findings" title="SWOT" strap={SWOT.synthesis} />
+        <SectionHeader index="07" act="Findings" title="SWOT" strap={SWOT.synthesis} />
         <div className="grid gap-px border border-white/10 bg-white/10 md:grid-cols-2">
           {QUADS.map((q) => (
             <Reveal key={q.key} className="bg-[#0A0A0A] p-6 md:p-8">
